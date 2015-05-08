@@ -1,38 +1,54 @@
 Dependencies for Project 'ServoArmNode', Target 'ServoArmNode': (DO NOT MODIFY !)
-F (.\src\main.c)(0x554513E3)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\src\main.c)(0x55463A49)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBOARD_PCA10001-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-F (.\src\ServoArmNode.c)(0x55450C80)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51-o .\objects\servoarmnode.o --omf_browse .\objects\servoarmnode.crf --depend .\objects\servoarmnode.d)
+I (.\app_inc\ServoArmNode.h)(0x55461E30)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FD04CA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FFC59A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FFC59A)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_assert.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpiote.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards.h)(0x551206C6)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards\pca10001.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_delay.h)(0x55122886)
+F (.\src\ServoArmNode.c)(0x55463A3A)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBOARD_PCA10001-o .\objects\servoarmnode.o --omf_browse .\objects\servoarmnode.crf --depend .\objects\servoarmnode.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (.\app_inc\ServoArmNode.h)(0x55450C83)
-F (.\app_inc\ServoArmNode.h)(0x55450C83)()
-F (.\app_inc\nrf_pwm.h)(0x55450B8F)()
-F (.\src\nrf_pwm.c)(0x55450B8F)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51-o .\objects\nrf_pwm.o --omf_browse .\objects\nrf_pwm.crf --depend .\objects\nrf_pwm.d)
-I (.\app_inc\nrf_pwm.h)(0x55450B8F)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FD04CA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FFC59A)
+I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FFC59A)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_assert.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpiote.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x540109BC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards.h)(0x551206C6)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards\pca10001.h)(0x540109BC)
+I (.\app_inc\ServoArmNode.h)(0x55461E30)
+F (.\app_inc\ServoArmNode.h)(0x55461E30)()
+F (RTE\Device\nRF51822_xxAA\arm_startup_nrf51.s)(0x53FCDA7E)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "NRF51 SETA 1"--list .\listings\arm_startup_nrf51.lst --xref -o .\objects\arm_startup_nrf51.o --depend .\objects\arm_startup_nrf51.d)
+F (RTE\Device\nRF51822_xxAA\system_nrf51.c)(0x53FCDA7E)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBOARD_PCA10001-o .\objects\system_nrf51.o --omf_browse .\objects\system_nrf51.crf --depend .\objects\system_nrf51.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FD04CA)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FFC59A)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FFC59A)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf_gpiote.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf_gpio.h)(0x540109BC)
-F (RTE\Device\nRF51422_xxAC\arm_startup_nrf51.s)(0x53FCDA7E)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "NRF51 SETA 1"--list .\listings\arm_startup_nrf51.lst --xref -o .\objects\arm_startup_nrf51.o --depend .\objects\arm_startup_nrf51.d)
-F (RTE\Device\nRF51422_xxAC\system_nrf51.c)(0x53FCDA7E)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -I.. -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\s110 -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\sdk -I.\app_inc-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\ServoArmNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51-o .\objects\system_nrf51.o --omf_browse .\objects\system_nrf51.crf --depend .\objects\system_nrf51.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h)(0x53FD04CA)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FFC59A)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FFC59A)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\compiler_abstraction.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
+I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)

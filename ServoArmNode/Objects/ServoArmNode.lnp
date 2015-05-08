@@ -1,7 +1,6 @@
 --cpu Cortex-M0
 ".\objects\main.o"
 ".\objects\servoarmnode.o"
-".\objects\nrf_pwm.o"
 ".\objects\arm_startup_nrf51.o"
 ".\objects\system_nrf51.o"
 --strict --scatter ".\Objects\ServoArmNode.sct"
