@@ -9,18 +9,6 @@
 #include "nrf_soc.h"
 #include "boards.h"
 
-#define GPIO_CTRLS_START 16
-#define GPIO_CTRLS_END   21
-
-#define MASK_BUTTON_A    0x01
-#define MASK_BUTTON_B    0x02
-#define MASK_ARROW_DOWN  0x04
-#define MASK_ARROW_UP    0x08
-#define MASK_ARROW_LEFT  0x10
-#define MASK_ARROW_RIGHT 0x20
-
-#define GPIO_RELAY_PORT 2
-
 typedef enum
 {
    ARROW_UP,
@@ -37,10 +25,32 @@ typedef struct
    bool button_b;
 } MsPacmanCtrls;
 
+#include "ms_pacman_service.h"
+
+#define GPIO_CTRLS_START 16
+#define GPIO_CTRLS_END   21
+
+#define MASK_BUTTON_A    0x01
+#define MASK_BUTTON_B    0x02
+#define MASK_ARROW_DOWN  0x04
+#define MASK_ARROW_UP    0x08
+#define MASK_ARROW_LEFT  0x10
+#define MASK_ARROW_RIGHT 0x20
+
+#define GPIO_RELAY_PORT 2
+
+
+
 /*Initialize the Ms. Pacman GPIO lines to be outputs and 0xFF*/
 void initMsPacmanGPIO(void);
 
 /*Sets the GPIO pins based on the input data*/
 void setMsPacmanControls(MsPacmanCtrls ms_pacman);
+
+/*Initialize the Ms. Pacman Service*/
+uint32_t ble_ms_pacman_init(ble_ms_pacman_t *p_ms_pacman);
+
+/*Initialize the Ms. Pacman Characteristic*/
+uint32_t ms_pacman_char_add(ble_ms_pacman_t *p_ms_pacman);
 
 #endif 

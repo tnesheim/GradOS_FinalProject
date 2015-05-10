@@ -309,8 +309,8 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x40000</Size>
+                <StartAddress>0x16000</StartAddress>
+                <Size>0x29000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -334,8 +334,8 @@
               </OCR_RVCT8>
               <OCR_RVCT9>
                 <Type>0</Type>
-                <StartAddress>0x20000000</StartAddress>
-                <Size>0x4000</Size>
+                <StartAddress>0x20002000</StartAddress>
+                <Size>0x2000</Size>
               </OCR_RVCT9>
               <OCR_RVCT10>
                 <Type>0</Type>
@@ -359,13 +359,13 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>BOARD_NRF6310</Define>
+              <Define>NRF51 DEBUG_NRF_USER BLE_STACK_SUPPORT_REQD BOARD_NRF6310</Define>
               <Undefine></Undefine>
-              <IncludePath>..;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\s110;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sd_common;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk;.\app_inc;C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.2.0\CMSIS\Include</IncludePath>
+              <IncludePath>..;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sd_common;C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk;.\app_inc;C:\Keil_v5\ARM\Pack\ARM\CMSIS\4.2.0\CMSIS\Include;.\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -386,7 +386,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -422,6 +422,83 @@
         </Group>
         <Group>
           <GroupName>include</GroupName>
+          <Files>
+            <File>
+              <FileName>ms_pacman.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\app_inc\ms_pacman.h</FilePath>
+            </File>
+            <File>
+              <FileName>ms_pacman_service.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\app_inc\ms_pacman_service.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>library</GroupName>
+          <Files>
+            <File>
+              <FileName>app_trace.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_trace.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_gpiote.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_gpiote.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_button.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_advdata.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_advdata.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_advdata_parser.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_advdata_parser.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_conn_params.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_conn_params.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_db_discovery.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_db_discovery.c</FilePath>
+            </File>
+            <File>
+              <FileName>ble_srv_common.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_services\ble_srv_common.c</FilePath>
+            </File>
+            <File>
+              <FileName>softdevice_handler.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\sd_common\softdevice_handler.c</FilePath>
+            </File>
+            <File>
+              <FileName>pstorage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\pstorage.c</FilePath>
+            </File>
+            <File>
+              <FileName>device_manager_peripheral.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\device_manager\device_manager_peripheral.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
