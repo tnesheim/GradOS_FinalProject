@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "twi_master.h"
+#include "nunchuck_service.h"
 
 //Nunchuck constants
 #define NUN_TWI_ADDRESS 0xA4
@@ -20,11 +21,14 @@
 #define NUN_DATA_REQUEST_VALUE 0x00
 
 //Nunchuck last byte masks
-#define NUN_MASK_ACCEL_Z_LSB 0xC0
-#define NUN_MASK_ACCEL_Y_LSB 0x30
-#define NUN_MASK_ACCEL_X_LSB 0x0C
-#define NUN_MASK_BUTTON_C    0x02
-#define NUN_MASK_BUTTON_Z    0x01
+#define NUN_MASK_ACCEL_Z_LSB   0xC0
+#define NUN_MASK_ACCEL_Y_LSB   0x30
+#define NUN_MASK_ACCEL_X_LSB   0x0C
+#define NUN_MASK_BUTTON_C      0x02
+#define NUN_MASK_BUTTON_Z      0x01
+#define NUN_BUTTON_PRESSED     0x01
+#define NUN_BUTTON_NOT_PRESSED 0x00
+#define NUN_BUTTON_ACTIVE_LOW 0x01
 
 //Nunchuck last byte shift amounts
 #define NUN_SHIFT_ACCEL_MSB   2
@@ -60,5 +64,14 @@ bool initNunchuck(void);
 
 /*Reads the data from the Nunchuck*/
 bool readNunchuckData(NunchuckData *nunData);
+
+/*Add the Nunchuck service and associated characteristic to the GATT server*/
+uint32_t ble_nunchuck_init(ble_nunchuck_t *p_nunchuck);
+
+/*Add the Nunchuck characteristic*/
+uint32_t nunchuck_char_add(ble_nunchuck_t * p_nunchuck);
+
+/*Notifies central that data is ready*/
+uint32_t ble_nunchuck_send(ble_nunchuck_t *ble_nunchuck, NunchuckData *nunData);
 
 #endif 
