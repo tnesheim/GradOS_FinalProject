@@ -39,8 +39,8 @@
 #define APP_TIMER_MAX_TIMERS                 5                                          /**< Maximum number of simultaneously created timers. */
 #define APP_TIMER_OP_QUEUE_SIZE              5                                          /**< Size of timer operation queues. */
 
-#define MIN_CONN_INTERVAL                    MSEC_TO_UNITS(500, UNIT_1_25_MS)           /**< Minimum acceptable connection interval (0.5 seconds). */
-#define MAX_CONN_INTERVAL                    MSEC_TO_UNITS(1000, UNIT_1_25_MS)          /**< Maximum acceptable connection interval (1 second). */
+#define MIN_CONN_INTERVAL                    MSEC_TO_UNITS(10, UNIT_1_25_MS)           /**< Minimum acceptable connection interval (0.5 seconds). */
+#define MAX_CONN_INTERVAL                    MSEC_TO_UNITS(100, UNIT_1_25_MS)          /**< Maximum acceptable connection interval (1 second). */
 #define SLAVE_LATENCY                        0                                          /**< Slave latency. */
 #define CONN_SUP_TIMEOUT                     MSEC_TO_UNITS(4000, UNIT_10_MS)            /**< Connection supervisory timeout (4 seconds). */
 

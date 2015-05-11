@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\NunchuckNode.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\NunchuckNode.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sat May 09 17:38:34 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun May 10 23:15:47 2015
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -540,6 +540,7 @@ Global Symbols
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;assert_nrf_callback
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timers_init
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;services_init
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;on_ble_evt
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gap_params_init
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;device_manager_init
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;device_manager_evt_handler
@@ -636,7 +637,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;services_init
 </UL>
 
-<P><STRONG><a name="[b9]"></a>ble_nunchuck_send</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, nunchuck.o(i.ble_nunchuck_send))
+<P><STRONG><a name="[b9]"></a>ble_nunchuck_send</STRONG> (Thumb, 132 bytes, Stack size 56 bytes, nunchuck.o(i.ble_nunchuck_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = ble_nunchuck_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -742,7 +743,7 @@ Global Symbols
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initNunchuck
 </UL>
 
-<P><STRONG><a name="[86]"></a>nunchuck_char_add</STRONG> (Thumb, 228 bytes, Stack size 64 bytes, nunchuck.o(i.nunchuck_char_add))
+<P><STRONG><a name="[86]"></a>nunchuck_char_add</STRONG> (Thumb, 244 bytes, Stack size 64 bytes, nunchuck.o(i.nunchuck_char_add))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = nunchuck_char_add
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
@@ -946,7 +947,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>gap_params_init</STRONG> (Thumb, 148 bytes, Stack size 24 bytes, main.o(i.gap_params_init))
+<P><STRONG><a name="[ad]"></a>gap_params_init</STRONG> (Thumb, 146 bytes, Stack size 24 bytes, main.o(i.gap_params_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = gap_params_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_error_handler
@@ -954,8 +955,12 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[84]"></a>on_ble_evt</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, main.o(i.on_ble_evt))
-<BR><BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_evt_dispatch
+<P><STRONG><a name="[84]"></a>on_ble_evt</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, main.o(i.on_ble_evt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = on_ble_evt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_error_handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_evt_dispatch
 </UL>
 
 <P><STRONG><a name="[bf]"></a>on_sys_evt</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, main.o(i.on_sys_evt))

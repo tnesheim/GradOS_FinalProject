@@ -40,8 +40,8 @@
 #define APP_TIMER_MAX_TIMERS                 5                                          /**< Maximum number of simultaneously created timers. */
 #define APP_TIMER_OP_QUEUE_SIZE              5                                          /**< Size of timer operation queues. */
 
-#define MIN_CONN_INTERVAL                    MSEC_TO_UNITS(500, UNIT_1_25_MS)           /**< Minimum acceptable connection interval (0.5 seconds). */
-#define MAX_CONN_INTERVAL                    MSEC_TO_UNITS(1000, UNIT_1_25_MS)          /**< Maximum acceptable connection interval (1 second). */
+#define MIN_CONN_INTERVAL                    MSEC_TO_UNITS(10, UNIT_1_25_MS)           /**< Minimum acceptable connection interval (0.5 seconds). */
+#define MAX_CONN_INTERVAL                    MSEC_TO_UNITS(100, UNIT_1_25_MS)          /**< Maximum acceptable connection interval (1 second). */
 #define SLAVE_LATENCY                        0                                          /**< Slave latency. */
 #define CONN_SUP_TIMEOUT                     MSEC_TO_UNITS(4000, UNIT_10_MS)            /**< Connection supervisory timeout (4 seconds). */
 
@@ -136,7 +136,17 @@ static void on_ble_evt(ble_evt_t * p_ble_evt)
         case BLE_GAP_EVT_DISCONNECTED:  
             m_ble_nunchuck.conn_handle = BLE_CONN_HANDLE_INVALID;
             break;
-
+        case BLE_GATTS_EVT_WRITE:
+           break;
+        case BLE_GATTC_EVT_HVX:
+           break;
+        case BLE_GATTS_EVT_SYS_ATTR_MISSING:
+           if(m_ble_nunchuck.conn_handle != BLE_CONN_HANDLE_INVALID)
+           {
+              err_code = sd_ble_gatts_sys_attr_set(m_ble_nunchuck.conn_handle, NULL, 0);
+              APP_ERROR_CHECK(err_code);
+           }
+           break;
         case BLE_GAP_EVT_TIMEOUT:
             break;
 

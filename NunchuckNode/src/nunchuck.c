@@ -171,9 +171,10 @@ uint32_t nunchuck_char_add(ble_nunchuck_t *p_nunchuck)
 
    memset(&char_md, 0, sizeof(char_md));
    
-   char_md.char_props.read   = 1;
-   char_md.char_props.write  = 0;
-   char_md.char_props.notify = 1;
+   char_md.char_props.read     = 1;
+   char_md.char_props.write    = 1;
+   char_md.char_props.notify   = 1;
+   char_md.char_props.indicate = 1;
    char_md.p_char_user_desc  = NULL;
    char_md.p_char_pf         = NULL;
    char_md.p_user_desc_md    = NULL;
@@ -186,7 +187,7 @@ uint32_t nunchuck_char_add(ble_nunchuck_t *p_nunchuck)
    memset(&attr_md, 0, sizeof(attr_md));
    
    BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
-   BLE_GAP_CONN_SEC_MODE_SET_NO_ACCESS(&attr_md.write_perm);
+   BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
    attr_md.vloc       = BLE_GATTS_VLOC_STACK;
    attr_md.rd_auth    = 0;
    attr_md.wr_auth    = 0;
@@ -209,7 +210,7 @@ uint32_t nunchuck_char_add(ble_nunchuck_t *p_nunchuck)
 /*Notifies central that data is ready*/
 uint32_t ble_nunchuck_send(ble_nunchuck_t *p_nunchuck, NunchuckData *nunData)
 {
-   uint32_t err_code;
+   uint32_t err_code = NRF_SUCCESS;
    
    //Send only if we are connected
    if(p_nunchuck->conn_handle != BLE_CONN_HANDLE_INVALID)
@@ -239,6 +240,10 @@ uint32_t ble_nunchuck_send(ble_nunchuck_t *p_nunchuck, NunchuckData *nunData)
       hvx_params.p_data = nunchuck_data;
       
       err_code = sd_ble_gatts_hvx(p_nunchuck->conn_handle, &hvx_params);
+      if(err_code == BLE_ERROR_GATTS_SYS_ATTR_MISSING)
+      {
+         err_code = sd_ble_gatts_sys_attr_set(p_nunchuck->conn_handle, NULL, 0);
+      }
       if ((err_code == NRF_SUCCESS) && (data_len != len))
       {
          err_code = NRF_ERROR_DATA_SIZE;
