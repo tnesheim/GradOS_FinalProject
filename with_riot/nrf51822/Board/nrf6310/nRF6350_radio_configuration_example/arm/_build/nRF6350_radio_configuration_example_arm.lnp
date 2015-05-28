@@ -1,0 +1,10 @@
+--cpu Cortex-M0
+".\_build\main.o"
+".\_build\arm_startup_nrf51.o"
+".\_build\system_nrf51.o"
+".\_build\nrf6350.o"
+".\_build\twi_hw_master.o"
+--strict --scatter ".\_build\nRF6350_radio_configuration_example_arm.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\_build\nRF6350_radio_configuration_example_arm.map" -o .\_build\nRF6350_radio_configuration_example_arm.axf

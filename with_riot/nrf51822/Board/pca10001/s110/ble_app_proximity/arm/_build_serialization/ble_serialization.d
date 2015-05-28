@@ -1,0 +1,10 @@
+.\_build_serialization\ble_serialization.o: ..\..\..\..\..\Source\serialization\common\ble_serialization.c
+.\_build_serialization\ble_serialization.o: ..\..\..\..\..\Include\serialization\common\ble_serialization.h
+.\_build_serialization\ble_serialization.o: ..\..\..\..\..\Include\nordic_common.h
+.\_build_serialization\ble_serialization.o: ..\..\..\..\..\Include\s110\nrf_error.h
+.\_build_serialization\ble_serialization.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build_serialization\ble_serialization.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build_serialization\ble_serialization.o: ..\..\..\..\..\Include\app_common\app_util.h
+.\_build_serialization\ble_serialization.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build_serialization\ble_serialization.o: ..\..\..\..\..\Include\compiler_abstraction.h
+.\_build_serialization\ble_serialization.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -1,0 +1,27 @@
+
+T14B0 001:108 SEGGER J-Link V4.92 Log File (0001ms, 1073ms total)
+T14B0 001:108 DLL Compiled: Sep 30 2014 09:33:42 (0001ms, 1073ms total)
+T14B0 001:108 Logging started @ 2015-04-13 14:19 (0001ms, 1073ms total)
+T14B0 001:109 JLINK_SetWarnOutHandler(...) (0000ms, 1073ms total)
+T14B0 001:109 JLINK_OpenEx(...)
+Firmware: J-Link Lite-Cortex-M V8 compiled Jul 17 2014 11:40:12
+Hardware: V8.00
+S/N: 518003074
+Feature(s): GDB  returns O.K. (0267ms, 1340ms total)
+T14B0 001:376 JLINK_SetErrorOutHandler(...) (0000ms, 1340ms total)
+T14B0 001:376 JLINK_ExecCommand("ProjectFile = "C:\Keil_v5\ARM\Device\Nordic\nrf51822\Board\nrf6310\s120\ble_app_hrs_c\arm\JLinkSettings.ini"", ...)  returns 0x00 (0002ms, 1342ms total)
+T14B0 001:384 JLINK_ExecCommand("Device = nRF51822_xxAA", ...)Device "NRF51822_XXAA" selected (257 KB flash, 16 KB RAM).  returns 0x00 (0001ms, 1343ms total)
+T14B0 001:385 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x01 (0000ms, 1343ms total)
+T14B0 001:385 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 1343ms total)
+T14B0 001:385 JLINK_GetDLLVersion()  returns 49200 (0000ms, 1343ms total)
+T14B0 001:385 JLINK_GetFirmwareString(...) (0000ms, 1343ms total)
+T14B0 001:389 JLINK_GetDLLVersion()  returns 49200 (0000ms, 1343ms total)
+T14B0 001:389 JLINK_GetCompileDateTime() (0000ms, 1343ms total)
+T14B0 001:390 JLINK_GetFirmwareString(...) (0000ms, 1343ms total)
+T14B0 001:392 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 1343ms total)
+T14B0 001:396 JLINK_TIF_Select(JLINKARM_TIF_JTAG)  returns 0x00 (0006ms, 1349ms total)
+T14B0 001:402 JLINK_SetSpeed(20000) (0001ms, 1350ms total)
+T14B0 001:403 JLINK_GetIdData(...) >0x2F8 JTAG>Could not measure total IR len. TDO is constant high. >0x30 JTAG> (0008ms, 1358ms total)
+T14B0 003:207 JLINK_Close() (0002ms, 1360ms total)
+T14B0 003:207  (0002ms, 1360ms total)
+T14B0 003:207 Closed (0002ms, 1360ms total)

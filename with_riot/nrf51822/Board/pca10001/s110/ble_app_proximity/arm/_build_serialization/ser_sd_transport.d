@@ -1,0 +1,11 @@
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Source\serialization\application\transport\ser_sd_transport.c
+.\_build_serialization\ser_sd_transport.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build_serialization\ser_sd_transport.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build_serialization\ser_sd_transport.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\serialization\application\transport\ser_sd_transport.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\serialization\common\transport\ser_hal_transport.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\s110\nrf_error.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\app_common\app_error.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\serialization\common\ble_serialization.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\nordic_common.h
+.\_build_serialization\ser_sd_transport.o: ..\..\..\..\..\Include\serialization\application\transport\ser_app_power_system_off.h

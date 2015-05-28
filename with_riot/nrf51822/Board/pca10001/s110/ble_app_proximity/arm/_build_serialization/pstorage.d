@@ -1,0 +1,17 @@
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Source\serialization\application\hal\pstorage.c
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\app_common\pstorage.h
+.\_build_serialization\pstorage.o: ..\pstorage_platform.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\nordic_common.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\s110\nrf_error.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\ble\ble_flash.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\nrf51.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm0.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\system_nrf51.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\app_common\app_util.h
+.\_build_serialization\pstorage.o: ..\..\..\..\..\Include\compiler_abstraction.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\_build_serialization\pstorage.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
