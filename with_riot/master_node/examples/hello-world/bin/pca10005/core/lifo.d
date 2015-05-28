@@ -1,7 +1,7 @@
-/Users/tnesheim/GitHub/RIOT/examples/hello-world/bin/pca10005/core/lifo.o: \
- /Users/tnesheim/GitHub/RIOT/core/lifo.c \
- /Users/tnesheim/GitHub/RIOT/core/include/lifo.h \
- /Users/tnesheim/GitHub/RIOT/core/include/debug.h \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/examples/hello-world/bin/pca10005/core/lifo.o: \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/lifo.c \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/lifo.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/debug.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/_ansi.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/newlib.h \
@@ -20,34 +20,34 @@
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/types.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/types.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/stdio.h \
- /Users/tnesheim/GitHub/RIOT/core/include/sched.h \
- /Users/tnesheim/GitHub/RIOT/core/include/bitarithm.h \
- /Users/tnesheim/GitHub/RIOT/core/include/tcb.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/sched.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/bitarithm.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/tcb.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stdint.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdint.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/_intsup.h \
- /Users/tnesheim/GitHub/RIOT/core/include/priority_queue.h \
- /Users/tnesheim/GitHub/RIOT/core/include/clist.h \
- /Users/tnesheim/GitHub/RIOT/core/include/kernel_macros.h \
- /Users/tnesheim/GitHub/RIOT/core/include/cib.h \
- /Users/tnesheim/GitHub/RIOT/core/include/msg.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/priority_queue.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/clist.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/kernel_macros.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/cib.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/msg.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stdbool.h \
- /Users/tnesheim/GitHub/RIOT/core/include/kernel_types.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/kernel_types.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/inttypes.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include-fixed/limits.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include-fixed/syslimits.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/limits.h \
- /Users/tnesheim/GitHub/RIOT/core/include/attributes.h \
- /Users/tnesheim/GitHub/RIOT/cpu/nrf51822/include/cpu-conf.h \
- /Users/tnesheim/GitHub/RIOT/cpu/nrf51822/include/nrf51.h \
- /Users/tnesheim/GitHub/RIOT/cpu/cortex-m0_common/include/core_cm0.h \
- /Users/tnesheim/GitHub/RIOT/cpu/cortex-m0_common/include/core_cmInstr.h \
- /Users/tnesheim/GitHub/RIOT/cpu/cortex-m0_common/include/core_cmFunc.h \
- /Users/tnesheim/GitHub/RIOT/cpu/nrf51822/include/nrf51_bitfields.h
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/attributes.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/nrf51822/include/cpu-conf.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/nrf51822/include/nrf51.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/cortex-m0_common/include/core_cm0.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/cortex-m0_common/include/core_cmInstr.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/cortex-m0_common/include/core_cmFunc.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/nrf51822/include/nrf51_bitfields.h
 
-/Users/tnesheim/GitHub/RIOT/core/include/lifo.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/lifo.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/debug.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/debug.h:
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h:
 
@@ -85,11 +85,11 @@
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/stdio.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/sched.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/sched.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/bitarithm.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/bitarithm.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/tcb.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/tcb.h:
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stdint.h:
 
@@ -97,19 +97,19 @@
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/_intsup.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/priority_queue.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/priority_queue.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/clist.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/clist.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/kernel_macros.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/kernel_macros.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/cib.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/cib.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/msg.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/msg.h:
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stdbool.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/kernel_types.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/kernel_types.h:
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/inttypes.h:
 
@@ -119,16 +119,16 @@
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/limits.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/attributes.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/attributes.h:
 
-/Users/tnesheim/GitHub/RIOT/cpu/nrf51822/include/cpu-conf.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/nrf51822/include/cpu-conf.h:
 
-/Users/tnesheim/GitHub/RIOT/cpu/nrf51822/include/nrf51.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/nrf51822/include/nrf51.h:
 
-/Users/tnesheim/GitHub/RIOT/cpu/cortex-m0_common/include/core_cm0.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/cortex-m0_common/include/core_cm0.h:
 
-/Users/tnesheim/GitHub/RIOT/cpu/cortex-m0_common/include/core_cmInstr.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/cortex-m0_common/include/core_cmInstr.h:
 
-/Users/tnesheim/GitHub/RIOT/cpu/cortex-m0_common/include/core_cmFunc.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/cortex-m0_common/include/core_cmFunc.h:
 
-/Users/tnesheim/GitHub/RIOT/cpu/nrf51822/include/nrf51_bitfields.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/cpu/nrf51822/include/nrf51_bitfields.h:

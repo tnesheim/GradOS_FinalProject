@@ -1,8 +1,8 @@
-/Users/tnesheim/GitHub/RIOT/examples/hello-world/bin/pca10005/core/clist.o: \
- /Users/tnesheim/GitHub/RIOT/core/clist.c \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/examples/hello-world/bin/pca10005/core/clist.o: \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/clist.c \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stddef.h \
- /Users/tnesheim/GitHub/RIOT/core/include/clist.h \
- /Users/tnesheim/GitHub/RIOT/core/include/kernel_macros.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/clist.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/kernel_macros.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/_ansi.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/newlib.h \
@@ -23,9 +23,9 @@
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stddef.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/clist.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/clist.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/kernel_macros.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/master_node/core/include/kernel_macros.h:
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h:
 

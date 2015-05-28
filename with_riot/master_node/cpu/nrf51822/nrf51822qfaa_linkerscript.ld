@@ -34,8 +34,8 @@ SEARCH_DIR(.)
 /* Memory Spaces Definitions */
 MEMORY
 {
-    rom (rx)    : ORIGIN = 0x00000000, LENGTH = 256K
-    ram (rwx)   : ORIGIN = 0x20000000, LENGTH = 16K
+    rom (rx)    : ORIGIN = 0x0001D000, LENGTH = 0x23000 
+    ram (rwx)   : ORIGIN = 0x20002000, LENGTH = 0x1800 
 }
 
 /* The stack size used by the application. NOTE: you need to adjust  */
