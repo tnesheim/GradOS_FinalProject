@@ -1,0 +1,10 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\nunchuck.o"
+".\objects\twi_sw_master.o"
+".\objects\arm_startup_nrf51.o"
+".\objects\system_nrf51.o"
+--strict --scatter ".\Objects\NunchuckNode.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\NunchuckNode.map" -o .\Objects\NunchuckNode.axf

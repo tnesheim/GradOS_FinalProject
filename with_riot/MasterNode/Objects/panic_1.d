@@ -1,0 +1,15 @@
+.\objects\panic_1.o: ..\riot_needed_source\cpu\cortex-m0_common\panic.c
+.\objects\panic_1.o: ..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\nrf51822\include\nrf51.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h
+.\objects\panic_1.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h
+.\objects\panic_1.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h
+.\objects\panic_1.o: ..\riot_needed_source\core\include\irq.h
+.\objects\panic_1.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\panic_1.o: ..\riot_needed_source\core\include\arch/irq_arch.h
+.\objects\panic_1.o: ..\riot_needed_source\core\include\lpm.h
+.\objects\panic_1.o: ..\riot_needed_source\core\include\arch/lpm_arch.h

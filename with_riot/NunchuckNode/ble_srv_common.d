@@ -1,0 +1,15 @@
+.\ble_srv_common.o: C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_services\ble_srv_common.c
+.\ble_srv_common.o: C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services\ble_srv_common.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\ble_srv_common.o: .\include\ble_types.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h
+.\ble_srv_common.o: .\include\ble_gap.h
+.\ble_srv_common.o: .\include\ble_ranges.h
+.\ble_srv_common.o: .\include\nrf_svc.h
+.\ble_srv_common.o: .\include\ble_gatt.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h
+.\ble_srv_common.o: C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h
+.\ble_srv_common.o: .\include\nrf_error.h

@@ -1,0 +1,14 @@
+.\objects\cpu.o: ..\riot_needed_source\cpu\nrf51822\cpu.c
+.\objects\cpu.o: ..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\nrf51822\include\nrf51.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h
+.\objects\cpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h
+.\objects\cpu.o: ..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h
+.\objects\cpu.o: ..\riot_needed_source\core\include\irq.h
+.\objects\cpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\cpu.o: ..\riot_needed_source\core\include\arch/irq_arch.h
+.\objects\cpu.o: ..\riot_needed_source\boards\pca10001\include\periph_conf.h
