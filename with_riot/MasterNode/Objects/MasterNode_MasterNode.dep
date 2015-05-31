@@ -1,928 +1,0 @@
-Dependencies for Project 'MasterNode', Target 'MasterNode': (DO NOT MODIFY !)
-F (.\src\main.c)(0x55669CF7)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (.\include\nrf_sdm.h)(0x55669CF7)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (.\include\nrf_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (.\include\nrf_error_soc.h)(0x55669CF7)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (.\include\nrf_error_sdm.h)(0x55669CF7)
-I (.\include\ble.h)(0x55669CF7)
-I (.\include\ble_ranges.h)(0x55669CF7)
-I (.\include\ble_types.h)(0x55669CF7)
-I (.\include\ble_gap.h)(0x55669CF7)
-I (.\include\ble_l2cap.h)(0x55669CF7)
-I (.\include\ble_err.h)(0x55669CF7)
-I (.\include\ble_gatt.h)(0x55669CF7)
-I (.\include\ble_gattc.h)(0x55669CF7)
-I (.\include\ble_gatts.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_db_discovery.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services\ble_srv_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\softdevice_handler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_scheduler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\ble_stack_handler_types.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\ant_stack_handler_types.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_advdata_parser.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_advdata.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards.h)(0x551206C6)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards\pca10001.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x554CB02A)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\pstorage.h)(0x540109BC)
-I (.\app_inc\pstorage_platform.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager\device_manager.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_os.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_errors.h)(0x540109BC)
-I (.\app_inc\device_manager_cnfg.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_trace.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services\ble_hrs_c.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services\ble_bas_c.h)(0x540109BC)
-I (.\app_inc\client_handling.h)(0x55669CF7)
-I (..\global_inc\ms_pacman.h)(0x55669CF9)
-I (..\global_inc\ms_pacman_service.h)(0x55669CF9)
-F (.\src\client_handling.c)(0x55669CF7)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\client_handling.o --omf_browse .\objects\client_handling.crf --depend .\objects\client_handling.d)
-I (.\app_inc\client_handling.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (.\include\ble.h)(0x55669CF7)
-I (.\include\ble_ranges.h)(0x55669CF7)
-I (.\include\ble_types.h)(0x55669CF7)
-I (.\include\ble_gap.h)(0x55669CF7)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (.\include\ble_l2cap.h)(0x55669CF7)
-I (.\include\ble_err.h)(0x55669CF7)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (.\include\ble_gatt.h)(0x55669CF7)
-I (.\include\ble_gattc.h)(0x55669CF7)
-I (.\include\ble_gatts.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager\device_manager.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_os.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_errors.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (.\app_inc\device_manager_cnfg.h)(0x55669CF7)
-I (..\global_inc\ms_pacman.h)(0x55669CF9)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x554CB02A)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (.\include\nrf_soc.h)(0x55669CF7)
-I (.\include\nrf_error_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards.h)(0x551206C6)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards\pca10001.h)(0x540109BC)
-I (..\global_inc\ms_pacman_service.h)(0x55669CF9)
-I (.\include\nrf_sdm.h)(0x55669CF7)
-I (.\include\nrf_error_sdm.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_trace.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_db_discovery.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services\ble_srv_common.h)(0x540109BC)
-I (..\global_inc\nunchuck_service.h)(0x55669CF9)
-I (..\global_inc\nunchuck.h)(0x55669CF9)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\twi_master.h)(0x540109BC)
-F (.\app_inc\device_manager_cnfg.h)(0x55669CF7)()
-F (.\app_inc\pstorage_platform.h)(0x55669CF7)()
-F (.\app_inc\client_handling.h)(0x55669CF7)()
-F (..\global_inc\ms_pacman_service.h)(0x55669CF9)()
-F (..\global_inc\nunchuck_service.h)(0x55669CF9)()
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_debug_assert_handler.c)(0x540109BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\ble_debug_assert_handler.o --omf_browse .\objects\ble_debug_assert_handler.crf --depend .\objects\ble_debug_assert_handler.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_debug_assert_handler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_error_log.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_flash.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-F (C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\global_src\app_trace.c)(0x5566B5EC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\app_trace.o --omf_browse .\objects\app_trace.crf --depend .\objects\app_trace.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_uart.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\app_util_platform.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\simple_uart.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_gpiote.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards.h)(0x551206C6)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards\pca10001.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x554CB02A)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_trace.h)(0x540109BC)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\ble_db_discovery.c)(0x552C324A)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\ble_db_discovery.o --omf_browse .\objects\ble_db_discovery.crf --depend .\objects\ble_db_discovery.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_db_discovery.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (.\include\ble_gattc.h)(0x55669CF7)
-I (.\include\ble_gatt.h)(0x55669CF7)
-I (.\include\ble_types.h)(0x55669CF7)
-I (.\include\ble_ranges.h)(0x55669CF7)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (.\include\ble.h)(0x55669CF7)
-I (.\include\ble_gap.h)(0x55669CF7)
-I (.\include\ble_l2cap.h)(0x55669CF7)
-I (.\include\ble_err.h)(0x55669CF7)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (.\include\ble_gatts.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services\ble_srv_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_trace.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\pstorage.c)(0x540109BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\pstorage.o --omf_browse .\objects\pstorage.crf --depend .\objects\pstorage.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\pstorage.h)(0x540109BC)
-I (.\app_inc\pstorage_platform.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_assert.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (.\include\nrf_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (.\include\nrf_error_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\ble\device_manager\device_manager_central.c)(0x5526B566)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\device_manager_central.o --omf_browse .\objects\device_manager_central.crf --depend .\objects\device_manager_central.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager\device_manager.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_os.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk\sdk_errors.h)(0x540109BC)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (.\include\ble.h)(0x55669CF7)
-I (.\include\ble_ranges.h)(0x55669CF7)
-I (.\include\ble_types.h)(0x55669CF7)
-I (.\include\ble_gap.h)(0x55669CF7)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (.\include\ble_l2cap.h)(0x55669CF7)
-I (.\include\ble_err.h)(0x55669CF7)
-I (.\include\ble_gatt.h)(0x55669CF7)
-I (.\include\ble_gattc.h)(0x55669CF7)
-I (.\include\ble_gatts.h)(0x55669CF7)
-I (.\app_inc\device_manager_cnfg.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_trace.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_advdata.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\pstorage.h)(0x540109BC)
-I (.\app_inc\pstorage_platform.h)(0x55669CF7)
-I (.\include\ble_hci.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_button.c)(0x540109BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\app_button.o --omf_browse .\objects\app_button.crf --depend .\objects\app_button.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_button.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_scheduler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x554CB02A)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_gpiote.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_timer.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_gpiote.c)(0x540109BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\app_gpiote.o --omf_browse .\objects\app_gpiote.crf --depend .\objects\app_gpiote.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_gpiote.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\app_util_platform.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x554CB02A)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_timer.c)(0x540109BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\app_timer.o --omf_browse .\objects\app_timer.crf --depend .\objects\app_timer.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_timer.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_scheduler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (.\include\nrf_soc.h)(0x55669CF7)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (.\include\nrf_error_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_delay.h)(0x55122886)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\app_util_platform.h)(0x540109BC)
-F (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\sd_common\softdevice_handler.c)(0x540109BC)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\softdevice_handler.o --omf_browse .\objects\softdevice_handler.crf --depend .\objects\softdevice_handler.d)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\softdevice_handler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (.\include\nrf_sdm.h)(0x55669CF7)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (.\include\nrf_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (.\include\nrf_error_soc.h)(0x55669CF7)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (.\include\nrf_error_sdm.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_error.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_scheduler.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common\app_util.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\ble_stack_handler_types.h)(0x540109BC)
-I (.\include\ble.h)(0x55669CF7)
-I (.\include\ble_ranges.h)(0x55669CF7)
-I (.\include\ble_types.h)(0x55669CF7)
-I (.\include\ble_gap.h)(0x55669CF7)
-I (.\include\ble_l2cap.h)(0x55669CF7)
-I (.\include\ble_err.h)(0x55669CF7)
-I (.\include\ble_gatt.h)(0x55669CF7)
-I (.\include\ble_gattc.h)(0x55669CF7)
-I (.\include\ble_gatts.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common\ant_stack_handler_types.h)(0x540109BC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_assert.h)(0x540109BC)
-F (..\MsPacmanNode\src\ms_pacman.c)(0x55669CF8)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\ms_pacman.o --omf_browse .\objects\ms_pacman.crf --depend .\objects\ms_pacman.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf_gpio.h)(0x554CB02A)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards.h)(0x551206C6)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\boards\pca10001.h)(0x540109BC)
-I (..\global_inc\ms_pacman.h)(0x55669CF9)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (.\include\nrf_soc.h)(0x55669CF7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (.\include\nrf_svc.h)(0x55669CF7)
-I (.\include\nrf_error_soc.h)(0x55669CF7)
-I (.\include\nrf_error.h)(0x55669CF7)
-I (..\global_inc\ms_pacman_service.h)(0x55669CF9)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nordic_common.h)(0x540109BC)
-I (.\include\nrf_sdm.h)(0x55669CF7)
-I (.\include\nrf_error_sdm.h)(0x55669CF7)
-I (.\include\ble.h)(0x55669CF7)
-I (.\include\ble_ranges.h)(0x55669CF7)
-I (.\include\ble_types.h)(0x55669CF7)
-I (.\include\ble_gap.h)(0x55669CF7)
-I (.\include\ble_l2cap.h)(0x55669CF7)
-I (.\include\ble_err.h)(0x55669CF7)
-I (.\include\ble_gatt.h)(0x55669CF7)
-I (.\include\ble_gattc.h)(0x55669CF7)
-I (.\include\ble_gatts.h)(0x55669CF7)
-F (..\riot_needed_source\boards\pca10001\board.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\board.o --omf_browse .\objects\board.crf --depend .\objects\board.d)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-F (..\riot_needed_source\core\atomic.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\atomic.o --omf_browse .\objects\atomic.crf --depend .\objects\atomic.d)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\atomic.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/atomic_arch.h)(0x55525E55)
-F (..\riot_needed_source\core\bitarithm.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\bitarithm.o --omf_browse .\objects\bitarithm.crf --depend .\objects\bitarithm.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-F (..\riot_needed_source\core\clist.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\clist.o --omf_browse .\objects\clist.crf --depend .\objects\clist.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-F (..\riot_needed_source\core\hwtimer.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\hwtimer.o --omf_browse .\objects\hwtimer.crf --depend .\objects\hwtimer.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\core\include\lifo.h)(0x55525E55)
-I (..\riot_needed_source\core\include\mutex.h)(0x55525E55)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-I (..\riot_needed_source\core\include\hwtimer.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\hwtimer_cpu.h)(0x55525E56)
-I (..\riot_needed_source\core\include\arch/hwtimer_arch.h)(0x55525E55)
-F (..\riot_needed_source\core\kernel_init.c)(0x5566AD6C)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\kernel_init.o --omf_browse .\objects\kernel_init.crf --depend .\objects\kernel_init.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\errno.h)(0x5476D400)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\core\include\lpm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/lpm_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\hwtimer.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\hwtimer_cpu.h)(0x55525E56)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-F (..\riot_needed_source\core\lifo.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\lifo.o --omf_browse .\objects\lifo.crf --depend .\objects\lifo.d)
-I (..\riot_needed_source\core\include\lifo.h)(0x55525E55)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-F (..\riot_needed_source\core\msg.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\msg.o --omf_browse .\objects\msg.crf --depend .\objects\msg.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-F (..\riot_needed_source\core\mutex.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\mutex.o --omf_browse .\objects\mutex.crf --depend .\objects\mutex.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\mutex.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\atomic.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/atomic_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-F (..\riot_needed_source\core\panic.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\panic.o --omf_browse .\objects\panic.crf --depend .\objects\panic.d)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\lpm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/lpm_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\panic.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/panic_arch.h)(0x55525E55)
-F (..\riot_needed_source\core\priority_queue.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\priority_queue.o --omf_browse .\objects\priority_queue.crf --depend .\objects\priority_queue.d)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-F (..\riot_needed_source\core\reboot.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\reboot.o --omf_browse .\objects\reboot.crf --depend .\objects\reboot.d)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/reboot_arch.h)(0x55525E55)
-F (..\riot_needed_source\core\ringbuffer.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\ringbuffer.o --omf_browse .\objects\ringbuffer.crf --depend .\objects\ringbuffer.d)
-I (..\riot_needed_source\core\include\ringbuffer.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-F (..\riot_needed_source\core\sched.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\sched.o --omf_browse .\objects\sched.crf --depend .\objects\sched.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-F (..\riot_needed_source\core\thread.c)(0x5566ADC8)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\thread.o --omf_browse .\objects\thread.crf --depend .\objects\thread.d)
-I (C:\Keil_v5\ARM\ARMCC\include\errno.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-I (..\riot_needed_source\core\include\hwtimer.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\hwtimer_cpu.h)(0x55525E56)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-F (..\riot_needed_source\cpu\nrf51822\cpu.c)(0x55525E56)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\cpu.o --omf_browse .\objects\cpu.crf --depend .\objects\cpu.d)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\boards\pca10001\include\periph_conf.h)(0x55525E55)
-F (..\riot_needed_source\cpu\nrf51822\hwtimer_arch.c)(0x55525E56)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\hwtimer_arch.o --omf_browse .\objects\hwtimer_arch.crf --depend .\objects\hwtimer_arch.d)
-I (..\riot_needed_source\core\include\arch/hwtimer_arch.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\drivers\include\periph/timer.h)(0x55525E57)
-I (..\riot_needed_source\boards\pca10001\include\periph_conf.h)(0x55525E55)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-F (..\riot_needed_source\cpu\nrf51822\lpm_arch.c)(0x55525E56)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\lpm_arch.o --omf_browse .\objects\lpm_arch.crf --depend .\objects\lpm_arch.d)
-I (..\riot_needed_source\core\include\arch/lpm_arch.h)(0x55525E55)
-F (..\riot_needed_source\cpu\cortex-m0_common\irq_arch.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\irq_arch.o --omf_browse .\objects\irq_arch.crf --depend .\objects\irq_arch.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-F (..\riot_needed_source\cpu\cortex-m0_common\panic.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\panic_1.o --omf_browse .\objects\panic_1.crf --depend .\objects\panic_1.d)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\lpm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/lpm_arch.h)(0x55525E55)
-F (..\riot_needed_source\cpu\cortex-m0_common\reboot_arch.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\reboot_arch.o --omf_browse .\objects\reboot_arch.crf --depend .\objects\reboot_arch.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/reboot_arch.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\hwtimer.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\hwtimer_cpu.h)(0x55525E56)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-F (..\riot_needed_source\cpu\cortex-m0_common\thread_arch.c)(0x55525E55)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\thread_arch.o --omf_browse .\objects\thread_arch.crf --depend .\objects\thread_arch.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-F (..\riot_needed_source\sys\transceiver\transceiver.c)(0x55525E58)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\transceiver.o --omf_browse .\objects\transceiver.crf --depend .\objects\transceiver.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\errno.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\radio/types.h)(0x55525E58)
-I (..\riot_needed_source\boards\pca10001\include\board.h)(0x5566B0BC)
-I (..\riot_needed_source\sys\include\timex.h)(0x5566B304)
-I (..\riot_needed_source\sys\include\transceiver.h)(0x5566B229)
-I (..\riot_needed_source\core\include\debug.h)(0x55525E55)
-F (..\riot_needed_source\sys\uart0\uart0.c)(0x55525E58)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\uart0.o --omf_browse .\objects\uart0.crf --depend .\objects\uart0.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5476D400)
-I (..\riot_needed_source\cpu\nrf51822\include\cpu-conf.h)(0x5566B186)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51.h)(0x55525E56)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (..\riot_needed_source\cpu\nrf51822\include\nrf51_bitfields.h)(0x55525E56)
-I (..\riot_needed_source\sys\include\chardev_thread.h)(0x55525E58)
-I (..\riot_needed_source\core\include\ringbuffer.h)(0x55525E55)
-I (..\riot_needed_source\core\include\thread.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (..\riot_needed_source\core\include\attributes.h)(0x55525E55)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5476D400)
-I (..\riot_needed_source\sys\include\config.h)(0x55525E58)
-I (..\riot_needed_source\core\include\tcb.h)(0x55525E55)
-I (..\riot_needed_source\core\include\priority_queue.h)(0x55525E55)
-I (..\riot_needed_source\core\include\clist.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_macros.h)(0x55525E55)
-I (..\riot_needed_source\core\include\cib.h)(0x55525E55)
-I (..\riot_needed_source\core\include\msg.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_types.h)(0x5566A8E7)
-I (C:\Keil_v5\ARM\ARMCC\include\inttypes.h)(0x5476D3FA)
-I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x5476D3FA)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\cpu.h)(0x55525E55)
-I (..\riot_needed_source\core\include\irq.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/irq_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\flags.h)(0x55525E55)
-I (..\riot_needed_source\core\include\sched.h)(0x55525E55)
-I (..\riot_needed_source\core\include\bitarithm.h)(0x55525E55)
-I (..\riot_needed_source\core\include\arch/thread_arch.h)(0x55525E55)
-I (..\riot_needed_source\core\include\kernel_internal.h)(0x55525E55)
-I (..\riot_needed_source\sys\include\posix_io.h)(0x55525E58)
-I (..\riot_needed_source\sys\include\board_uart0.h)(0x55525E58)
-F (RTE\Device\nRF51822_xxAA\arm_startup_nrf51.s)(0x55669CF7)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "NRF51 SETA 1"--list .\listings\arm_startup_nrf51.lst --xref -o .\objects\arm_startup_nrf51.o --depend .\objects\arm_startup_nrf51.d)
-F (RTE\Device\nRF51822_xxAA\system_nrf51.c)(0x55669CF7)(--c99 -c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork --split_sections -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\app_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\device_manager -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\ble\ble_services -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\boards -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\include\sd_common -IC:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\sdk -I.\app_inc -I.\include -I..\global_inc -I..\riot_needed_source\core\include -I..\riot_needed_source\core\include\arch -I..\riot_needed_source\cpu\nrf51822\include -I..\riot_needed_source\sys\include -I..\riot_needed_source\sys\include\radio -I..\riot_needed_source\cpu\cortex-m0_common\include -I..\riot_needed_source\boards\pca10001\include -I..\riot_needed_source\drivers\include\periph -I..\riot_needed_source\drivers\include-I C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\MasterNode\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DNRF51 -DBLE_STACK_SUPPORT_REQD -DBOARD_PCA10001 -DCOREIF_NG-o .\objects\system_nrf51.o --omf_browse .\objects\system_nrf51.crf --depend .\objects\system_nrf51.d)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5476D400)
-I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5476D400)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51.h)(0x540109DC)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cm0.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmInstr.h)(0x55525E55)
-I (..\riot_needed_source\cpu\cortex-m0_common\include\core_cmFunc.h)(0x55525E55)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\system_nrf51.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_bitfields.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\nrf51_deprecated.h)(0x540109DC)
-I (C:\Keil_v5\ARM\Device\Nordic\nrf51822\Include\compiler_abstraction.h)(0x540109DC)
