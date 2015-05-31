@@ -1,0 +1,6 @@
+USEMODULE += msp430_common
+
+ifneq (,$(filter defaulttransceiver,$(USEMODULE)))
+	USEMODULE += cc2420
+	USEMODULE += transceiver
+endif
