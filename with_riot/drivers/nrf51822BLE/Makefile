@@ -1,3 +1,3 @@
-MODULE = nrf51822BLE 
+#MODULE = nrf51822BLE 
 
 include $(RIOTBASE)/Makefile.base

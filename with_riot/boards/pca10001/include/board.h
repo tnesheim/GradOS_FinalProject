@@ -28,6 +28,8 @@
 extern "C" {
 #endif
 
+typedef uint8_t radio_packet_length_t;
+
 /**
  * @name Define the nominal CPU core clock in this board
  */

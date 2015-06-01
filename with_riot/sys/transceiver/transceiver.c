@@ -315,6 +315,7 @@ static void *run(void *arg)
             case RCV_PKT_MC1322X:
             case RCV_PKT_NATIVE:
             case RCV_PKT_AT86RF231:
+            case RCV_PKT_RCV_PKT_NRF51822BLE:
                 receive_packet(m.type, m.content.value);
                 break;
 
@@ -433,7 +434,8 @@ static void receive_packet(uint16_t type, uint8_t pos)
         case RCV_PKT_AT86RF231:
             t = TRANSCEIVER_AT86RF231;
             break;
-
+        case RCV_PKT_NRF51822BLE:
+            t = TRANSCEIVER_NRF51822BLE;
         default:
             t = TRANSCEIVER_NONE;
             break;
@@ -490,6 +492,12 @@ static void receive_packet(uint16_t type, uint8_t pos)
 #ifdef MODULE_NATIVENET
             radio_packet_t *trans_p = &(transceiver_buffer[transceiver_buffer_pos]);
             receive_nativenet_packet(trans_p);
+#endif
+        }
+        else if (type == RCV_PKT_NRF51822BLE) {
+#ifdef MODULE_NRF51822BLE
+            radio_packet_t *trans_p = &(transceiver_buffer[transceiver_buffer_pos]);
+            receive_nrf51822ble_packet(trans_p);
 #endif
         }
         else {
@@ -724,6 +732,34 @@ void receive_at86rf231_packet(ieee802154_packet_t *trans_p)
     DEBUG("Content: %s\n", trans_p->frame.payload);
 }
 #endif
+
+#ifdef MODULE_NRF51822BLE
+static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
+{
+    //The BLE radio pkt that will get the received data
+    ble_radio_pkt blePkt;
+
+    /*Disable interrupts during copying*/
+    state = disableIRQ();
+
+    //Receive the BLE radio packet over SPI
+    nrfRcvPkt(&blePkt);
+
+    //Copy the data over
+    trans_p->src = blePkt.src_address;
+    trans_p->dst = blePkt.dest_address;
+    trans_p->rssi = 0;
+    trans_p->lqi = 0;
+    trans_p->length = NRF51822_MAX_DATA_LENGTH;
+    memcpy((void *) &(data_buffer[transceiver_buffer_pos * PAYLOAD_SIZE]), blePkt.payload, NRF51822_MAX_DATA_LENGTH);
+    
+    trans_p->data = (uint8_t *) &(data_buffer[transceiver_buffer_pos * NRF51822_MAX_DATA_LENGTH]);
+
+    /*Restore interrupts*/
+    restoreIRQ(state);
+}
+#endif
+
 /*------------------------------------------------------------------------------------*/
 /*
  * @brief Sends a radio packet to the receiver

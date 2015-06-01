@@ -26,6 +26,8 @@
 extern "C" {
 #endif
 
+#define TRANSCEIVER_BUFFER_SIZE (1)
+
 /**
  * @name Kernel configuration
  * @{

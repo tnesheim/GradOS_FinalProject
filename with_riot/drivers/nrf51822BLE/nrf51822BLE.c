@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <string.h>
 
 #include "kernel.h"
 #include "mutex.h"
@@ -25,5 +26,20 @@ void nrfInitSPI(void)
    do
    {
       spi_transfer_bytes(SPI_0, NRF_BLE_INIT_STR, rcvBuf, 4);   
-   } while(memcmp(rcvBuf, NRF_BLE_INIT_SUCESS, 6) == 0); 
+   } while(memcmp(rcvBuf, NRF_BLE_INIT_SUCCESS, 4) != 0); 
+}
+
+/*Receives the current BLE radio pkt*/
+void nrfRcvPkt(ble_radio_pkt * blePkt)
+{
+   uint8_t rcv_buf[NRF51822_SPI_PKT_LEN];
+
+   //Receive ble packets
+   spi_transfer_bytes(SPI_0, NULL, rcv_buf, NRF51822_SPI_PKT_LEN);
+
+   //Copy the data over to the radio pkt buffer
+   blePkt->src_address  = rcv_buf[NRF51822_SPI_SRC_OFFSET];
+   blePkt->dest_address = rcv_buf[NRF51822_SPI_DST_OFFSET];
+   //Copy the payload over
+   memcpy(blePkt->payload, &(rcv_buf[NRF51822_SPI_PAYLOAD_OFFSET]), NRF51822_MAX_DATA_LENGTH);
 }

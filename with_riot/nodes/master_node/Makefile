@@ -16,7 +16,9 @@ CFLAGS += -DDEVELHELP
 QUIET ?= 1
 
 #Say which modules to use
+
 USEMODULE += periph
+USEMODULE += vtimer
 USEMODULE += nrf51822BLE 
 
 include $(RIOTBASE)/Makefile.include

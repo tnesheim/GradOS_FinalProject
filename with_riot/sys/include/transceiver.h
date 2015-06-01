@@ -91,6 +91,8 @@
 #include "nrf51822BLE.h"
 #ifndef TRANSCEIVER_DEFAULT
 #define TRANCEIVER_DEFAULT TRANSCEIVER_NRF51822BLE
+#endif
+#endif
 
 #ifdef __cplusplus
 extern "C" {

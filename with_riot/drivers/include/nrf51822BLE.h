@@ -7,17 +7,31 @@
 #include "mutex.h"
 #include "periph/spi.h"
 
-#define NRF51822_MAX_DATA_LENGTH (64)
+#define NRF51822_MAX_DATA_LENGTH (20)
 #define NRF51822_BROADCAST_ADDRESS (0xFFFF)
+
+#define NRF51822_SPI_PKT_LEN 2 + NRF51822_MAX_DATA_LENGTH
+#define NRF51822_SPI_SRC_OFFSET 0
+#define NRF51822_SPI_DST_OFFSET 1
+#define NRF51822_SPI_PAYLOAD_OFFSET 2
 
 #define NRF_BLE_INIT_STR     "INIT"
 #define NRF_BLE_INIT_SUCCESS "GOOD"
 
+//BLE Radio pkt
+typedef struct ble_radio_pkt {
+   uint16_t src_address;
+   uint16_t dest_address;
+   uint8_t payload[NRF51822_MAX_DATA_LENGTH];
+} ble_radio_pkt;
 
 /*Initialize the NRF BLE transceiver w/ the RIOT OS*/
 void nrf51822ble_init(void);
 
 /*Initialize the spi connection and send the init pkt*/
 void nrfInitSPI(void);
+
+/*Receives the current BLE radio pkt*/
+void nrfRcvPkt(ble_radio_pkt * blePkt);
 
 #endif 
