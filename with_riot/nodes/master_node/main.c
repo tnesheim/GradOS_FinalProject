@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "board.h"
 #include "kernel.h"
+#include "thread.h"
+#include "msg.h"
 #include "periph/spi.h"
 #include "transceiver.h"
 #include "vtimer.h"

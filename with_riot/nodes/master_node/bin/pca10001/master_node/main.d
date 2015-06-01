@@ -49,6 +49,12 @@
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/flags.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/sched.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/bitarithm.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/thread.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/kernel.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/arch/thread_arch.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/attributes.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/kernel_internal.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/msg.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/spi.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/periph_conf.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/transceiver.h \
@@ -63,8 +69,7 @@
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/time.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/time.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/priority_queue.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/msg.h
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h:
 
@@ -164,6 +169,18 @@
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/bitarithm.h:
 
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/thread.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/kernel.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/arch/thread_arch.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/attributes.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/kernel_internal.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/msg.h:
+
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/spi.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/periph_conf.h:
@@ -193,5 +210,3 @@
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/priority_queue.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h:
-
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/msg.h:

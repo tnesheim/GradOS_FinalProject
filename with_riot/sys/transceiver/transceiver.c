@@ -135,7 +135,7 @@ void receive_mc1322x_packet(ieee802154_packet_t *trans_p);
 void receive_at86rf231_packet(ieee802154_packet_t *trans_p);
 #endif
 #ifdef MODULE_NRF51822BLE
-void receive_nrf51822ble_packet(radio_packet_t *trans_p);
+static void receive_nrf51822ble_packet(radio_packet_t *trans_p);
 #endif
 static int8_t send_packet(transceiver_type_t t, void *pkt);
 static int32_t get_channel(transceiver_type_t t);
@@ -315,7 +315,7 @@ static void *run(void *arg)
             case RCV_PKT_MC1322X:
             case RCV_PKT_NATIVE:
             case RCV_PKT_AT86RF231:
-            case RCV_PKT_RCV_PKT_NRF51822BLE:
+            case RCV_PKT_NRF51822BLE:
                 receive_packet(m.type, m.content.value);
                 break;
 
@@ -740,7 +740,7 @@ static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
     ble_radio_pkt blePkt;
 
     /*Disable interrupts during copying*/
-    state = disableIRQ();
+    dINT();
 
     //Receive the BLE radio packet over SPI
     nrfRcvPkt(&blePkt);
@@ -756,7 +756,7 @@ static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
     trans_p->data = (uint8_t *) &(data_buffer[transceiver_buffer_pos * NRF51822_MAX_DATA_LENGTH]);
 
     /*Restore interrupts*/
-    restoreIRQ(state);
+    eINT();
 }
 #endif
 
@@ -809,6 +809,10 @@ static int8_t send_packet(transceiver_type_t t, void *pkt)
     at86rf231_packet_t at86rf231_pkt;
 #endif
 
+#ifdef MODULE_NRF51822BLE
+    ble_radio_pkt *nrf_radio_pkt = (ble_radio_pkt *) pkt;
+#endif
+
     switch (t) {
         case TRANSCEIVER_CC1100:
 #if (defined(MODULE_CC110X) || defined(MODULE_CC110X_LEGACY))
@@ -857,7 +861,11 @@ static int8_t send_packet(transceiver_type_t t, void *pkt)
             res = at86rf231_send(&at86rf231_pkt);
             break;
 #endif
-
+#ifdef MODULE_NRF51822BLE
+        case TRANSCEIVER_NRF51822BLE:
+            nrfSendPkt(nrf_radio_pkt);
+            break;
+#endif
         default:
             puts("Unknown transceiver");
             break;
