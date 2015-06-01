@@ -1,0 +1,19 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\client_handling.o"
+".\objects\ble_debug_assert_handler.o"
+".\objects\app_trace.o"
+".\objects\ble_db_discovery.o"
+".\objects\pstorage.o"
+".\objects\device_manager_central.o"
+".\objects\app_button.o"
+".\objects\app_gpiote.o"
+".\objects\app_timer.o"
+".\objects\softdevice_handler.o"
+".\objects\spi_slave.o"
+".\objects\arm_startup_nrf51.o"
+".\objects\system_nrf51.o"
+--strict --scatter ".\Objects\MasterNode.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MasterNode.map" -o .\Objects\MasterNode.axf
