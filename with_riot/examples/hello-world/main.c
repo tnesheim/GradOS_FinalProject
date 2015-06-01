@@ -21,17 +21,14 @@
 
 #include <stdio.h>
 #include "board.h"
-#include "softdevice_handler.h"
 
 int main(void)
 {
     LED_RED_ON;
 
     puts("Hello World!");
-    uint8_t a;
-    uint16_t b;
-    char ret = sd_ble_evt_get(&a,&b);
-    printf("output %i\n",ret);
+
+    printf("Test.");
 
     return 0;
 }

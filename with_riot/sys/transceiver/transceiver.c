@@ -1,4 +1,4 @@
-/**
+/*
  * Generic transceiver module as an interface to NIC driver.
  *
  * Copyright (C) 2013  INRIA.
@@ -62,6 +62,10 @@
 #ifdef MODULE_AT86RF231
 #include "at86rf231.h"
 #include "ieee802154_frame.h"
+#endif
+
+#ifdef MODULE_NRF51822BLE
+#include "nrf51822BLE.h"
 #endif
 
 #define ENABLE_DEBUG (0)
@@ -130,6 +134,9 @@ void receive_mc1322x_packet(ieee802154_packet_t *trans_p);
 #ifdef MODULE_AT86RF231
 void receive_at86rf231_packet(ieee802154_packet_t *trans_p);
 #endif
+#ifdef MODULE_NRF51822BLE
+void receive_nrf51822ble_packet(radio_packet_t *trans_p);
+#endif
 static int8_t send_packet(transceiver_type_t t, void *pkt);
 static int32_t get_channel(transceiver_type_t t);
 static int32_t set_channel(transceiver_type_t t, void *channel);
@@ -175,7 +182,7 @@ void transceiver_init(transceiver_type_t t)
     }
 
     /* check if a non defined bit is set */
-    if (t & ~(TRANSCEIVER_CC1100 | TRANSCEIVER_CC2420 | TRANSCEIVER_MC1322X | TRANSCEIVER_NATIVE | TRANSCEIVER_AT86RF231)) {
+    if (t & ~(TRANSCEIVER_CC1100 | TRANSCEIVER_CC2420 | TRANSCEIVER_MC1322X | TRANSCEIVER_NATIVE | TRANSCEIVER_AT86RF231 | TRANSCEIVER_NRF51822BLE)) {
         puts("Invalid transceiver type");
     }
     else {
@@ -233,6 +240,13 @@ kernel_pid_t transceiver_start(void)
     }
 
 #endif
+#ifdef MODULE_NRF51822BLE
+    else if (transceivers & TRANSCEIVER_NRF51822BLE) {
+        nrf51822ble_init();
+    }
+
+#endif
+
     return transceiver_pid;
 }
 

@@ -1,5 +1,5 @@
-/Users/tnesheim/GitHub/RIOT/examples/hello-world/bin/pca10005/core/bitarithm.o: \
- /Users/tnesheim/GitHub/RIOT/core/bitarithm.c \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/examples/hello-world/bin/pca10005/core/bitarithm.o: \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/bitarithm.c \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/_ansi.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/newlib.h \

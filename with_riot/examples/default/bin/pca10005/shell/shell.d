@@ -1,5 +1,5 @@
-/Users/tnesheim/GitHub/RIOT/examples/default/bin/pca10005/shell/shell.o: \
- /Users/tnesheim/GitHub/RIOT/sys/shell/shell.c \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/examples/default/bin/pca10005/shell/shell.o: \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/shell/shell.c \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/string.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/_ansi.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/newlib.h \
@@ -26,10 +26,10 @@
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdlib.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/stdlib.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/alloca.h \
- /Users/tnesheim/GitHub/RIOT/sys/include/shell.h \
- /Users/tnesheim/GitHub/RIOT/core/include/attributes.h \
- /Users/tnesheim/GitHub/RIOT/sys/include/shell_commands.h \
- /Users/tnesheim/GitHub/RIOT/sys/include/shell.h
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/shell.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/attributes.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/shell_commands.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/shell.h
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/string.h:
 
@@ -83,10 +83,10 @@
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/alloca.h:
 
-/Users/tnesheim/GitHub/RIOT/sys/include/shell.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/shell.h:
 
-/Users/tnesheim/GitHub/RIOT/core/include/attributes.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/attributes.h:
 
-/Users/tnesheim/GitHub/RIOT/sys/include/shell_commands.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/shell_commands.h:
 
-/Users/tnesheim/GitHub/RIOT/sys/include/shell.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/shell.h:

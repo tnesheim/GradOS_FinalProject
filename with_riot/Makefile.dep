@@ -165,6 +165,10 @@ ifneq (,$(filter cc2420,$(USEMODULE)))
   USEMODULE += ieee802154
 endif
 
+ifneq (,$(filter nrf51822BLE,$(USEMODULE)))
+  USEMODULE += transceiver
+endif
+
 ifneq (,$(filter at86rf231,$(USEMODULE)))
   USEMODULE += netdev_802154
   USEMODULE += ieee802154

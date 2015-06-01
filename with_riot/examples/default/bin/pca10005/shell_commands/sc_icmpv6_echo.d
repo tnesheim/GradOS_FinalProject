@@ -1,5 +1,5 @@
-/Users/tnesheim/GitHub/RIOT/examples/default/bin/pca10005/shell_commands/sc_icmpv6_echo.o: \
- /Users/tnesheim/GitHub/RIOT/sys/shell/commands/sc_icmpv6_echo.c \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/examples/default/bin/pca10005/shell_commands/sc_icmpv6_echo.o: \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/shell/commands/sc_icmpv6_echo.c \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/_ansi.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/newlib.h \

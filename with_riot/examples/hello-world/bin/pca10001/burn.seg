@@ -1,0 +1,8 @@
+device nrf51822
+speed 1000
+w4 4001e504 1
+loadbin /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/examples/hello-world/bin/pca10001/hello-world.bin 0
+r
+g
+exit
+

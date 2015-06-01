@@ -87,6 +87,11 @@
 #endif
 #endif
 
+#ifdef MODULE_NRF51822BLE
+#include "nrf51822BLE.h"
+#ifndef TRANSCEIVER_DEFAULT
+#define TRANCEIVER_DEFAULT TRANSCEIVER_NRF51822BLE
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -147,6 +152,14 @@ extern "C" {
 #define TRANSCEIVER_BROADCAST  NATIVE_BROADCAST_ADDRESS
 #endif
 #endif
+#ifdef MODULE_NRF51822BLE
+#if (NRF51822_MAX_DATA_LENGTH > PAYLOAD_SIZE)
+#undef PAYLOAD_SIZE
+#define PAYLOAD_SIZE (NRF51822_MAX_DATA_LENGTH)
+#define TRANSCEIVER_BROADCAST  NRF51822_BROADCAST_ADDRESS
+#endif
+#endif
+
 /**
  * @}
  */
@@ -178,6 +191,7 @@ extern "C" {
 #define TRANSCEIVER_MC1322X     (0x08)      /**< MC1322X transceivers */
 #define TRANSCEIVER_NATIVE      (0x10)      /**< NATIVE transceivers */
 #define TRANSCEIVER_AT86RF231   (0x20)      /**< AT86RF231 transceivers */
+#define TRANSCEIVER_NRF51822BLE (0x40)      /**< NRF51822 transceiver */
 /**
  * @}
  */
@@ -203,6 +217,7 @@ enum transceiver_msg_type_t {
     RCV_PKT_MC1322X,       /**< packet was received by mc1322x transceiver */
     RCV_PKT_NATIVE,        /**< packet was received by native transceiver */
     RCV_PKT_AT86RF231,     /**< packet was received by AT86RF231 transceiver */
+    RCV_PKT_NRF51822BLE,
 
     /* Message types for transceiver <-> upper layer communication */
     PKT_PENDING,    /**< packet pending in transceiver buffer */
