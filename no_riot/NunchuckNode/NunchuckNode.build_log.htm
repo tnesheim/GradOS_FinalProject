@@ -21,12 +21,58 @@ Target DLL:      Segger\JL2CM3.dll V2.99.13.0
 Dialog DLL:      TARMCM1.DLL V1.9.0.0
  
 <h2>Project:</h2>
-C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\NunchuckNode\NunchuckNode.uvprojx
-Project File Date:  05/09/2015
+C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\no_riot\NunchuckNode\NunchuckNode.uvprojx
+Project File Date:  06/01/2015
 
 <h2>Output:</h2>
 Build target 'NunchuckNode'
-".\NunchuckNode.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+.\app_inc\nunchuck_service.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\app_inc\nunchuck.h(77): warning:  #1-D: last line of file ends without a newline
+  #endif 
+src\main.c(70): warning:  #1295-D: Deprecated declaration initLEDS - give arg types
+  static void initLEDS();
+src\main.c(218): warning:  #177-D: variable "err_code" was declared but never referenced
+      uint32_t err_code;
+src\main.c(472): warning:  #1-D: last line of file ends without a newline
+  }
+src\main.c(440): warning:  #550-D: variable "success" was set but never used
+     bool success;
+src\main.c(417): warning:  #177-D: function "initLEDS" was declared but never referenced
+  static void initLEDS()
+src\main.c(426): warning:  #177-D: function "setLED" was declared but never referenced
+  static void setLED(uint32_t led_num, bool set_led)
+src\main.c: 8 warnings, 0 errors
+compiling nunchuck.c...
+.\app_inc\nunchuck_service.h(35): warning:  #1-D: last line of file ends without a newline
+  #endif
+.\app_inc\nunchuck.h(77): warning:  #1-D: last line of file ends without a newline
+  #endif 
+src\nunchuck.c(258): warning:  #1-D: last line of file ends without a newline
+  }
+src\nunchuck.c: 3 warnings, 0 errors
+compiling twi_sw_master.c...
+compiling simple_uart.c...
+compiling app_trace.c...
+compiling pstorage.c...
+compiling ble_advdata.c...
+compiling ble_advdata_parser.c...
+compiling ble_conn_params.c...
+compiling ble_db_discovery.c...
+compiling device_manager_peripheral.c...
+compiling ble_srv_common.c...
+compiling softdevice_handler.c...
+compiling app_timer.c...
+compiling app_gpiote.c...
+compiling app_button.c...
+compiling ble_error_log.c...
+assembling arm_startup_nrf51.s...
+compiling system_nrf51.c...
+linking...
+Program Size: Code=17068 RO-data=532 RW-data=144 ZI-data=5552  
+FromELF: creating hex file...
+".\NunchuckNode.axf" - 0 Error(s), 11 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -43,7 +89,7 @@ Package Vendor: NordicSemiconductor
    * Component: Startup Version: 1.0.0
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\NunchuckNode\RTE
+  C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\no_riot\NunchuckNode\RTE
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\1.1.1\Device\Include
 

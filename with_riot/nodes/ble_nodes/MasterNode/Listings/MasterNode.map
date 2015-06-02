@@ -41,8 +41,6 @@ Section Cross References
     main.o(i.initSPI) refers to main.o(.constdata) for .constdata
     main.o(i.initSPI) refers to main.o(i.spi_event_handler) for spi_event_handler
     main.o(i.main) refers to main.o(i.initLeds) for initLeds
-    main.o(i.main) refers to main.o(i.initSPI) for initSPI
-    main.o(i.main) refers to main.o(i.waitForRIOT) for waitForRIOT
     main.o(i.main) refers to main.o(i.ble_stack_init) for ble_stack_init
     main.o(i.main) refers to client_handling.o(i.client_handling_init) for client_handling_init
     main.o(i.main) refers to main.o(i.device_manager_init) for device_manager_init
@@ -79,6 +77,7 @@ Section Cross References
     client_handling.o(i.client_handling_ble_evt_handler) refers to device_manager_central.o(i.dm_security_setup_req) for dm_security_setup_req
     client_handling.o(i.client_handling_ble_evt_handler) refers to main.o(i.app_error_handler) for app_error_handler
     client_handling.o(i.client_handling_ble_evt_handler) refers to client_handling.o(i.on_evt_write_rsp) for on_evt_write_rsp
+    client_handling.o(i.client_handling_ble_evt_handler) refers to rt_memcpy.o(.text) for __aeabi_memcpy
     client_handling.o(i.client_handling_ble_evt_handler) refers to client_handling.o(i.on_evt_hvx) for on_evt_hvx
     client_handling.o(i.client_handling_ble_evt_handler) refers to client_handling.o(i.on_evt_timeout) for on_evt_timeout
     client_handling.o(i.client_handling_ble_evt_handler) refers to ble_db_discovery.o(i.ble_db_discovery_on_ble_evt) for ble_db_discovery_on_ble_evt
@@ -603,9 +602,15 @@ Removing Unused input sections from the image.
 
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(i.initSPI), (40 bytes).
+    Removing main.o(i.spi_event_handler), (132 bytes).
+    Removing main.o(i.waitForRIOT), (56 bytes).
     Removing client_handling.o(.rev16_text), (4 bytes).
     Removing client_handling.o(.revsh_text), (4 bytes).
+    Removing client_handling.o(i.client_find_addr), (64 bytes).
     Removing client_handling.o(i.client_handling_count), (12 bytes).
+    Removing client_handling.o(i.rx_send), (100 bytes).
+    Removing client_handling.o(i.tx_get), (48 bytes).
     Removing ble_debug_assert_handler.o(.rev16_text), (4 bytes).
     Removing ble_debug_assert_handler.o(.revsh_text), (4 bytes).
     Removing ble_debug_assert_handler.o(i.ble_debug_assert_handler), (60 bytes).
@@ -626,6 +631,7 @@ Removing Unused input sections from the image.
     Removing device_manager_central.o(i.dm_device_delete), (120 bytes).
     Removing device_manager_central.o(i.dm_device_delete_all), (112 bytes).
     Removing device_manager_central.o(i.dm_distributed_keys_get), (228 bytes).
+    Removing device_manager_central.o(i.dm_peer_addr_get), (196 bytes).
     Removing device_manager_central.o(i.dm_peer_addr_set), (196 bytes).
     Removing device_manager_central.o(i.dm_security_status_req), (196 bytes).
     Removing device_manager_central.o(i.dm_service_context_delete), (112 bytes).
@@ -674,13 +680,17 @@ Removing Unused input sections from the image.
     Removing softdevice_handler.o(i.softdevice_handler_sd_disable), (28 bytes).
     Removing spi_slave.o(.rev16_text), (4 bytes).
     Removing spi_slave.o(.revsh_text), (4 bytes).
+    Removing spi_slave.o(i.NVIC_SetPriority), (120 bytes).
+    Removing spi_slave.o(i.spi_slave_buffers_set), (112 bytes).
+    Removing spi_slave.o(i.spi_slave_evt_handler_register), (24 bytes).
+    Removing spi_slave.o(i.spi_slave_init), (308 bytes).
     Removing spi_slave.o(i.spi_slave_set_cs_pull_up_config), (12 bytes).
     Removing spi_slave.o(i.spi_slave_set_drive_config), (12 bytes).
     Removing system_nrf51.o(.rev16_text), (4 bytes).
     Removing system_nrf51.o(.revsh_text), (4 bytes).
     Removing system_nrf51.o(i.SystemCoreClockUpdate), (16 bytes).
 
-78 unused section(s) (total 4883 bytes) removed from the image.
+89 unused section(s) (total 6083 bytes) removed from the image.
 
 ==============================================================================
 
@@ -690,65 +700,65 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
     ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
     ../clib/memcpset.c                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
     ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
-    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
-    ../clib/string.c                         0x00000000   Number         0  strncpy.o ABSOLUTE
     ../clib/string.c                         0x00000000   Number         0  memcmp.o ABSOLUTE
+    ../clib/string.c                         0x00000000   Number         0  strncpy.o ABSOLUTE
     ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
     C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_button.c 0x00000000   Number         0  app_button.o ABSOLUTE
     C:\Keil_v5\ARM\Device\Nordic\nrf51822\Source\app_common\app_gpiote.c 0x00000000   Number         0  app_gpiote.o ABSOLUTE
@@ -842,236 +852,221 @@ Image Symbol Table
     NVIC_EnableIRQ                           0x0001d5b9   Thumb Code    14  app_timer.o(i.NVIC_EnableIRQ)
     i.NVIC_SetPendingIRQ                     0x0001d5cc   Section        0  app_timer.o(i.NVIC_SetPendingIRQ)
     NVIC_SetPendingIRQ                       0x0001d5cd   Thumb Code    14  app_timer.o(i.NVIC_SetPendingIRQ)
-    i.NVIC_SetPriority                       0x0001d5e0   Section        0  spi_slave.o(i.NVIC_SetPriority)
-    NVIC_SetPriority                         0x0001d5e1   Thumb Code   110  spi_slave.o(i.NVIC_SetPriority)
-    i.RTC1_IRQHandler                        0x0001d658   Section        0  app_timer.o(i.RTC1_IRQHandler)
-    i.SPI1_TWI1_IRQHandler                   0x0001d680   Section        0  spi_slave.o(i.SPI1_TWI1_IRQHandler)
-    i.SWI0_IRQHandler                        0x0001d710   Section        0  app_timer.o(i.SWI0_IRQHandler)
-    i.SWI2_IRQHandler                        0x0001d718   Section        0  softdevice_handler.o(i.SWI2_IRQHandler)
-    i.SystemInit                             0x0001d754   Section        0  system_nrf51.o(i.SystemInit)
-    i.__ARM_common_switch8                   0x0001d78c   Section        0  pstorage.o(i.__ARM_common_switch8)
-    i.app_error_handler                      0x0001d7a8   Section        0  main.o(i.app_error_handler)
-    i.app_evt_notify                         0x0001d7d0   Section        0  device_manager_central.o(i.app_evt_notify)
-    app_evt_notify                           0x0001d7d1   Thumb Code    22  device_manager_central.o(i.app_evt_notify)
-    i.app_notify                             0x0001d7ec   Section        0  pstorage.o(i.app_notify)
-    app_notify                               0x0001d7ed   Thumb Code   100  pstorage.o(i.app_notify)
-    i.assert_nrf_callback                    0x0001d858   Section        0  main.o(i.assert_nrf_callback)
-    i.ble_db_discovery_evt_register          0x0001d86c   Section        0  ble_db_discovery.o(i.ble_db_discovery_evt_register)
-    i.ble_db_discovery_init                  0x0001d8a8   Section        0  ble_db_discovery.o(i.ble_db_discovery_init)
-    i.ble_db_discovery_on_ble_evt            0x0001d8d0   Section        0  ble_db_discovery.o(i.ble_db_discovery_on_ble_evt)
-    i.ble_db_discovery_start                 0x0001d94c   Section        0  ble_db_discovery.o(i.ble_db_discovery_start)
-    i.ble_evt_dispatch                       0x0001d9e0   Section        0  main.o(i.ble_evt_dispatch)
-    ble_evt_dispatch                         0x0001d9e1   Thumb Code    24  main.o(i.ble_evt_dispatch)
-    i.ble_stack_init                         0x0001d9f8   Section        0  main.o(i.ble_stack_init)
-    ble_stack_init                           0x0001d9f9   Thumb Code   148  main.o(i.ble_stack_init)
-    i.characteristics_discover               0x0001daa4   Section        0  ble_db_discovery.o(i.characteristics_discover)
-    characteristics_discover                 0x0001daa5   Thumb Code    80  ble_db_discovery.o(i.characteristics_discover)
-    i.client_find                            0x0001daf4   Section        0  client_handling.o(i.client_find)
-    client_find                              0x0001daf5   Thumb Code    36  client_handling.o(i.client_find)
-    i.client_find_addr                       0x0001db1c   Section        0  client_handling.o(i.client_find_addr)
-    client_find_addr                         0x0001db1d   Thumb Code    60  client_handling.o(i.client_find_addr)
-    i.client_handling_ble_evt_handler        0x0001db5c   Section        0  client_handling.o(i.client_handling_ble_evt_handler)
-    i.client_handling_create                 0x0001dc10   Section        0  client_handling.o(i.client_handling_create)
-    i.client_handling_destroy                0x0001dc70   Section        0  client_handling.o(i.client_handling_destroy)
-    i.client_handling_dm_event_handler       0x0001dca8   Section        0  client_handling.o(i.client_handling_dm_event_handler)
-    i.client_handling_init                   0x0001dcd8   Section        0  client_handling.o(i.client_handling_init)
-    i.cmd_process                            0x0001dd8c   Section        0  pstorage.o(i.cmd_process)
-    cmd_process                              0x0001dd8d   Thumb Code   360  pstorage.o(i.cmd_process)
-    i.cmd_queue_dequeue                      0x0001df00   Section        0  pstorage.o(i.cmd_queue_dequeue)
-    cmd_queue_dequeue                        0x0001df01   Thumb Code    32  pstorage.o(i.cmd_queue_dequeue)
-    i.cmd_queue_element_init                 0x0001df24   Section        0  pstorage.o(i.cmd_queue_element_init)
-    cmd_queue_element_init                   0x0001df25   Thumb Code    56  pstorage.o(i.cmd_queue_element_init)
-    i.cmd_queue_enqueue                      0x0001df60   Section        0  pstorage.o(i.cmd_queue_enqueue)
-    cmd_queue_enqueue                        0x0001df61   Thumb Code   136  pstorage.o(i.cmd_queue_enqueue)
-    i.cmd_queue_init                         0x0001dfec   Section        0  pstorage.o(i.cmd_queue_init)
-    cmd_queue_init                           0x0001dfed   Thumb Code    38  pstorage.o(i.cmd_queue_init)
-    i.compare_reg_update                     0x0001e020   Section        0  app_timer.o(i.compare_reg_update)
-    compare_reg_update                       0x0001e021   Thumb Code   124  app_timer.o(i.compare_reg_update)
-    i.connection_instance_find               0x0001e0b0   Section        0  device_manager_central.o(i.connection_instance_find)
-    connection_instance_find                 0x0001e0b1   Thumb Code    64  device_manager_central.o(i.connection_instance_find)
-    i.connection_instance_init               0x0001e0f8   Section        0  device_manager_central.o(i.connection_instance_init)
-    connection_instance_init                 0x0001e0f9   Thumb Code    50  device_manager_central.o(i.connection_instance_init)
-    i.db_discovery_evt_handler               0x0001e130   Section        0  client_handling.o(i.db_discovery_evt_handler)
-    db_discovery_evt_handler                 0x0001e131   Thumb Code   118  client_handling.o(i.db_discovery_evt_handler)
-    i.db_discovery_init                      0x0001e1b4   Section        0  client_handling.o(i.db_discovery_init)
-    db_discovery_init                        0x0001e1b5   Thumb Code    36  client_handling.o(i.db_discovery_init)
-    i.descriptors_discover                   0x0001e1f0   Section        0  ble_db_discovery.o(i.descriptors_discover)
-    descriptors_discover                     0x0001e1f1   Thumb Code   178  ble_db_discovery.o(i.descriptors_discover)
-    i.device_context_store                   0x0001e2a4   Section        0  device_manager_central.o(i.device_context_store)
-    device_context_store                     0x0001e2a5   Thumb Code   172  device_manager_central.o(i.device_context_store)
-    i.device_instance_allocate               0x0001e374   Section        0  device_manager_central.o(i.device_instance_allocate)
-    device_instance_allocate                 0x0001e375   Thumb Code   116  device_manager_central.o(i.device_instance_allocate)
-    i.device_instance_find                   0x0001e3f0   Section        0  device_manager_central.o(i.device_instance_find)
-    device_instance_find                     0x0001e3f1   Thumb Code    54  device_manager_central.o(i.device_instance_find)
-    i.device_manager_event_handler           0x0001e42c   Section        0  main.o(i.device_manager_event_handler)
-    device_manager_event_handler             0x0001e42d   Thumb Code   328  main.o(i.device_manager_event_handler)
-    i.device_manager_init                    0x0001e58c   Section        0  main.o(i.device_manager_init)
-    device_manager_init                      0x0001e58d   Thumb Code   206  main.o(i.device_manager_init)
-    i.discovery_complete_evt_trigger         0x0001e670   Section        0  ble_db_discovery.o(i.discovery_complete_evt_trigger)
-    discovery_complete_evt_trigger           0x0001e671   Thumb Code   152  ble_db_discovery.o(i.discovery_complete_evt_trigger)
-    i.discovery_error_evt_trigger            0x0001e714   Section        0  ble_db_discovery.o(i.discovery_error_evt_trigger)
-    discovery_error_evt_trigger              0x0001e715   Thumb Code   124  ble_db_discovery.o(i.discovery_error_evt_trigger)
-    i.dm_ble_evt_handler                     0x0001e79c   Section        0  device_manager_central.o(i.dm_ble_evt_handler)
-    i.dm_handle_initialize                   0x0001ed0c   Section        0  device_manager_central.o(i.dm_handle_initialize)
-    i.dm_init                                0x0001ed28   Section        0  device_manager_central.o(i.dm_init)
-    i.dm_peer_addr_get                       0x0001ee24   Section        0  device_manager_central.o(i.dm_peer_addr_get)
-    i.dm_pstorage_cb_handler                 0x0001eee8   Section        0  device_manager_central.o(i.dm_pstorage_cb_handler)
-    dm_pstorage_cb_handler                   0x0001eee9   Thumb Code   472  device_manager_central.o(i.dm_pstorage_cb_handler)
-    i.dm_register                            0x0001f0e8   Section        0  device_manager_central.o(i.dm_register)
-    i.dm_security_setup_req                  0x0001f15c   Section        0  device_manager_central.o(i.dm_security_setup_req)
-    i.dm_whitelist_create                    0x0001f2b8   Section        0  device_manager_central.o(i.dm_whitelist_create)
-    i.elapsed_ticks_acquire                  0x0001f3cc   Section        0  app_timer.o(i.elapsed_ticks_acquire)
-    elapsed_ticks_acquire                    0x0001f3cd   Thumb Code    82  app_timer.o(i.elapsed_ticks_acquire)
-    i.expired_timers_handler                 0x0001f430   Section        0  app_timer.o(i.expired_timers_handler)
-    expired_timers_handler                   0x0001f431   Thumb Code   100  app_timer.o(i.expired_timers_handler)
-    i.gattc_context_apply                    0x0001f49c   Section        0  device_manager_central.o(i.gattc_context_apply)
-    gattc_context_apply                      0x0001f49d   Thumb Code     6  device_manager_central.o(i.gattc_context_apply)
-    i.gattc_context_load                     0x0001f4a2   Section        0  device_manager_central.o(i.gattc_context_load)
-    gattc_context_load                       0x0001f4a3   Thumb Code     6  device_manager_central.o(i.gattc_context_load)
-    i.gattc_context_store                    0x0001f4a8   Section        0  device_manager_central.o(i.gattc_context_store)
-    gattc_context_store                      0x0001f4a9   Thumb Code     6  device_manager_central.o(i.gattc_context_store)
-    i.gatts_context_apply                    0x0001f4b0   Section        0  device_manager_central.o(i.gatts_context_apply)
-    gatts_context_apply                      0x0001f4b1   Thumb Code   110  device_manager_central.o(i.gatts_context_apply)
-    i.gatts_context_load                     0x0001f52c   Section        0  device_manager_central.o(i.gatts_context_load)
-    gatts_context_load                       0x0001f52d   Thumb Code    56  device_manager_central.o(i.gatts_context_load)
-    i.gatts_context_store                    0x0001f568   Section        0  device_manager_central.o(i.gatts_context_store)
-    gatts_context_store                      0x0001f569   Thumb Code   172  device_manager_central.o(i.gatts_context_store)
-    i.gattsc_context_apply                   0x0001f624   Section        0  device_manager_central.o(i.gattsc_context_apply)
-    gattsc_context_apply                     0x0001f625   Thumb Code    26  device_manager_central.o(i.gattsc_context_apply)
-    i.gattsc_context_load                    0x0001f63e   Section        0  device_manager_central.o(i.gattsc_context_load)
-    gattsc_context_load                      0x0001f63f   Thumb Code    30  device_manager_central.o(i.gattsc_context_load)
-    i.gattsc_context_store                   0x0001f65c   Section        0  device_manager_central.o(i.gattsc_context_store)
-    gattsc_context_store                     0x0001f65d   Thumb Code    30  device_manager_central.o(i.gattsc_context_store)
-    i.initLeds                               0x0001f67a   Section        0  main.o(i.initLeds)
-    initLeds                                 0x0001f67b   Thumb Code    28  main.o(i.initLeds)
-    i.initSPI                                0x0001f698   Section        0  main.o(i.initSPI)
-    initSPI                                  0x0001f699   Thumb Code    30  main.o(i.initSPI)
-    i.initiate_security_request              0x0001f6c0   Section        0  device_manager_central.o(i.initiate_security_request)
-    i.intern_softdevice_events_execute       0x0001f744   Section        0  softdevice_handler.o(i.intern_softdevice_events_execute)
-    i.is_char_discovery_reqd                 0x0001f804   Section        0  ble_db_discovery.o(i.is_char_discovery_reqd)
-    is_char_discovery_reqd                   0x0001f805   Thumb Code    30  ble_db_discovery.o(i.is_char_discovery_reqd)
-    i.is_desc_discovery_reqd                 0x0001f822   Section        0  ble_db_discovery.o(i.is_desc_discovery_reqd)
-    is_desc_discovery_reqd                   0x0001f823   Thumb Code    84  ble_db_discovery.o(i.is_desc_discovery_reqd)
-    i.is_disabled_in_debug_needed            0x0001f878   Section        0  system_nrf51.o(i.is_disabled_in_debug_needed)
-    is_disabled_in_debug_needed              0x0001f879   Thumb Code    52  system_nrf51.o(i.is_disabled_in_debug_needed)
-    i.is_manual_peripheral_setup_needed      0x0001f8b0   Section        0  system_nrf51.o(i.is_manual_peripheral_setup_needed)
-    is_manual_peripheral_setup_needed        0x0001f8b1   Thumb Code   104  system_nrf51.o(i.is_manual_peripheral_setup_needed)
-    i.is_word_aligned                        0x0001f91c   Section        0  pstorage.o(i.is_word_aligned)
-    is_word_aligned                          0x0001f91d   Thumb Code    18  pstorage.o(i.is_word_aligned)
-    i.list_deletions_handler                 0x0001f930   Section        0  app_timer.o(i.list_deletions_handler)
-    list_deletions_handler                   0x0001f931   Thumb Code   176  app_timer.o(i.list_deletions_handler)
-    i.list_insertions_handler                0x0001f9f0   Section        0  app_timer.o(i.list_insertions_handler)
-    list_insertions_handler                  0x0001f9f1   Thumb Code   264  app_timer.o(i.list_insertions_handler)
-    i.main                                   0x0001fb10   Section        0  main.o(i.main)
-    i.no_service_context_apply               0x0001fb30   Section        0  device_manager_central.o(i.no_service_context_apply)
-    no_service_context_apply                 0x0001fb31   Thumb Code     6  device_manager_central.o(i.no_service_context_apply)
-    i.no_service_context_load                0x0001fb36   Section        0  device_manager_central.o(i.no_service_context_load)
-    no_service_context_load                  0x0001fb37   Thumb Code     6  device_manager_central.o(i.no_service_context_load)
-    i.no_service_context_store               0x0001fb3c   Section        0  device_manager_central.o(i.no_service_context_store)
-    no_service_context_store                 0x0001fb3d   Thumb Code     6  device_manager_central.o(i.no_service_context_store)
-    i.notif_enable                           0x0001fb44   Section        0  client_handling.o(i.notif_enable)
-    notif_enable                             0x0001fb45   Thumb Code    90  client_handling.o(i.notif_enable)
-    i.nrf_gpio_cfg_output                    0x0001fbb8   Section        0  main.o(i.nrf_gpio_cfg_output)
-    nrf_gpio_cfg_output                      0x0001fbb9   Thumb Code    18  main.o(i.nrf_gpio_cfg_output)
-    i.nrf_gpio_pin_clear                     0x0001fbcc   Section        0  main.o(i.nrf_gpio_pin_clear)
-    nrf_gpio_pin_clear                       0x0001fbcd   Thumb Code    10  main.o(i.nrf_gpio_pin_clear)
-    i.on_ble_evt                             0x0001fbdc   Section        0  main.o(i.on_ble_evt)
-    on_ble_evt                               0x0001fbdd   Thumb Code   126  main.o(i.on_ble_evt)
-    i.on_characteristic_discovery_rsp        0x0001fc80   Section        0  ble_db_discovery.o(i.on_characteristic_discovery_rsp)
-    on_characteristic_discovery_rsp          0x0001fc81   Thumb Code   278  ble_db_discovery.o(i.on_characteristic_discovery_rsp)
-    i.on_descriptor_discovery_rsp            0x0001fd98   Section        0  ble_db_discovery.o(i.on_descriptor_discovery_rsp)
-    on_descriptor_discovery_rsp              0x0001fd99   Thumb Code   180  ble_db_discovery.o(i.on_descriptor_discovery_rsp)
-    i.on_evt_hvx                             0x0001fe50   Section        0  client_handling.o(i.on_evt_hvx)
-    on_evt_hvx                               0x0001fe51   Thumb Code    64  client_handling.o(i.on_evt_hvx)
-    i.on_evt_timeout                         0x0001fe90   Section        0  client_handling.o(i.on_evt_timeout)
-    on_evt_timeout                           0x0001fe91   Thumb Code    54  client_handling.o(i.on_evt_timeout)
-    i.on_evt_write_rsp                       0x0001fee0   Section        0  client_handling.o(i.on_evt_write_rsp)
-    on_evt_write_rsp                         0x0001fee1   Thumb Code    74  client_handling.o(i.on_evt_write_rsp)
-    i.on_primary_srv_discovery_rsp           0x0001ff2a   Section        0  ble_db_discovery.o(i.on_primary_srv_discovery_rsp)
-    on_primary_srv_discovery_rsp             0x0001ff2b   Thumb Code    88  ble_db_discovery.o(i.on_primary_srv_discovery_rsp)
-    i.on_srv_disc_completion                 0x0001ff84   Section        0  ble_db_discovery.o(i.on_srv_disc_completion)
-    on_srv_disc_completion                   0x0001ff85   Thumb Code   118  ble_db_discovery.o(i.on_srv_disc_completion)
-    i.on_sys_evt                             0x00020008   Section        0  main.o(i.on_sys_evt)
-    on_sys_evt                               0x00020009   Thumb Code    42  main.o(i.on_sys_evt)
-    i.peer_instance_init                     0x00020038   Section        0  device_manager_central.o(i.peer_instance_init)
-    peer_instance_init                       0x00020039   Thumb Code    68  device_manager_central.o(i.peer_instance_init)
-    i.pending_user_evts_send                 0x00020080   Section        0  ble_db_discovery.o(i.pending_user_evts_send)
-    pending_user_evts_send                   0x00020081   Thumb Code    42  ble_db_discovery.o(i.pending_user_evts_send)
-    i.pstorage_access_status_get             0x000200b8   Section        0  pstorage.o(i.pstorage_access_status_get)
-    i.pstorage_block_identifier_get          0x000200e4   Section        0  pstorage.o(i.pstorage_block_identifier_get)
-    i.pstorage_clear                         0x00020174   Section        0  pstorage.o(i.pstorage_clear)
-    i.pstorage_init                          0x00020224   Section        0  pstorage.o(i.pstorage_init)
-    i.pstorage_load                          0x00020308   Section        0  pstorage.o(i.pstorage_load)
-    i.pstorage_register                      0x000203f4   Section        0  pstorage.o(i.pstorage_register)
-    i.pstorage_store                         0x00020574   Section        0  pstorage.o(i.pstorage_store)
-    i.pstorage_sys_event_handler             0x00020648   Section        0  pstorage.o(i.pstorage_sys_event_handler)
-    i.pstorage_update                        0x000207a0   Section        0  pstorage.o(i.pstorage_update)
-    i.registered_handler_get                 0x00020874   Section        0  ble_db_discovery.o(i.registered_handler_get)
-    registered_handler_get                   0x00020875   Thumb Code    56  ble_db_discovery.o(i.registered_handler_get)
-    i.registered_handler_set                 0x000208b4   Section        0  ble_db_discovery.o(i.registered_handler_set)
-    registered_handler_set                   0x000208b5   Thumb Code    58  ble_db_discovery.o(i.registered_handler_set)
-    i.rtc1_counter_get                       0x000208f8   Section        0  app_timer.o(i.rtc1_counter_get)
-    rtc1_counter_get                         0x000208f9   Thumb Code     6  app_timer.o(i.rtc1_counter_get)
-    i.rtc1_start                             0x00020904   Section        0  app_timer.o(i.rtc1_start)
-    rtc1_start                               0x00020905   Thumb Code    48  app_timer.o(i.rtc1_start)
-    i.rtc1_stop                              0x00020940   Section        0  app_timer.o(i.rtc1_stop)
-    rtc1_stop                                0x00020941   Thumb Code    66  app_timer.o(i.rtc1_stop)
-    i.rx_send                                0x00020998   Section        0  client_handling.o(i.rx_send)
-    i.scan_start                             0x000209fc   Section        0  main.o(i.scan_start)
-    scan_start                               0x000209fd   Thumb Code   250  main.o(i.scan_start)
-    i.sense_level_toggle                     0x00020b14   Section        0  app_gpiote.o(i.sense_level_toggle)
-    sense_level_toggle                       0x00020b15   Thumb Code   128  app_gpiote.o(i.sense_level_toggle)
-    i.service_discover                       0x00020b94   Section        0  client_handling.o(i.service_discover)
-    service_discover                         0x00020b95   Thumb Code    48  client_handling.o(i.service_discover)
-    i.setLed                                 0x00020bdc   Section        0  main.o(i.setLed)
-    setLed                                   0x00020bdd   Thumb Code    32  main.o(i.setLed)
-    i.sm_state_change                        0x00020c00   Section        0  spi_slave.o(i.sm_state_change)
-    sm_state_change                          0x00020c01   Thumb Code    14  spi_slave.o(i.sm_state_change)
-    i.softdevice_assertion_handler           0x00020c14   Section        0  softdevice_handler.o(i.softdevice_assertion_handler)
-    i.softdevice_ble_evt_handler_set         0x00020c28   Section        0  softdevice_handler.o(i.softdevice_ble_evt_handler_set)
-    i.softdevice_handler_init                0x00020c40   Section        0  softdevice_handler.o(i.softdevice_handler_init)
-    i.softdevice_sys_evt_handler_set         0x00020ca8   Section        0  softdevice_handler.o(i.softdevice_sys_evt_handler_set)
-    i.spi_event_handler                      0x00020cc0   Section        0  main.o(i.spi_event_handler)
-    i.spi_slave_buffers_set                  0x00020d44   Section        0  spi_slave.o(i.spi_slave_buffers_set)
-    i.spi_slave_evt_handler_register         0x00020db4   Section        0  spi_slave.o(i.spi_slave_evt_handler_register)
-    i.spi_slave_init                         0x00020dcc   Section        0  spi_slave.o(i.spi_slave_init)
-    i.state_entry_action_execute             0x00020f00   Section        0  spi_slave.o(i.state_entry_action_execute)
-    state_entry_action_execute               0x00020f01   Thumb Code   160  spi_slave.o(i.state_entry_action_execute)
-    i.storage_operation_dummy_handler        0x00020fb4   Section        0  device_manager_central.o(i.storage_operation_dummy_handler)
-    storage_operation_dummy_handler          0x00020fb5   Thumb Code     8  device_manager_central.o(i.storage_operation_dummy_handler)
-    i.swap_state_process                     0x00020fbc   Section        0  pstorage.o(i.swap_state_process)
-    swap_state_process                       0x00020fbd   Thumb Code   578  pstorage.o(i.swap_state_process)
-    i.sys_evt_dispatch                       0x00021208   Section        0  main.o(i.sys_evt_dispatch)
-    sys_evt_dispatch                         0x00021209   Thumb Code    18  main.o(i.sys_evt_dispatch)
-    i.ticks_diff_get                         0x0002121a   Section        0  app_timer.o(i.ticks_diff_get)
-    ticks_diff_get                           0x0002121b   Thumb Code    10  app_timer.o(i.ticks_diff_get)
-    i.timeout_handler_exec                   0x00021224   Section        0  app_timer.o(i.timeout_handler_exec)
-    timeout_handler_exec                     0x00021225   Thumb Code    60  app_timer.o(i.timeout_handler_exec)
-    i.timer_list_handler                     0x00021268   Section        0  app_timer.o(i.timer_list_handler)
-    timer_list_handler                       0x00021269   Thumb Code    70  app_timer.o(i.timer_list_handler)
-    i.timer_list_handler_sched               0x000212b8   Section        0  app_timer.o(i.timer_list_handler_sched)
-    timer_list_handler_sched                 0x000212b9   Thumb Code    10  app_timer.o(i.timer_list_handler_sched)
-    i.timer_list_insert                      0x000212c4   Section        0  app_timer.o(i.timer_list_insert)
-    timer_list_insert                        0x000212c5   Thumb Code   212  app_timer.o(i.timer_list_insert)
-    i.timer_list_remove                      0x000213a0   Section        0  app_timer.o(i.timer_list_remove)
-    timer_list_remove                        0x000213a1   Thumb Code   170  app_timer.o(i.timer_list_remove)
-    i.timer_timeouts_check                   0x00021454   Section        0  app_timer.o(i.timer_timeouts_check)
-    timer_timeouts_check                     0x00021455   Thumb Code   132  app_timer.o(i.timer_timeouts_check)
-    i.timer_timeouts_check_sched             0x000214f0   Section        0  app_timer.o(i.timer_timeouts_check_sched)
-    timer_timeouts_check_sched               0x000214f1   Thumb Code    10  app_timer.o(i.timer_timeouts_check_sched)
-    i.tx_get                                 0x000214fc   Section        0  client_handling.o(i.tx_get)
-    i.update_status_bit_reset                0x0002152c   Section        0  device_manager_central.o(i.update_status_bit_reset)
-    update_status_bit_reset                  0x0002152d   Thumb Code    16  device_manager_central.o(i.update_status_bit_reset)
-    i.waitForRIOT                            0x00021540   Section        0  main.o(i.waitForRIOT)
-    waitForRIOT                              0x00021541   Thumb Code    36  main.o(i.waitForRIOT)
-    .constdata                               0x00021578   Section       28  main.o(.constdata)
-    m_connection_param                       0x00021578   Data           8  main.o(.constdata)
-    .constdata                               0x00021594   Section       16  client_handling.o(.constdata)
-    .constdata                               0x000215a4   Section       52  device_manager_central.o(.constdata)
-    .conststring                             0x000215d8   Section       89  device_manager_central.o(.conststring)
-    .conststring                             0x00021634   Section       68  app_timer.o(.conststring)
-    .conststring                             0x00021678   Section       76  softdevice_handler.o(.conststring)
-    .conststring                             0x000216c4   Section      108  spi_slave.o(.conststring)
+    i.RTC1_IRQHandler                        0x0001d5e0   Section        0  app_timer.o(i.RTC1_IRQHandler)
+    i.SPI1_TWI1_IRQHandler                   0x0001d608   Section        0  spi_slave.o(i.SPI1_TWI1_IRQHandler)
+    i.SWI0_IRQHandler                        0x0001d698   Section        0  app_timer.o(i.SWI0_IRQHandler)
+    i.SWI2_IRQHandler                        0x0001d6a0   Section        0  softdevice_handler.o(i.SWI2_IRQHandler)
+    i.SystemInit                             0x0001d6dc   Section        0  system_nrf51.o(i.SystemInit)
+    i.__ARM_common_switch8                   0x0001d714   Section        0  pstorage.o(i.__ARM_common_switch8)
+    i.app_error_handler                      0x0001d730   Section        0  main.o(i.app_error_handler)
+    i.app_evt_notify                         0x0001d758   Section        0  device_manager_central.o(i.app_evt_notify)
+    app_evt_notify                           0x0001d759   Thumb Code    22  device_manager_central.o(i.app_evt_notify)
+    i.app_notify                             0x0001d774   Section        0  pstorage.o(i.app_notify)
+    app_notify                               0x0001d775   Thumb Code   100  pstorage.o(i.app_notify)
+    i.assert_nrf_callback                    0x0001d7e0   Section        0  main.o(i.assert_nrf_callback)
+    i.ble_db_discovery_evt_register          0x0001d7f4   Section        0  ble_db_discovery.o(i.ble_db_discovery_evt_register)
+    i.ble_db_discovery_init                  0x0001d830   Section        0  ble_db_discovery.o(i.ble_db_discovery_init)
+    i.ble_db_discovery_on_ble_evt            0x0001d858   Section        0  ble_db_discovery.o(i.ble_db_discovery_on_ble_evt)
+    i.ble_db_discovery_start                 0x0001d8d4   Section        0  ble_db_discovery.o(i.ble_db_discovery_start)
+    i.ble_evt_dispatch                       0x0001d968   Section        0  main.o(i.ble_evt_dispatch)
+    ble_evt_dispatch                         0x0001d969   Thumb Code    24  main.o(i.ble_evt_dispatch)
+    i.ble_stack_init                         0x0001d980   Section        0  main.o(i.ble_stack_init)
+    ble_stack_init                           0x0001d981   Thumb Code   148  main.o(i.ble_stack_init)
+    i.characteristics_discover               0x0001da2c   Section        0  ble_db_discovery.o(i.characteristics_discover)
+    characteristics_discover                 0x0001da2d   Thumb Code    80  ble_db_discovery.o(i.characteristics_discover)
+    i.client_find                            0x0001da7c   Section        0  client_handling.o(i.client_find)
+    client_find                              0x0001da7d   Thumb Code    36  client_handling.o(i.client_find)
+    i.client_handling_ble_evt_handler        0x0001daa4   Section        0  client_handling.o(i.client_handling_ble_evt_handler)
+    i.client_handling_create                 0x0001db80   Section        0  client_handling.o(i.client_handling_create)
+    i.client_handling_destroy                0x0001dbe0   Section        0  client_handling.o(i.client_handling_destroy)
+    i.client_handling_dm_event_handler       0x0001dc18   Section        0  client_handling.o(i.client_handling_dm_event_handler)
+    i.client_handling_init                   0x0001dc48   Section        0  client_handling.o(i.client_handling_init)
+    i.cmd_process                            0x0001dcfc   Section        0  pstorage.o(i.cmd_process)
+    cmd_process                              0x0001dcfd   Thumb Code   360  pstorage.o(i.cmd_process)
+    i.cmd_queue_dequeue                      0x0001de70   Section        0  pstorage.o(i.cmd_queue_dequeue)
+    cmd_queue_dequeue                        0x0001de71   Thumb Code    32  pstorage.o(i.cmd_queue_dequeue)
+    i.cmd_queue_element_init                 0x0001de94   Section        0  pstorage.o(i.cmd_queue_element_init)
+    cmd_queue_element_init                   0x0001de95   Thumb Code    56  pstorage.o(i.cmd_queue_element_init)
+    i.cmd_queue_enqueue                      0x0001ded0   Section        0  pstorage.o(i.cmd_queue_enqueue)
+    cmd_queue_enqueue                        0x0001ded1   Thumb Code   136  pstorage.o(i.cmd_queue_enqueue)
+    i.cmd_queue_init                         0x0001df5c   Section        0  pstorage.o(i.cmd_queue_init)
+    cmd_queue_init                           0x0001df5d   Thumb Code    38  pstorage.o(i.cmd_queue_init)
+    i.compare_reg_update                     0x0001df90   Section        0  app_timer.o(i.compare_reg_update)
+    compare_reg_update                       0x0001df91   Thumb Code   124  app_timer.o(i.compare_reg_update)
+    i.connection_instance_find               0x0001e020   Section        0  device_manager_central.o(i.connection_instance_find)
+    connection_instance_find                 0x0001e021   Thumb Code    64  device_manager_central.o(i.connection_instance_find)
+    i.connection_instance_init               0x0001e068   Section        0  device_manager_central.o(i.connection_instance_init)
+    connection_instance_init                 0x0001e069   Thumb Code    50  device_manager_central.o(i.connection_instance_init)
+    i.db_discovery_evt_handler               0x0001e0a0   Section        0  client_handling.o(i.db_discovery_evt_handler)
+    db_discovery_evt_handler                 0x0001e0a1   Thumb Code   118  client_handling.o(i.db_discovery_evt_handler)
+    i.db_discovery_init                      0x0001e124   Section        0  client_handling.o(i.db_discovery_init)
+    db_discovery_init                        0x0001e125   Thumb Code    36  client_handling.o(i.db_discovery_init)
+    i.descriptors_discover                   0x0001e160   Section        0  ble_db_discovery.o(i.descriptors_discover)
+    descriptors_discover                     0x0001e161   Thumb Code   178  ble_db_discovery.o(i.descriptors_discover)
+    i.device_context_store                   0x0001e214   Section        0  device_manager_central.o(i.device_context_store)
+    device_context_store                     0x0001e215   Thumb Code   172  device_manager_central.o(i.device_context_store)
+    i.device_instance_allocate               0x0001e2e4   Section        0  device_manager_central.o(i.device_instance_allocate)
+    device_instance_allocate                 0x0001e2e5   Thumb Code   116  device_manager_central.o(i.device_instance_allocate)
+    i.device_instance_find                   0x0001e360   Section        0  device_manager_central.o(i.device_instance_find)
+    device_instance_find                     0x0001e361   Thumb Code    54  device_manager_central.o(i.device_instance_find)
+    i.device_manager_event_handler           0x0001e39c   Section        0  main.o(i.device_manager_event_handler)
+    device_manager_event_handler             0x0001e39d   Thumb Code   328  main.o(i.device_manager_event_handler)
+    i.device_manager_init                    0x0001e4fc   Section        0  main.o(i.device_manager_init)
+    device_manager_init                      0x0001e4fd   Thumb Code   206  main.o(i.device_manager_init)
+    i.discovery_complete_evt_trigger         0x0001e5e0   Section        0  ble_db_discovery.o(i.discovery_complete_evt_trigger)
+    discovery_complete_evt_trigger           0x0001e5e1   Thumb Code   152  ble_db_discovery.o(i.discovery_complete_evt_trigger)
+    i.discovery_error_evt_trigger            0x0001e684   Section        0  ble_db_discovery.o(i.discovery_error_evt_trigger)
+    discovery_error_evt_trigger              0x0001e685   Thumb Code   124  ble_db_discovery.o(i.discovery_error_evt_trigger)
+    i.dm_ble_evt_handler                     0x0001e70c   Section        0  device_manager_central.o(i.dm_ble_evt_handler)
+    i.dm_handle_initialize                   0x0001ec7c   Section        0  device_manager_central.o(i.dm_handle_initialize)
+    i.dm_init                                0x0001ec98   Section        0  device_manager_central.o(i.dm_init)
+    i.dm_pstorage_cb_handler                 0x0001ed94   Section        0  device_manager_central.o(i.dm_pstorage_cb_handler)
+    dm_pstorage_cb_handler                   0x0001ed95   Thumb Code   472  device_manager_central.o(i.dm_pstorage_cb_handler)
+    i.dm_register                            0x0001ef94   Section        0  device_manager_central.o(i.dm_register)
+    i.dm_security_setup_req                  0x0001f008   Section        0  device_manager_central.o(i.dm_security_setup_req)
+    i.dm_whitelist_create                    0x0001f164   Section        0  device_manager_central.o(i.dm_whitelist_create)
+    i.elapsed_ticks_acquire                  0x0001f278   Section        0  app_timer.o(i.elapsed_ticks_acquire)
+    elapsed_ticks_acquire                    0x0001f279   Thumb Code    82  app_timer.o(i.elapsed_ticks_acquire)
+    i.expired_timers_handler                 0x0001f2dc   Section        0  app_timer.o(i.expired_timers_handler)
+    expired_timers_handler                   0x0001f2dd   Thumb Code   100  app_timer.o(i.expired_timers_handler)
+    i.gattc_context_apply                    0x0001f348   Section        0  device_manager_central.o(i.gattc_context_apply)
+    gattc_context_apply                      0x0001f349   Thumb Code     6  device_manager_central.o(i.gattc_context_apply)
+    i.gattc_context_load                     0x0001f34e   Section        0  device_manager_central.o(i.gattc_context_load)
+    gattc_context_load                       0x0001f34f   Thumb Code     6  device_manager_central.o(i.gattc_context_load)
+    i.gattc_context_store                    0x0001f354   Section        0  device_manager_central.o(i.gattc_context_store)
+    gattc_context_store                      0x0001f355   Thumb Code     6  device_manager_central.o(i.gattc_context_store)
+    i.gatts_context_apply                    0x0001f35c   Section        0  device_manager_central.o(i.gatts_context_apply)
+    gatts_context_apply                      0x0001f35d   Thumb Code   110  device_manager_central.o(i.gatts_context_apply)
+    i.gatts_context_load                     0x0001f3d8   Section        0  device_manager_central.o(i.gatts_context_load)
+    gatts_context_load                       0x0001f3d9   Thumb Code    56  device_manager_central.o(i.gatts_context_load)
+    i.gatts_context_store                    0x0001f414   Section        0  device_manager_central.o(i.gatts_context_store)
+    gatts_context_store                      0x0001f415   Thumb Code   172  device_manager_central.o(i.gatts_context_store)
+    i.gattsc_context_apply                   0x0001f4d0   Section        0  device_manager_central.o(i.gattsc_context_apply)
+    gattsc_context_apply                     0x0001f4d1   Thumb Code    26  device_manager_central.o(i.gattsc_context_apply)
+    i.gattsc_context_load                    0x0001f4ea   Section        0  device_manager_central.o(i.gattsc_context_load)
+    gattsc_context_load                      0x0001f4eb   Thumb Code    30  device_manager_central.o(i.gattsc_context_load)
+    i.gattsc_context_store                   0x0001f508   Section        0  device_manager_central.o(i.gattsc_context_store)
+    gattsc_context_store                     0x0001f509   Thumb Code    30  device_manager_central.o(i.gattsc_context_store)
+    i.initLeds                               0x0001f526   Section        0  main.o(i.initLeds)
+    initLeds                                 0x0001f527   Thumb Code    28  main.o(i.initLeds)
+    i.initiate_security_request              0x0001f544   Section        0  device_manager_central.o(i.initiate_security_request)
+    i.intern_softdevice_events_execute       0x0001f5c8   Section        0  softdevice_handler.o(i.intern_softdevice_events_execute)
+    i.is_char_discovery_reqd                 0x0001f688   Section        0  ble_db_discovery.o(i.is_char_discovery_reqd)
+    is_char_discovery_reqd                   0x0001f689   Thumb Code    30  ble_db_discovery.o(i.is_char_discovery_reqd)
+    i.is_desc_discovery_reqd                 0x0001f6a6   Section        0  ble_db_discovery.o(i.is_desc_discovery_reqd)
+    is_desc_discovery_reqd                   0x0001f6a7   Thumb Code    84  ble_db_discovery.o(i.is_desc_discovery_reqd)
+    i.is_disabled_in_debug_needed            0x0001f6fc   Section        0  system_nrf51.o(i.is_disabled_in_debug_needed)
+    is_disabled_in_debug_needed              0x0001f6fd   Thumb Code    52  system_nrf51.o(i.is_disabled_in_debug_needed)
+    i.is_manual_peripheral_setup_needed      0x0001f734   Section        0  system_nrf51.o(i.is_manual_peripheral_setup_needed)
+    is_manual_peripheral_setup_needed        0x0001f735   Thumb Code   104  system_nrf51.o(i.is_manual_peripheral_setup_needed)
+    i.is_word_aligned                        0x0001f7a0   Section        0  pstorage.o(i.is_word_aligned)
+    is_word_aligned                          0x0001f7a1   Thumb Code    18  pstorage.o(i.is_word_aligned)
+    i.list_deletions_handler                 0x0001f7b4   Section        0  app_timer.o(i.list_deletions_handler)
+    list_deletions_handler                   0x0001f7b5   Thumb Code   176  app_timer.o(i.list_deletions_handler)
+    i.list_insertions_handler                0x0001f874   Section        0  app_timer.o(i.list_insertions_handler)
+    list_insertions_handler                  0x0001f875   Thumb Code   264  app_timer.o(i.list_insertions_handler)
+    i.main                                   0x0001f994   Section        0  main.o(i.main)
+    i.no_service_context_apply               0x0001f9ac   Section        0  device_manager_central.o(i.no_service_context_apply)
+    no_service_context_apply                 0x0001f9ad   Thumb Code     6  device_manager_central.o(i.no_service_context_apply)
+    i.no_service_context_load                0x0001f9b2   Section        0  device_manager_central.o(i.no_service_context_load)
+    no_service_context_load                  0x0001f9b3   Thumb Code     6  device_manager_central.o(i.no_service_context_load)
+    i.no_service_context_store               0x0001f9b8   Section        0  device_manager_central.o(i.no_service_context_store)
+    no_service_context_store                 0x0001f9b9   Thumb Code     6  device_manager_central.o(i.no_service_context_store)
+    i.notif_enable                           0x0001f9c0   Section        0  client_handling.o(i.notif_enable)
+    notif_enable                             0x0001f9c1   Thumb Code    90  client_handling.o(i.notif_enable)
+    i.nrf_gpio_cfg_output                    0x0001fa34   Section        0  main.o(i.nrf_gpio_cfg_output)
+    nrf_gpio_cfg_output                      0x0001fa35   Thumb Code    18  main.o(i.nrf_gpio_cfg_output)
+    i.nrf_gpio_pin_clear                     0x0001fa48   Section        0  main.o(i.nrf_gpio_pin_clear)
+    nrf_gpio_pin_clear                       0x0001fa49   Thumb Code    10  main.o(i.nrf_gpio_pin_clear)
+    i.on_ble_evt                             0x0001fa58   Section        0  main.o(i.on_ble_evt)
+    on_ble_evt                               0x0001fa59   Thumb Code   112  main.o(i.on_ble_evt)
+    i.on_characteristic_discovery_rsp        0x0001faec   Section        0  ble_db_discovery.o(i.on_characteristic_discovery_rsp)
+    on_characteristic_discovery_rsp          0x0001faed   Thumb Code   278  ble_db_discovery.o(i.on_characteristic_discovery_rsp)
+    i.on_descriptor_discovery_rsp            0x0001fc04   Section        0  ble_db_discovery.o(i.on_descriptor_discovery_rsp)
+    on_descriptor_discovery_rsp              0x0001fc05   Thumb Code   180  ble_db_discovery.o(i.on_descriptor_discovery_rsp)
+    i.on_evt_hvx                             0x0001fcbc   Section        0  client_handling.o(i.on_evt_hvx)
+    on_evt_hvx                               0x0001fcbd   Thumb Code    64  client_handling.o(i.on_evt_hvx)
+    i.on_evt_timeout                         0x0001fcfc   Section        0  client_handling.o(i.on_evt_timeout)
+    on_evt_timeout                           0x0001fcfd   Thumb Code    54  client_handling.o(i.on_evt_timeout)
+    i.on_evt_write_rsp                       0x0001fd4c   Section        0  client_handling.o(i.on_evt_write_rsp)
+    on_evt_write_rsp                         0x0001fd4d   Thumb Code    74  client_handling.o(i.on_evt_write_rsp)
+    i.on_primary_srv_discovery_rsp           0x0001fd96   Section        0  ble_db_discovery.o(i.on_primary_srv_discovery_rsp)
+    on_primary_srv_discovery_rsp             0x0001fd97   Thumb Code    88  ble_db_discovery.o(i.on_primary_srv_discovery_rsp)
+    i.on_srv_disc_completion                 0x0001fdf0   Section        0  ble_db_discovery.o(i.on_srv_disc_completion)
+    on_srv_disc_completion                   0x0001fdf1   Thumb Code   118  ble_db_discovery.o(i.on_srv_disc_completion)
+    i.on_sys_evt                             0x0001fe74   Section        0  main.o(i.on_sys_evt)
+    on_sys_evt                               0x0001fe75   Thumb Code    42  main.o(i.on_sys_evt)
+    i.peer_instance_init                     0x0001fea4   Section        0  device_manager_central.o(i.peer_instance_init)
+    peer_instance_init                       0x0001fea5   Thumb Code    68  device_manager_central.o(i.peer_instance_init)
+    i.pending_user_evts_send                 0x0001feec   Section        0  ble_db_discovery.o(i.pending_user_evts_send)
+    pending_user_evts_send                   0x0001feed   Thumb Code    42  ble_db_discovery.o(i.pending_user_evts_send)
+    i.pstorage_access_status_get             0x0001ff24   Section        0  pstorage.o(i.pstorage_access_status_get)
+    i.pstorage_block_identifier_get          0x0001ff50   Section        0  pstorage.o(i.pstorage_block_identifier_get)
+    i.pstorage_clear                         0x0001ffe0   Section        0  pstorage.o(i.pstorage_clear)
+    i.pstorage_init                          0x00020090   Section        0  pstorage.o(i.pstorage_init)
+    i.pstorage_load                          0x00020174   Section        0  pstorage.o(i.pstorage_load)
+    i.pstorage_register                      0x00020260   Section        0  pstorage.o(i.pstorage_register)
+    i.pstorage_store                         0x000203e0   Section        0  pstorage.o(i.pstorage_store)
+    i.pstorage_sys_event_handler             0x000204b4   Section        0  pstorage.o(i.pstorage_sys_event_handler)
+    i.pstorage_update                        0x0002060c   Section        0  pstorage.o(i.pstorage_update)
+    i.registered_handler_get                 0x000206e0   Section        0  ble_db_discovery.o(i.registered_handler_get)
+    registered_handler_get                   0x000206e1   Thumb Code    56  ble_db_discovery.o(i.registered_handler_get)
+    i.registered_handler_set                 0x00020720   Section        0  ble_db_discovery.o(i.registered_handler_set)
+    registered_handler_set                   0x00020721   Thumb Code    58  ble_db_discovery.o(i.registered_handler_set)
+    i.rtc1_counter_get                       0x00020764   Section        0  app_timer.o(i.rtc1_counter_get)
+    rtc1_counter_get                         0x00020765   Thumb Code     6  app_timer.o(i.rtc1_counter_get)
+    i.rtc1_start                             0x00020770   Section        0  app_timer.o(i.rtc1_start)
+    rtc1_start                               0x00020771   Thumb Code    48  app_timer.o(i.rtc1_start)
+    i.rtc1_stop                              0x000207ac   Section        0  app_timer.o(i.rtc1_stop)
+    rtc1_stop                                0x000207ad   Thumb Code    66  app_timer.o(i.rtc1_stop)
+    i.scan_start                             0x00020804   Section        0  main.o(i.scan_start)
+    scan_start                               0x00020805   Thumb Code   250  main.o(i.scan_start)
+    i.sense_level_toggle                     0x0002091c   Section        0  app_gpiote.o(i.sense_level_toggle)
+    sense_level_toggle                       0x0002091d   Thumb Code   128  app_gpiote.o(i.sense_level_toggle)
+    i.service_discover                       0x0002099c   Section        0  client_handling.o(i.service_discover)
+    service_discover                         0x0002099d   Thumb Code    48  client_handling.o(i.service_discover)
+    i.setLed                                 0x000209e4   Section        0  main.o(i.setLed)
+    setLed                                   0x000209e5   Thumb Code    32  main.o(i.setLed)
+    i.sm_state_change                        0x00020a08   Section        0  spi_slave.o(i.sm_state_change)
+    sm_state_change                          0x00020a09   Thumb Code    14  spi_slave.o(i.sm_state_change)
+    i.softdevice_assertion_handler           0x00020a1c   Section        0  softdevice_handler.o(i.softdevice_assertion_handler)
+    i.softdevice_ble_evt_handler_set         0x00020a30   Section        0  softdevice_handler.o(i.softdevice_ble_evt_handler_set)
+    i.softdevice_handler_init                0x00020a48   Section        0  softdevice_handler.o(i.softdevice_handler_init)
+    i.softdevice_sys_evt_handler_set         0x00020ab0   Section        0  softdevice_handler.o(i.softdevice_sys_evt_handler_set)
+    i.state_entry_action_execute             0x00020ac8   Section        0  spi_slave.o(i.state_entry_action_execute)
+    state_entry_action_execute               0x00020ac9   Thumb Code   160  spi_slave.o(i.state_entry_action_execute)
+    i.storage_operation_dummy_handler        0x00020b7c   Section        0  device_manager_central.o(i.storage_operation_dummy_handler)
+    storage_operation_dummy_handler          0x00020b7d   Thumb Code     8  device_manager_central.o(i.storage_operation_dummy_handler)
+    i.swap_state_process                     0x00020b84   Section        0  pstorage.o(i.swap_state_process)
+    swap_state_process                       0x00020b85   Thumb Code   578  pstorage.o(i.swap_state_process)
+    i.sys_evt_dispatch                       0x00020dd0   Section        0  main.o(i.sys_evt_dispatch)
+    sys_evt_dispatch                         0x00020dd1   Thumb Code    18  main.o(i.sys_evt_dispatch)
+    i.ticks_diff_get                         0x00020de2   Section        0  app_timer.o(i.ticks_diff_get)
+    ticks_diff_get                           0x00020de3   Thumb Code    10  app_timer.o(i.ticks_diff_get)
+    i.timeout_handler_exec                   0x00020dec   Section        0  app_timer.o(i.timeout_handler_exec)
+    timeout_handler_exec                     0x00020ded   Thumb Code    60  app_timer.o(i.timeout_handler_exec)
+    i.timer_list_handler                     0x00020e30   Section        0  app_timer.o(i.timer_list_handler)
+    timer_list_handler                       0x00020e31   Thumb Code    70  app_timer.o(i.timer_list_handler)
+    i.timer_list_handler_sched               0x00020e80   Section        0  app_timer.o(i.timer_list_handler_sched)
+    timer_list_handler_sched                 0x00020e81   Thumb Code    10  app_timer.o(i.timer_list_handler_sched)
+    i.timer_list_insert                      0x00020e8c   Section        0  app_timer.o(i.timer_list_insert)
+    timer_list_insert                        0x00020e8d   Thumb Code   212  app_timer.o(i.timer_list_insert)
+    i.timer_list_remove                      0x00020f68   Section        0  app_timer.o(i.timer_list_remove)
+    timer_list_remove                        0x00020f69   Thumb Code   170  app_timer.o(i.timer_list_remove)
+    i.timer_timeouts_check                   0x0002101c   Section        0  app_timer.o(i.timer_timeouts_check)
+    timer_timeouts_check                     0x0002101d   Thumb Code   132  app_timer.o(i.timer_timeouts_check)
+    i.timer_timeouts_check_sched             0x000210b8   Section        0  app_timer.o(i.timer_timeouts_check_sched)
+    timer_timeouts_check_sched               0x000210b9   Thumb Code    10  app_timer.o(i.timer_timeouts_check_sched)
+    i.update_status_bit_reset                0x000210c4   Section        0  device_manager_central.o(i.update_status_bit_reset)
+    update_status_bit_reset                  0x000210c5   Thumb Code    16  device_manager_central.o(i.update_status_bit_reset)
+    .constdata                               0x000210d8   Section       28  main.o(.constdata)
+    m_connection_param                       0x000210d8   Data           8  main.o(.constdata)
+    .constdata                               0x000210f4   Section       16  client_handling.o(.constdata)
+    .constdata                               0x00021104   Section       52  device_manager_central.o(.constdata)
+    .conststring                             0x00021138   Section       89  device_manager_central.o(.conststring)
+    .conststring                             0x00021194   Section       68  app_timer.o(.conststring)
+    .conststring                             0x000211d8   Section       76  softdevice_handler.o(.conststring)
+    .conststring                             0x00021224   Section      108  spi_slave.o(.conststring)
     .data                                    0x20002800   Section       21  main.o(.data)
     waitRIOT                                 0x20002800   Data           1  main.o(.data)
     m_peer_addr_ms_pacman                    0x20002801   Data           6  main.o(.data)
@@ -1303,58 +1298,51 @@ Image Symbol Table
     __use_no_semihosting_swi                 0x0001d4ed   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x0001d4ef   Thumb Code     0  indicate_semi.o(.text)
     GPIOTE_IRQHandler                        0x0001d4f1   Thumb Code   158  app_gpiote.o(i.GPIOTE_IRQHandler)
-    RTC1_IRQHandler                          0x0001d659   Thumb Code    34  app_timer.o(i.RTC1_IRQHandler)
-    SPI1_TWI1_IRQHandler                     0x0001d681   Thumb Code   110  spi_slave.o(i.SPI1_TWI1_IRQHandler)
-    SWI0_IRQHandler                          0x0001d711   Thumb Code     8  app_timer.o(i.SWI0_IRQHandler)
-    SWI2_IRQHandler                          0x0001d719   Thumb Code    52  softdevice_handler.o(i.SWI2_IRQHandler)
-    SystemInit                               0x0001d755   Thumb Code    38  system_nrf51.o(i.SystemInit)
-    __ARM_common_switch8                     0x0001d78d   Thumb Code    28  pstorage.o(i.__ARM_common_switch8)
-    app_error_handler                        0x0001d7a9   Thumb Code    30  main.o(i.app_error_handler)
-    assert_nrf_callback                      0x0001d859   Thumb Code    14  main.o(i.assert_nrf_callback)
-    ble_db_discovery_evt_register            0x0001d86d   Thumb Code    52  ble_db_discovery.o(i.ble_db_discovery_evt_register)
-    ble_db_discovery_init                    0x0001d8a9   Thumb Code    24  ble_db_discovery.o(i.ble_db_discovery_init)
-    ble_db_discovery_on_ble_evt              0x0001d8d1   Thumb Code   118  ble_db_discovery.o(i.ble_db_discovery_on_ble_evt)
-    ble_db_discovery_start                   0x0001d94d   Thumb Code   128  ble_db_discovery.o(i.ble_db_discovery_start)
-    client_handling_ble_evt_handler          0x0001db5d   Thumb Code   150  client_handling.o(i.client_handling_ble_evt_handler)
-    client_handling_create                   0x0001dc11   Thumb Code    86  client_handling.o(i.client_handling_create)
-    client_handling_destroy                  0x0001dc71   Thumb Code    46  client_handling.o(i.client_handling_destroy)
-    client_handling_dm_event_handler         0x0001dca9   Thumb Code    44  client_handling.o(i.client_handling_dm_event_handler)
-    client_handling_init                     0x0001dcd9   Thumb Code   132  client_handling.o(i.client_handling_init)
-    dm_ble_evt_handler                       0x0001e79d   Thumb Code  1370  device_manager_central.o(i.dm_ble_evt_handler)
-    dm_handle_initialize                     0x0001ed0d   Thumb Code    24  device_manager_central.o(i.dm_handle_initialize)
-    dm_init                                  0x0001ed29   Thumb Code   224  device_manager_central.o(i.dm_init)
-    dm_peer_addr_get                         0x0001ee25   Thumb Code   176  device_manager_central.o(i.dm_peer_addr_get)
-    dm_register                              0x0001f0e9   Thumb Code   102  device_manager_central.o(i.dm_register)
-    dm_security_setup_req                    0x0001f15d   Thumb Code   326  device_manager_central.o(i.dm_security_setup_req)
-    dm_whitelist_create                      0x0001f2b9   Thumb Code   256  device_manager_central.o(i.dm_whitelist_create)
-    initiate_security_request                0x0001f6c1   Thumb Code   124  device_manager_central.o(i.initiate_security_request)
-    intern_softdevice_events_execute         0x0001f745   Thumb Code   168  softdevice_handler.o(i.intern_softdevice_events_execute)
-    main                                     0x0001fb11   Thumb Code    32  main.o(i.main)
-    pstorage_access_status_get               0x000200b9   Thumb Code    36  pstorage.o(i.pstorage_access_status_get)
-    pstorage_block_identifier_get            0x000200e5   Thumb Code   136  pstorage.o(i.pstorage_block_identifier_get)
-    pstorage_clear                           0x00020175   Thumb Code   166  pstorage.o(i.pstorage_clear)
-    pstorage_init                            0x00020225   Thumb Code   196  pstorage.o(i.pstorage_init)
-    pstorage_load                            0x00020309   Thumb Code   226  pstorage.o(i.pstorage_load)
-    pstorage_register                        0x000203f5   Thumb Code   362  pstorage.o(i.pstorage_register)
-    pstorage_store                           0x00020575   Thumb Code   202  pstorage.o(i.pstorage_store)
-    pstorage_sys_event_handler               0x00020649   Thumb Code   326  pstorage.o(i.pstorage_sys_event_handler)
-    pstorage_update                          0x000207a1   Thumb Code   202  pstorage.o(i.pstorage_update)
-    rx_send                                  0x00020999   Thumb Code    96  client_handling.o(i.rx_send)
-    softdevice_assertion_handler             0x00020c15   Thumb Code    18  softdevice_handler.o(i.softdevice_assertion_handler)
-    softdevice_ble_evt_handler_set           0x00020c29   Thumb Code    18  softdevice_handler.o(i.softdevice_ble_evt_handler_set)
-    softdevice_handler_init                  0x00020c41   Thumb Code    84  softdevice_handler.o(i.softdevice_handler_init)
-    softdevice_sys_evt_handler_set           0x00020ca9   Thumb Code    18  softdevice_handler.o(i.softdevice_sys_evt_handler_set)
-    spi_event_handler                        0x00020cc1   Thumb Code   110  main.o(i.spi_event_handler)
-    spi_slave_buffers_set                    0x00020d45   Thumb Code    92  spi_slave.o(i.spi_slave_buffers_set)
-    spi_slave_evt_handler_register           0x00020db5   Thumb Code    20  spi_slave.o(i.spi_slave_evt_handler_register)
-    spi_slave_init                           0x00020dcd   Thumb Code   272  spi_slave.o(i.spi_slave_init)
-    tx_get                                   0x000214fd   Thumb Code    44  client_handling.o(i.tx_get)
-    m_service_context_store                  0x000215a4   Data          16  device_manager_central.o(.constdata)
-    m_service_context_load                   0x000215b4   Data          16  device_manager_central.o(.constdata)
-    m_service_context_apply                  0x000215c4   Data          16  device_manager_central.o(.constdata)
-    m_context_init_len                       0x000215d4   Data           4  device_manager_central.o(.constdata)
-    Region$$Table$$Base                      0x00021730   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00021750   Number         0  anon$$obj.o(Region$$Table)
+    RTC1_IRQHandler                          0x0001d5e1   Thumb Code    34  app_timer.o(i.RTC1_IRQHandler)
+    SPI1_TWI1_IRQHandler                     0x0001d609   Thumb Code   110  spi_slave.o(i.SPI1_TWI1_IRQHandler)
+    SWI0_IRQHandler                          0x0001d699   Thumb Code     8  app_timer.o(i.SWI0_IRQHandler)
+    SWI2_IRQHandler                          0x0001d6a1   Thumb Code    52  softdevice_handler.o(i.SWI2_IRQHandler)
+    SystemInit                               0x0001d6dd   Thumb Code    38  system_nrf51.o(i.SystemInit)
+    __ARM_common_switch8                     0x0001d715   Thumb Code    28  pstorage.o(i.__ARM_common_switch8)
+    app_error_handler                        0x0001d731   Thumb Code    30  main.o(i.app_error_handler)
+    assert_nrf_callback                      0x0001d7e1   Thumb Code    14  main.o(i.assert_nrf_callback)
+    ble_db_discovery_evt_register            0x0001d7f5   Thumb Code    52  ble_db_discovery.o(i.ble_db_discovery_evt_register)
+    ble_db_discovery_init                    0x0001d831   Thumb Code    24  ble_db_discovery.o(i.ble_db_discovery_init)
+    ble_db_discovery_on_ble_evt              0x0001d859   Thumb Code   118  ble_db_discovery.o(i.ble_db_discovery_on_ble_evt)
+    ble_db_discovery_start                   0x0001d8d5   Thumb Code   128  ble_db_discovery.o(i.ble_db_discovery_start)
+    client_handling_ble_evt_handler          0x0001daa5   Thumb Code   192  client_handling.o(i.client_handling_ble_evt_handler)
+    client_handling_create                   0x0001db81   Thumb Code    86  client_handling.o(i.client_handling_create)
+    client_handling_destroy                  0x0001dbe1   Thumb Code    46  client_handling.o(i.client_handling_destroy)
+    client_handling_dm_event_handler         0x0001dc19   Thumb Code    44  client_handling.o(i.client_handling_dm_event_handler)
+    client_handling_init                     0x0001dc49   Thumb Code   132  client_handling.o(i.client_handling_init)
+    dm_ble_evt_handler                       0x0001e70d   Thumb Code  1370  device_manager_central.o(i.dm_ble_evt_handler)
+    dm_handle_initialize                     0x0001ec7d   Thumb Code    24  device_manager_central.o(i.dm_handle_initialize)
+    dm_init                                  0x0001ec99   Thumb Code   224  device_manager_central.o(i.dm_init)
+    dm_register                              0x0001ef95   Thumb Code   102  device_manager_central.o(i.dm_register)
+    dm_security_setup_req                    0x0001f009   Thumb Code   326  device_manager_central.o(i.dm_security_setup_req)
+    dm_whitelist_create                      0x0001f165   Thumb Code   256  device_manager_central.o(i.dm_whitelist_create)
+    initiate_security_request                0x0001f545   Thumb Code   124  device_manager_central.o(i.initiate_security_request)
+    intern_softdevice_events_execute         0x0001f5c9   Thumb Code   168  softdevice_handler.o(i.intern_softdevice_events_execute)
+    main                                     0x0001f995   Thumb Code    24  main.o(i.main)
+    pstorage_access_status_get               0x0001ff25   Thumb Code    36  pstorage.o(i.pstorage_access_status_get)
+    pstorage_block_identifier_get            0x0001ff51   Thumb Code   136  pstorage.o(i.pstorage_block_identifier_get)
+    pstorage_clear                           0x0001ffe1   Thumb Code   166  pstorage.o(i.pstorage_clear)
+    pstorage_init                            0x00020091   Thumb Code   196  pstorage.o(i.pstorage_init)
+    pstorage_load                            0x00020175   Thumb Code   226  pstorage.o(i.pstorage_load)
+    pstorage_register                        0x00020261   Thumb Code   362  pstorage.o(i.pstorage_register)
+    pstorage_store                           0x000203e1   Thumb Code   202  pstorage.o(i.pstorage_store)
+    pstorage_sys_event_handler               0x000204b5   Thumb Code   326  pstorage.o(i.pstorage_sys_event_handler)
+    pstorage_update                          0x0002060d   Thumb Code   202  pstorage.o(i.pstorage_update)
+    softdevice_assertion_handler             0x00020a1d   Thumb Code    18  softdevice_handler.o(i.softdevice_assertion_handler)
+    softdevice_ble_evt_handler_set           0x00020a31   Thumb Code    18  softdevice_handler.o(i.softdevice_ble_evt_handler_set)
+    softdevice_handler_init                  0x00020a49   Thumb Code    84  softdevice_handler.o(i.softdevice_handler_init)
+    softdevice_sys_evt_handler_set           0x00020ab1   Thumb Code    18  softdevice_handler.o(i.softdevice_sys_evt_handler_set)
+    m_service_context_store                  0x00021104   Data          16  device_manager_central.o(.constdata)
+    m_service_context_load                   0x00021114   Data          16  device_manager_central.o(.constdata)
+    m_service_context_apply                  0x00021124   Data          16  device_manager_central.o(.constdata)
+    m_context_init_len                       0x00021134   Data           4  device_manager_central.o(.constdata)
+    Region$$Table$$Base                      0x00021290   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000212b0   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x200028b0   Data           4  system_nrf51.o(.data)
     __libspace_start                         0x20002cc4   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20002d24   Data           0  libspace.o(.bss)
@@ -1367,9 +1355,9 @@ Memory Map of the image
 
   Image Entry point : 0x0001d0c1
 
-  Load Region LR_IROM1 (Base: 0x0001d000, Size: 0x00004804, Max: 0x00023000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x0001d000, Size: 0x00004364, Max: 0x00023000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x0001d000, Size: 0x00004750, Max: 0x00023000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x0001d000, Size: 0x000042b0, Max: 0x00023000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1441,161 +1429,150 @@ Memory Map of the image
     0x0001d5a4   0x00000014   Code   RO         1167    i.NVIC_ClearPendingIRQ  app_timer.o
     0x0001d5b8   0x00000014   Code   RO         1168    i.NVIC_EnableIRQ    app_timer.o
     0x0001d5cc   0x00000014   Code   RO         1169    i.NVIC_SetPendingIRQ  app_timer.o
-    0x0001d5e0   0x00000078   Code   RO         1458    i.NVIC_SetPriority  spi_slave.o
-    0x0001d658   0x00000028   Code   RO         1171    i.RTC1_IRQHandler   app_timer.o
-    0x0001d680   0x00000090   Code   RO         1459    i.SPI1_TWI1_IRQHandler  spi_slave.o
-    0x0001d710   0x00000008   Code   RO         1172    i.SWI0_IRQHandler   app_timer.o
-    0x0001d718   0x0000003c   Code   RO         1396    i.SWI2_IRQHandler   softdevice_handler.o
-    0x0001d754   0x00000038   Code   RO         1537    i.SystemInit        system_nrf51.o
-    0x0001d78c   0x0000001c   Code   RO          753    i.__ARM_common_switch8  pstorage.o
-    0x0001d7a8   0x00000028   Code   RO            3    i.app_error_handler  main.o
-    0x0001d7d0   0x0000001c   Code   RO          767    i.app_evt_notify    device_manager_central.o
-    0x0001d7ec   0x0000006c   Code   RO          647    i.app_notify        pstorage.o
-    0x0001d858   0x00000014   Code   RO            4    i.assert_nrf_callback  main.o
-    0x0001d86c   0x0000003c   Code   RO          523    i.ble_db_discovery_evt_register  ble_db_discovery.o
-    0x0001d8a8   0x00000028   Code   RO          524    i.ble_db_discovery_init  ble_db_discovery.o
-    0x0001d8d0   0x0000007c   Code   RO          525    i.ble_db_discovery_on_ble_evt  ble_db_discovery.o
-    0x0001d94c   0x00000094   Code   RO          526    i.ble_db_discovery_start  ble_db_discovery.o
-    0x0001d9e0   0x00000018   Code   RO            5    i.ble_evt_dispatch  main.o
-    0x0001d9f8   0x000000ac   Code   RO            6    i.ble_stack_init    main.o
-    0x0001daa4   0x00000050   Code   RO          527    i.characteristics_discover  ble_db_discovery.o
-    0x0001daf4   0x00000028   Code   RO          294    i.client_find       client_handling.o
-    0x0001db1c   0x00000040   Code   RO          295    i.client_find_addr  client_handling.o
-    0x0001db5c   0x000000b4   Code   RO          296    i.client_handling_ble_evt_handler  client_handling.o
-    0x0001dc10   0x00000060   Code   RO          298    i.client_handling_create  client_handling.o
-    0x0001dc70   0x00000038   Code   RO          299    i.client_handling_destroy  client_handling.o
-    0x0001dca8   0x00000030   Code   RO          300    i.client_handling_dm_event_handler  client_handling.o
-    0x0001dcd8   0x000000b4   Code   RO          301    i.client_handling_init  client_handling.o
-    0x0001dd8c   0x00000174   Code   RO          648    i.cmd_process       pstorage.o
-    0x0001df00   0x00000024   Code   RO          649    i.cmd_queue_dequeue  pstorage.o
-    0x0001df24   0x0000003c   Code   RO          650    i.cmd_queue_element_init  pstorage.o
-    0x0001df60   0x0000008c   Code   RO          651    i.cmd_queue_enqueue  pstorage.o
-    0x0001dfec   0x00000034   Code   RO          652    i.cmd_queue_init    pstorage.o
-    0x0001e020   0x00000090   Code   RO         1180    i.compare_reg_update  app_timer.o
-    0x0001e0b0   0x00000048   Code   RO          768    i.connection_instance_find  device_manager_central.o
-    0x0001e0f8   0x00000038   Code   RO          769    i.connection_instance_init  device_manager_central.o
-    0x0001e130   0x00000084   Code   RO          302    i.db_discovery_evt_handler  client_handling.o
-    0x0001e1b4   0x0000003c   Code   RO          303    i.db_discovery_init  client_handling.o
-    0x0001e1f0   0x000000b2   Code   RO          528    i.descriptors_discover  ble_db_discovery.o
-    0x0001e2a2   0x00000002   PAD
-    0x0001e2a4   0x000000d0   Code   RO          770    i.device_context_store  device_manager_central.o
-    0x0001e374   0x0000007c   Code   RO          771    i.device_instance_allocate  device_manager_central.o
-    0x0001e3f0   0x0000003c   Code   RO          772    i.device_instance_find  device_manager_central.o
-    0x0001e42c   0x00000160   Code   RO            7    i.device_manager_event_handler  main.o
-    0x0001e58c   0x000000e4   Code   RO            8    i.device_manager_init  main.o
-    0x0001e670   0x000000a4   Code   RO          529    i.discovery_complete_evt_trigger  ble_db_discovery.o
-    0x0001e714   0x00000088   Code   RO          530    i.discovery_error_evt_trigger  ble_db_discovery.o
-    0x0001e79c   0x00000570   Code   RO          778    i.dm_ble_evt_handler  device_manager_central.o
-    0x0001ed0c   0x0000001c   Code   RO          783    i.dm_handle_initialize  device_manager_central.o
-    0x0001ed28   0x000000fc   Code   RO          784    i.dm_init           device_manager_central.o
-    0x0001ee24   0x000000c4   Code   RO          785    i.dm_peer_addr_get  device_manager_central.o
-    0x0001eee8   0x00000200   Code   RO          787    i.dm_pstorage_cb_handler  device_manager_central.o
-    0x0001f0e8   0x00000074   Code   RO          788    i.dm_register       device_manager_central.o
-    0x0001f15c   0x0000015c   Code   RO          789    i.dm_security_setup_req  device_manager_central.o
-    0x0001f2b8   0x00000114   Code   RO          794    i.dm_whitelist_create  device_manager_central.o
-    0x0001f3cc   0x00000064   Code   RO         1182    i.elapsed_ticks_acquire  app_timer.o
-    0x0001f430   0x0000006c   Code   RO         1183    i.expired_timers_handler  app_timer.o
-    0x0001f49c   0x00000006   Code   RO          795    i.gattc_context_apply  device_manager_central.o
-    0x0001f4a2   0x00000006   Code   RO          796    i.gattc_context_load  device_manager_central.o
-    0x0001f4a8   0x00000006   Code   RO          797    i.gattc_context_store  device_manager_central.o
-    0x0001f4ae   0x00000002   PAD
-    0x0001f4b0   0x0000007c   Code   RO          798    i.gatts_context_apply  device_manager_central.o
-    0x0001f52c   0x0000003c   Code   RO          799    i.gatts_context_load  device_manager_central.o
-    0x0001f568   0x000000bc   Code   RO          800    i.gatts_context_store  device_manager_central.o
-    0x0001f624   0x0000001a   Code   RO          801    i.gattsc_context_apply  device_manager_central.o
-    0x0001f63e   0x0000001e   Code   RO          802    i.gattsc_context_load  device_manager_central.o
-    0x0001f65c   0x0000001e   Code   RO          803    i.gattsc_context_store  device_manager_central.o
-    0x0001f67a   0x0000001c   Code   RO            9    i.initLeds          main.o
-    0x0001f696   0x00000002   PAD
-    0x0001f698   0x00000028   Code   RO           10    i.initSPI           main.o
-    0x0001f6c0   0x00000084   Code   RO          804    i.initiate_security_request  device_manager_central.o
-    0x0001f744   0x000000c0   Code   RO         1397    i.intern_softdevice_events_execute  softdevice_handler.o
-    0x0001f804   0x0000001e   Code   RO          531    i.is_char_discovery_reqd  ble_db_discovery.o
-    0x0001f822   0x00000054   Code   RO          532    i.is_desc_discovery_reqd  ble_db_discovery.o
-    0x0001f876   0x00000002   PAD
-    0x0001f878   0x00000038   Code   RO         1538    i.is_disabled_in_debug_needed  system_nrf51.o
-    0x0001f8b0   0x0000006c   Code   RO         1539    i.is_manual_peripheral_setup_needed  system_nrf51.o
-    0x0001f91c   0x00000012   Code   RO          653    i.is_word_aligned   pstorage.o
-    0x0001f92e   0x00000002   PAD
-    0x0001f930   0x000000c0   Code   RO         1184    i.list_deletions_handler  app_timer.o
-    0x0001f9f0   0x00000120   Code   RO         1185    i.list_insertions_handler  app_timer.o
-    0x0001fb10   0x00000020   Code   RO           11    i.main              main.o
-    0x0001fb30   0x00000006   Code   RO          805    i.no_service_context_apply  device_manager_central.o
-    0x0001fb36   0x00000006   Code   RO          806    i.no_service_context_load  device_manager_central.o
-    0x0001fb3c   0x00000006   Code   RO          807    i.no_service_context_store  device_manager_central.o
-    0x0001fb42   0x00000002   PAD
-    0x0001fb44   0x00000074   Code   RO          304    i.notif_enable      client_handling.o
-    0x0001fbb8   0x00000012   Code   RO           12    i.nrf_gpio_cfg_output  main.o
-    0x0001fbca   0x00000002   PAD
-    0x0001fbcc   0x00000010   Code   RO           13    i.nrf_gpio_pin_clear  main.o
-    0x0001fbdc   0x000000a4   Code   RO           14    i.on_ble_evt        main.o
-    0x0001fc80   0x00000116   Code   RO          533    i.on_characteristic_discovery_rsp  ble_db_discovery.o
-    0x0001fd96   0x00000002   PAD
-    0x0001fd98   0x000000b8   Code   RO          534    i.on_descriptor_discovery_rsp  ble_db_discovery.o
-    0x0001fe50   0x00000040   Code   RO          305    i.on_evt_hvx        client_handling.o
-    0x0001fe90   0x00000050   Code   RO          306    i.on_evt_timeout    client_handling.o
-    0x0001fee0   0x0000004a   Code   RO          307    i.on_evt_write_rsp  client_handling.o
-    0x0001ff2a   0x00000058   Code   RO          535    i.on_primary_srv_discovery_rsp  ble_db_discovery.o
-    0x0001ff82   0x00000002   PAD
-    0x0001ff84   0x00000084   Code   RO          536    i.on_srv_disc_completion  ble_db_discovery.o
-    0x00020008   0x00000030   Code   RO           15    i.on_sys_evt        main.o
-    0x00020038   0x00000048   Code   RO          808    i.peer_instance_init  device_manager_central.o
-    0x00020080   0x00000038   Code   RO          537    i.pending_user_evts_send  ble_db_discovery.o
-    0x000200b8   0x0000002c   Code   RO          654    i.pstorage_access_status_get  pstorage.o
-    0x000200e4   0x00000090   Code   RO          655    i.pstorage_block_identifier_get  pstorage.o
-    0x00020174   0x000000b0   Code   RO          656    i.pstorage_clear    pstorage.o
-    0x00020224   0x000000e4   Code   RO          657    i.pstorage_init     pstorage.o
-    0x00020308   0x000000ec   Code   RO          658    i.pstorage_load     pstorage.o
-    0x000203f4   0x00000180   Code   RO          659    i.pstorage_register  pstorage.o
-    0x00020574   0x000000d4   Code   RO          660    i.pstorage_store    pstorage.o
-    0x00020648   0x00000158   Code   RO          661    i.pstorage_sys_event_handler  pstorage.o
-    0x000207a0   0x000000d4   Code   RO          662    i.pstorage_update   pstorage.o
-    0x00020874   0x00000040   Code   RO          538    i.registered_handler_get  ble_db_discovery.o
-    0x000208b4   0x00000044   Code   RO          539    i.registered_handler_set  ble_db_discovery.o
-    0x000208f8   0x0000000c   Code   RO         1186    i.rtc1_counter_get  app_timer.o
-    0x00020904   0x0000003c   Code   RO         1188    i.rtc1_start        app_timer.o
-    0x00020940   0x00000058   Code   RO         1189    i.rtc1_stop         app_timer.o
-    0x00020998   0x00000064   Code   RO          308    i.rx_send           client_handling.o
-    0x000209fc   0x00000118   Code   RO           16    i.scan_start        main.o
-    0x00020b14   0x00000080   Code   RO         1101    i.sense_level_toggle  app_gpiote.o
-    0x00020b94   0x00000048   Code   RO          309    i.service_discover  client_handling.o
-    0x00020bdc   0x00000024   Code   RO           17    i.setLed            main.o
-    0x00020c00   0x00000014   Code   RO         1460    i.sm_state_change   spi_slave.o
-    0x00020c14   0x00000012   Code   RO         1398    i.softdevice_assertion_handler  softdevice_handler.o
-    0x00020c26   0x00000002   PAD
-    0x00020c28   0x00000018   Code   RO         1399    i.softdevice_ble_evt_handler_set  softdevice_handler.o
-    0x00020c40   0x00000068   Code   RO         1400    i.softdevice_handler_init  softdevice_handler.o
-    0x00020ca8   0x00000018   Code   RO         1402    i.softdevice_sys_evt_handler_set  softdevice_handler.o
-    0x00020cc0   0x00000084   Code   RO           18    i.spi_event_handler  main.o
-    0x00020d44   0x00000070   Code   RO         1461    i.spi_slave_buffers_set  spi_slave.o
-    0x00020db4   0x00000018   Code   RO         1462    i.spi_slave_evt_handler_register  spi_slave.o
-    0x00020dcc   0x00000134   Code   RO         1463    i.spi_slave_init    spi_slave.o
-    0x00020f00   0x000000b4   Code   RO         1466    i.state_entry_action_execute  spi_slave.o
-    0x00020fb4   0x00000008   Code   RO          809    i.storage_operation_dummy_handler  device_manager_central.o
-    0x00020fbc   0x0000024c   Code   RO          663    i.swap_state_process  pstorage.o
-    0x00021208   0x00000012   Code   RO           19    i.sys_evt_dispatch  main.o
-    0x0002121a   0x0000000a   Code   RO         1190    i.ticks_diff_get    app_timer.o
-    0x00021224   0x00000044   Code   RO         1191    i.timeout_handler_exec  app_timer.o
-    0x00021268   0x00000050   Code   RO         1192    i.timer_list_handler  app_timer.o
-    0x000212b8   0x0000000a   Code   RO         1193    i.timer_list_handler_sched  app_timer.o
-    0x000212c2   0x00000002   PAD
-    0x000212c4   0x000000dc   Code   RO         1194    i.timer_list_insert  app_timer.o
-    0x000213a0   0x000000b4   Code   RO         1195    i.timer_list_remove  app_timer.o
-    0x00021454   0x0000009c   Code   RO         1199    i.timer_timeouts_check  app_timer.o
-    0x000214f0   0x0000000a   Code   RO         1200    i.timer_timeouts_check_sched  app_timer.o
-    0x000214fa   0x00000002   PAD
-    0x000214fc   0x00000030   Code   RO          310    i.tx_get            client_handling.o
-    0x0002152c   0x00000014   Code   RO          810    i.update_status_bit_reset  device_manager_central.o
-    0x00021540   0x00000038   Code   RO           20    i.waitForRIOT       main.o
-    0x00021578   0x0000001c   Data   RO           22    .constdata          main.o
-    0x00021594   0x00000010   Data   RO          312    .constdata          client_handling.o
-    0x000215a4   0x00000034   Data   RO          812    .constdata          device_manager_central.o
-    0x000215d8   0x00000059   Data   RO          813    .conststring        device_manager_central.o
-    0x00021631   0x00000003   PAD
-    0x00021634   0x00000044   Data   RO         1204    .conststring        app_timer.o
-    0x00021678   0x0000004c   Data   RO         1403    .conststring        softdevice_handler.o
-    0x000216c4   0x0000006c   Data   RO         1467    .conststring        spi_slave.o
-    0x00021730   0x00000020   Data   RO         1760    Region$$Table       anon$$obj.o
+    0x0001d5e0   0x00000028   Code   RO         1171    i.RTC1_IRQHandler   app_timer.o
+    0x0001d608   0x00000090   Code   RO         1459    i.SPI1_TWI1_IRQHandler  spi_slave.o
+    0x0001d698   0x00000008   Code   RO         1172    i.SWI0_IRQHandler   app_timer.o
+    0x0001d6a0   0x0000003c   Code   RO         1396    i.SWI2_IRQHandler   softdevice_handler.o
+    0x0001d6dc   0x00000038   Code   RO         1537    i.SystemInit        system_nrf51.o
+    0x0001d714   0x0000001c   Code   RO          753    i.__ARM_common_switch8  pstorage.o
+    0x0001d730   0x00000028   Code   RO            3    i.app_error_handler  main.o
+    0x0001d758   0x0000001c   Code   RO          767    i.app_evt_notify    device_manager_central.o
+    0x0001d774   0x0000006c   Code   RO          647    i.app_notify        pstorage.o
+    0x0001d7e0   0x00000014   Code   RO            4    i.assert_nrf_callback  main.o
+    0x0001d7f4   0x0000003c   Code   RO          523    i.ble_db_discovery_evt_register  ble_db_discovery.o
+    0x0001d830   0x00000028   Code   RO          524    i.ble_db_discovery_init  ble_db_discovery.o
+    0x0001d858   0x0000007c   Code   RO          525    i.ble_db_discovery_on_ble_evt  ble_db_discovery.o
+    0x0001d8d4   0x00000094   Code   RO          526    i.ble_db_discovery_start  ble_db_discovery.o
+    0x0001d968   0x00000018   Code   RO            5    i.ble_evt_dispatch  main.o
+    0x0001d980   0x000000ac   Code   RO            6    i.ble_stack_init    main.o
+    0x0001da2c   0x00000050   Code   RO          527    i.characteristics_discover  ble_db_discovery.o
+    0x0001da7c   0x00000028   Code   RO          294    i.client_find       client_handling.o
+    0x0001daa4   0x000000dc   Code   RO          296    i.client_handling_ble_evt_handler  client_handling.o
+    0x0001db80   0x00000060   Code   RO          298    i.client_handling_create  client_handling.o
+    0x0001dbe0   0x00000038   Code   RO          299    i.client_handling_destroy  client_handling.o
+    0x0001dc18   0x00000030   Code   RO          300    i.client_handling_dm_event_handler  client_handling.o
+    0x0001dc48   0x000000b4   Code   RO          301    i.client_handling_init  client_handling.o
+    0x0001dcfc   0x00000174   Code   RO          648    i.cmd_process       pstorage.o
+    0x0001de70   0x00000024   Code   RO          649    i.cmd_queue_dequeue  pstorage.o
+    0x0001de94   0x0000003c   Code   RO          650    i.cmd_queue_element_init  pstorage.o
+    0x0001ded0   0x0000008c   Code   RO          651    i.cmd_queue_enqueue  pstorage.o
+    0x0001df5c   0x00000034   Code   RO          652    i.cmd_queue_init    pstorage.o
+    0x0001df90   0x00000090   Code   RO         1180    i.compare_reg_update  app_timer.o
+    0x0001e020   0x00000048   Code   RO          768    i.connection_instance_find  device_manager_central.o
+    0x0001e068   0x00000038   Code   RO          769    i.connection_instance_init  device_manager_central.o
+    0x0001e0a0   0x00000084   Code   RO          302    i.db_discovery_evt_handler  client_handling.o
+    0x0001e124   0x0000003c   Code   RO          303    i.db_discovery_init  client_handling.o
+    0x0001e160   0x000000b2   Code   RO          528    i.descriptors_discover  ble_db_discovery.o
+    0x0001e212   0x00000002   PAD
+    0x0001e214   0x000000d0   Code   RO          770    i.device_context_store  device_manager_central.o
+    0x0001e2e4   0x0000007c   Code   RO          771    i.device_instance_allocate  device_manager_central.o
+    0x0001e360   0x0000003c   Code   RO          772    i.device_instance_find  device_manager_central.o
+    0x0001e39c   0x00000160   Code   RO            7    i.device_manager_event_handler  main.o
+    0x0001e4fc   0x000000e4   Code   RO            8    i.device_manager_init  main.o
+    0x0001e5e0   0x000000a4   Code   RO          529    i.discovery_complete_evt_trigger  ble_db_discovery.o
+    0x0001e684   0x00000088   Code   RO          530    i.discovery_error_evt_trigger  ble_db_discovery.o
+    0x0001e70c   0x00000570   Code   RO          778    i.dm_ble_evt_handler  device_manager_central.o
+    0x0001ec7c   0x0000001c   Code   RO          783    i.dm_handle_initialize  device_manager_central.o
+    0x0001ec98   0x000000fc   Code   RO          784    i.dm_init           device_manager_central.o
+    0x0001ed94   0x00000200   Code   RO          787    i.dm_pstorage_cb_handler  device_manager_central.o
+    0x0001ef94   0x00000074   Code   RO          788    i.dm_register       device_manager_central.o
+    0x0001f008   0x0000015c   Code   RO          789    i.dm_security_setup_req  device_manager_central.o
+    0x0001f164   0x00000114   Code   RO          794    i.dm_whitelist_create  device_manager_central.o
+    0x0001f278   0x00000064   Code   RO         1182    i.elapsed_ticks_acquire  app_timer.o
+    0x0001f2dc   0x0000006c   Code   RO         1183    i.expired_timers_handler  app_timer.o
+    0x0001f348   0x00000006   Code   RO          795    i.gattc_context_apply  device_manager_central.o
+    0x0001f34e   0x00000006   Code   RO          796    i.gattc_context_load  device_manager_central.o
+    0x0001f354   0x00000006   Code   RO          797    i.gattc_context_store  device_manager_central.o
+    0x0001f35a   0x00000002   PAD
+    0x0001f35c   0x0000007c   Code   RO          798    i.gatts_context_apply  device_manager_central.o
+    0x0001f3d8   0x0000003c   Code   RO          799    i.gatts_context_load  device_manager_central.o
+    0x0001f414   0x000000bc   Code   RO          800    i.gatts_context_store  device_manager_central.o
+    0x0001f4d0   0x0000001a   Code   RO          801    i.gattsc_context_apply  device_manager_central.o
+    0x0001f4ea   0x0000001e   Code   RO          802    i.gattsc_context_load  device_manager_central.o
+    0x0001f508   0x0000001e   Code   RO          803    i.gattsc_context_store  device_manager_central.o
+    0x0001f526   0x0000001c   Code   RO            9    i.initLeds          main.o
+    0x0001f542   0x00000002   PAD
+    0x0001f544   0x00000084   Code   RO          804    i.initiate_security_request  device_manager_central.o
+    0x0001f5c8   0x000000c0   Code   RO         1397    i.intern_softdevice_events_execute  softdevice_handler.o
+    0x0001f688   0x0000001e   Code   RO          531    i.is_char_discovery_reqd  ble_db_discovery.o
+    0x0001f6a6   0x00000054   Code   RO          532    i.is_desc_discovery_reqd  ble_db_discovery.o
+    0x0001f6fa   0x00000002   PAD
+    0x0001f6fc   0x00000038   Code   RO         1538    i.is_disabled_in_debug_needed  system_nrf51.o
+    0x0001f734   0x0000006c   Code   RO         1539    i.is_manual_peripheral_setup_needed  system_nrf51.o
+    0x0001f7a0   0x00000012   Code   RO          653    i.is_word_aligned   pstorage.o
+    0x0001f7b2   0x00000002   PAD
+    0x0001f7b4   0x000000c0   Code   RO         1184    i.list_deletions_handler  app_timer.o
+    0x0001f874   0x00000120   Code   RO         1185    i.list_insertions_handler  app_timer.o
+    0x0001f994   0x00000018   Code   RO           11    i.main              main.o
+    0x0001f9ac   0x00000006   Code   RO          805    i.no_service_context_apply  device_manager_central.o
+    0x0001f9b2   0x00000006   Code   RO          806    i.no_service_context_load  device_manager_central.o
+    0x0001f9b8   0x00000006   Code   RO          807    i.no_service_context_store  device_manager_central.o
+    0x0001f9be   0x00000002   PAD
+    0x0001f9c0   0x00000074   Code   RO          304    i.notif_enable      client_handling.o
+    0x0001fa34   0x00000012   Code   RO           12    i.nrf_gpio_cfg_output  main.o
+    0x0001fa46   0x00000002   PAD
+    0x0001fa48   0x00000010   Code   RO           13    i.nrf_gpio_pin_clear  main.o
+    0x0001fa58   0x00000094   Code   RO           14    i.on_ble_evt        main.o
+    0x0001faec   0x00000116   Code   RO          533    i.on_characteristic_discovery_rsp  ble_db_discovery.o
+    0x0001fc02   0x00000002   PAD
+    0x0001fc04   0x000000b8   Code   RO          534    i.on_descriptor_discovery_rsp  ble_db_discovery.o
+    0x0001fcbc   0x00000040   Code   RO          305    i.on_evt_hvx        client_handling.o
+    0x0001fcfc   0x00000050   Code   RO          306    i.on_evt_timeout    client_handling.o
+    0x0001fd4c   0x0000004a   Code   RO          307    i.on_evt_write_rsp  client_handling.o
+    0x0001fd96   0x00000058   Code   RO          535    i.on_primary_srv_discovery_rsp  ble_db_discovery.o
+    0x0001fdee   0x00000002   PAD
+    0x0001fdf0   0x00000084   Code   RO          536    i.on_srv_disc_completion  ble_db_discovery.o
+    0x0001fe74   0x00000030   Code   RO           15    i.on_sys_evt        main.o
+    0x0001fea4   0x00000048   Code   RO          808    i.peer_instance_init  device_manager_central.o
+    0x0001feec   0x00000038   Code   RO          537    i.pending_user_evts_send  ble_db_discovery.o
+    0x0001ff24   0x0000002c   Code   RO          654    i.pstorage_access_status_get  pstorage.o
+    0x0001ff50   0x00000090   Code   RO          655    i.pstorage_block_identifier_get  pstorage.o
+    0x0001ffe0   0x000000b0   Code   RO          656    i.pstorage_clear    pstorage.o
+    0x00020090   0x000000e4   Code   RO          657    i.pstorage_init     pstorage.o
+    0x00020174   0x000000ec   Code   RO          658    i.pstorage_load     pstorage.o
+    0x00020260   0x00000180   Code   RO          659    i.pstorage_register  pstorage.o
+    0x000203e0   0x000000d4   Code   RO          660    i.pstorage_store    pstorage.o
+    0x000204b4   0x00000158   Code   RO          661    i.pstorage_sys_event_handler  pstorage.o
+    0x0002060c   0x000000d4   Code   RO          662    i.pstorage_update   pstorage.o
+    0x000206e0   0x00000040   Code   RO          538    i.registered_handler_get  ble_db_discovery.o
+    0x00020720   0x00000044   Code   RO          539    i.registered_handler_set  ble_db_discovery.o
+    0x00020764   0x0000000c   Code   RO         1186    i.rtc1_counter_get  app_timer.o
+    0x00020770   0x0000003c   Code   RO         1188    i.rtc1_start        app_timer.o
+    0x000207ac   0x00000058   Code   RO         1189    i.rtc1_stop         app_timer.o
+    0x00020804   0x00000118   Code   RO           16    i.scan_start        main.o
+    0x0002091c   0x00000080   Code   RO         1101    i.sense_level_toggle  app_gpiote.o
+    0x0002099c   0x00000048   Code   RO          309    i.service_discover  client_handling.o
+    0x000209e4   0x00000024   Code   RO           17    i.setLed            main.o
+    0x00020a08   0x00000014   Code   RO         1460    i.sm_state_change   spi_slave.o
+    0x00020a1c   0x00000012   Code   RO         1398    i.softdevice_assertion_handler  softdevice_handler.o
+    0x00020a2e   0x00000002   PAD
+    0x00020a30   0x00000018   Code   RO         1399    i.softdevice_ble_evt_handler_set  softdevice_handler.o
+    0x00020a48   0x00000068   Code   RO         1400    i.softdevice_handler_init  softdevice_handler.o
+    0x00020ab0   0x00000018   Code   RO         1402    i.softdevice_sys_evt_handler_set  softdevice_handler.o
+    0x00020ac8   0x000000b4   Code   RO         1466    i.state_entry_action_execute  spi_slave.o
+    0x00020b7c   0x00000008   Code   RO          809    i.storage_operation_dummy_handler  device_manager_central.o
+    0x00020b84   0x0000024c   Code   RO          663    i.swap_state_process  pstorage.o
+    0x00020dd0   0x00000012   Code   RO           19    i.sys_evt_dispatch  main.o
+    0x00020de2   0x0000000a   Code   RO         1190    i.ticks_diff_get    app_timer.o
+    0x00020dec   0x00000044   Code   RO         1191    i.timeout_handler_exec  app_timer.o
+    0x00020e30   0x00000050   Code   RO         1192    i.timer_list_handler  app_timer.o
+    0x00020e80   0x0000000a   Code   RO         1193    i.timer_list_handler_sched  app_timer.o
+    0x00020e8a   0x00000002   PAD
+    0x00020e8c   0x000000dc   Code   RO         1194    i.timer_list_insert  app_timer.o
+    0x00020f68   0x000000b4   Code   RO         1195    i.timer_list_remove  app_timer.o
+    0x0002101c   0x0000009c   Code   RO         1199    i.timer_timeouts_check  app_timer.o
+    0x000210b8   0x0000000a   Code   RO         1200    i.timer_timeouts_check_sched  app_timer.o
+    0x000210c2   0x00000002   PAD
+    0x000210c4   0x00000014   Code   RO          810    i.update_status_bit_reset  device_manager_central.o
+    0x000210d8   0x0000001c   Data   RO           22    .constdata          main.o
+    0x000210f4   0x00000010   Data   RO          312    .constdata          client_handling.o
+    0x00021104   0x00000034   Data   RO          812    .constdata          device_manager_central.o
+    0x00021138   0x00000059   Data   RO          813    .conststring        device_manager_central.o
+    0x00021191   0x00000003   PAD
+    0x00021194   0x00000044   Data   RO         1204    .conststring        app_timer.o
+    0x000211d8   0x0000004c   Data   RO         1403    .conststring        softdevice_handler.o
+    0x00021224   0x0000006c   Data   RO         1467    .conststring        spi_slave.o
+    0x00021290   0x00000020   Data   RO         1760    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20002800, Size: 0x00001528, Max: 0x00001800, ABSOLUTE)
@@ -1635,20 +1612,20 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       308         22          0         12          0       9448   app_gpiote.o
+       308         22          0         12          0       3768   app_gpiote.o
       1864        210         68         41          0      23648   app_timer.o
         84         36        192          0       4096        704   arm_startup_nrf51.o
       1914        124          0         13        128      15023   ble_db_discovery.o
-      1410        232         16          2        260      15054   client_handling.o
-      4394        338        141         13        315      27861   device_manager_central.o
-      1704        222         28         21        236      81541   main.o
+      1238        218         16          2        260      13387   client_handling.o
+      4198        318        141         13        315      27090   device_manager_central.o
+      1452        168         28         21        236      80101   main.o
       3382        194          0         12        100      17382   pstorage.o
        422         64         76         20          0       6780   softdevice_handler.o
-       908        130        108         32          0       6613   spi_slave.o
+       344         60        108         32          0       3415   spi_slave.o
        220         26          0          4          0       1931   system_nrf51.o
 
     ----------------------------------------------------------------------
-     16636       1598        664        180       5136     205985   Object Totals
+     15452       1440        664        180       5136     193229   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         26          0          3         10          1          0   (incl. Padding)
 
@@ -1701,15 +1678,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17592       1614        664        180       5236     200533   Grand Totals
-     17592       1614        664        180       5236     200533   ELF Image Totals
-     17592       1614        664        180          0          0   ROM Totals
+     16408       1456        664        180       5236     188261   Grand Totals
+     16408       1456        664        180       5236     188261   ELF Image Totals
+     16408       1456        664        180          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                18256 (  17.83kB)
+    Total RO  Size (Code + RO Data)                17072 (  16.67kB)
     Total RW  Size (RW Data + ZI Data)              5416 (   5.29kB)
-    Total ROM Size (Code + RO Data + RW Data)      18436 (  18.00kB)
+    Total ROM Size (Code + RO Data + RW Data)      17252 (  16.85kB)
 
 ==============================================================================
 

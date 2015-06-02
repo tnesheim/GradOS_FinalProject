@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hardware>
+<sleeposc enable="false" ppm="30" />
+<script enable="true" />
+<slow_clock enable="false"/>
+<sleep enable="false" />
+<txpower power="15" bias="5" />
+<port index="0" pull="down"/>
+<usart channel="1" alternate="1" baud="19200" endpoint="none" flow="false"/>
+</hardware>

@@ -238,17 +238,13 @@ static void on_ble_evt(ble_evt_t * p_ble_evt)
         {
            ble_gap_evt_adv_report_t adv_report = p_ble_evt->evt.gap_evt.params.adv_report;
            
-           //See if this is a scan response advertisement packet
-           if(adv_report.scan_rsp == 1)
+           uint8_t base_uuid[] = TRANSCEIVER_SERVICE_UUID_128;
+           
+           //Check the adv. pkt. to see if it contains the base Transceiver UUID
+           if(memcmp(base_uuid, &(adv_report.data[5]), 16) == 0)
            {
-              uint8_t base_uuid[] = TRANSCEIVER_BASE_UUID;
-              
-              //Check the scan response to see if it contains the base Transceiver UUID
-              if(memcmp(base_uuid, adv_report.data, 16) == 0)
-              {
-                 //Attempt a connection
-                 sd_ble_gap_connect(&p_ble_evt->evt.gap_evt.params.adv_report.peer_addr, &m_scan_param, &m_connection_param);
-              }
+              //Attempt a connection
+              sd_ble_gap_connect(&p_ble_evt->evt.gap_evt.params.adv_report.peer_addr, &m_scan_param, &m_connection_param);
            }
            break;
         }
@@ -541,10 +537,10 @@ static void waitForRIOT()
 int main(void)
 {
    initLeds();
-   initSPI();
+   //initSPI();
    
    //Wait for SPI init from RIOT
-   waitForRIOT();
+   //waitForRIOT();
    
    ble_stack_init();
    client_handling_init();

@@ -322,6 +322,13 @@ void client_handling_ble_evt_handler(ble_evt_t * p_ble_evt)
             on_evt_write_rsp(p_ble_evt, p_client);
             break;
 
+        case BLE_GATTC_EVT_PRIM_SRVC_DISC_RSP:
+            int i;
+            ble_gattc_service_t service;
+            for(i = 0; i < p_ble_evt->evt.gattc_evt.params.prim_srvc_disc_rsp.count; i++)
+            {
+               service = p_ble_evt->evt.gattc_evt.params.prim_srvc_disc_rsp.services[i];
+            }
         case BLE_GATTC_EVT_HVX:
             on_evt_hvx(p_ble_evt, p_client, index);
             break;
@@ -402,7 +409,7 @@ uint32_t client_handling_create(const dm_handle_t * p_handle, uint16_t conn_hand
     m_client_count++;
     m_client[p_handle->connection_id].handle             = (*p_handle);
     service_discover(&m_client[p_handle->connection_id]);
-
+   
     return NRF_SUCCESS;
 }
 

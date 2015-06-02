@@ -1,0 +1,38 @@
+dim connected 
+
+# Boot event listener
+event system_boot(major, minor, patch, build, ll_version, prot_version, hw)
+	#Configure the P0_0 as output
+	call hardware_io_port_config_direction(0, 1)
+	call hardware_io_port_write(0, 1, 0)
+	
+	# Start advertisement (generic discoverable, undirected connectable)
+	call gap_set_mode(gap_general_discoverable, gap_undirected_connectable)
+	# Set device to be bondable
+	call sm_set_bondable_mode(1)
+end
+
+# Connection event listener
+event connection_status(connection, flags, address, address_type, conn_interval, timeout, latency, bonding)
+	# Device is connected.
+	connected = 1
+	#Turn on the connection LED
+	call hardware_io_port_write(0, 1, 1)
+end
+
+# Disconnection event
+event connection_disconnected(handle, result)
+	#not connected anymore
+	connected = 0
+	
+	#Turn off the connection LED
+	call hardware_io_port_write(0, 1, 0)
+	
+	#connection disconnected, continue advertising
+	call gap_set_mode(gap_general_discoverable,gap_undirected_connectable)
+end
+
+# GATT Database update event 
+event attributes_value(connection, reason, handle, offset, value_len, value_data)
+
+end

@@ -1679,20 +1679,20 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        308         22          0         12          0       3768   app_gpiote.o
-      2862        306         68         41          0      34599   app_timer.o
-        84         36        192          0       4096        680   arm_startup_nrf51.o
+      2862        306         68         41          0      34607   app_timer.o
+        84         36        192          0       4096        688   arm_startup_nrf51.o
       1536          4          0          0          0      14370   ble_advdata.o
        766        126          0         25         28      16108   ble_conn_params.o
       3502        278        144         20        268      28945   device_manager_peripheral.o
-      1338        226          4          2        844      81857   main.o
-       804         20         16          0          0       5573   nunchuck.o
+      1338        226          4          2        844      82089   main.o
+       804         20         16          0          0       5637   nunchuck.o
       3342        188          0         12        220      16801   pstorage.o
        422         64         76         20          0       8896   softdevice_handler.o
-       220         26          0          4          0       1835   system_nrf51.o
-       902         40          0          0          0       6852   twi_sw_master.o
+       220         26          0          4          0       1867   system_nrf51.o
+       902         40          0          0          0       6860   twi_sw_master.o
 
     ----------------------------------------------------------------------
-     16112       1336        532        144       5456     220284   Object Totals
+     16112       1336        532        144       5456     220636   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         26          0          0          8          0          0   (incl. Padding)
 
@@ -1745,8 +1745,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     17068       1352        532        144       5552     214596   Grand Totals
-     17068       1352        532        144       5552     214596   ELF Image Totals
+     17068       1352        532        144       5552     214948   Grand Totals
+     17068       1352        532        144       5552     214948   ELF Image Totals
      17068       1352        532        144          0          0   ROM Totals
 
 ==============================================================================

@@ -1,0 +1,2 @@
+transceiver_rx 3
+transceiver_tx 5

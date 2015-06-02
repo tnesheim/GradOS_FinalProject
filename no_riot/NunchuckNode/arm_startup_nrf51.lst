@@ -349,11 +349,12 @@ ARM Macro Assembler    Page 6
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=.\arm_startup_nrf51.d -o.\arm_startup_nrf51.o -IC:\Users\tnesheim\
-Documents\GitHub\GradOS_FinalProject\NunchuckNode\RTE -IC:\Keil_v5\ARM\PACK\ARM
-\CMSIS\4.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_Device
-FamilyPack\1.1.1\Device\Include --predefine="__EVAL SETA 1" --predefine="__UVIS
-ION_VERSION SETA 514" --predefine="_RTE_ SETA 1" --predefine="NRF51 SETA 1" --l
-ist=.\arm_startup_nrf51.lst RTE\Device\nRF51822_xxAA\arm_startup_nrf51.s
+Documents\GitHub\GradOS_FinalProject\no_riot\NunchuckNode\RTE -IC:\Keil_v5\ARM\
+PACK\ARM\CMSIS\4.2.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nR
+F_DeviceFamilyPack\1.1.1\Device\Include --predefine="__EVAL SETA 1" --predefine
+="__UVISION_VERSION SETA 514" --predefine="_RTE_ SETA 1" --predefine="NRF51 SET
+A 1" --list=.\arm_startup_nrf51.lst RTE\Device\nRF51822_xxAA\arm_startup_nrf51.
+s
 
 
 
