@@ -51,7 +51,7 @@ uint8_t client_handling_count(void);
  * @param[in] conn_handle Identifies link for which client is created.
  * @return NRF_SUCCESS on success, any other on failure.
  */
-uint32_t client_handling_create(const dm_handle_t * p_handle, uint16_t conn_handle, uint8_t node_type);
+uint32_t client_handling_create(const dm_handle_t * p_handle, uint16_t conn_handle);
 
 /**@brief Funtion for freeing up a client by setting its state to idle.
  *
@@ -68,11 +68,11 @@ uint32_t client_handling_destroy(const dm_handle_t * p_handle);
  */
 void client_handling_ble_evt_handler(ble_evt_t * p_ble_evt);
 
-/*Transform the received nunchuck data into Ms. Pacman controls*/
-static MsPacmanCtrls nunchuck_transform(uint8_t *nunchuck_data);
+/*Get what is currently in the TX buffer and copy it into the Transceiver RX buffer*/
+void tx_get(uint8_t *addr, uint8_t * rx_buf);
 
-/*Send the updated ctrls to the Ms. Pacman node*/
-static void sendToMsPacman(MsPacmanCtrls ms_pacman);
+/*Send the received RX data to the node*/
+void rx_send(uint8_t *rx_buf);
 
 /**@brief Funtion for handling device manager events.
  *

@@ -58,3 +58,4 @@
 .\objects\main.o: C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\spi_slave.h
 .\objects\main.o: .\app_inc\transceiver.h
 .\objects\main.o: .\app_inc\nrf51822BLE.h
+.\objects\main.o: .\app_inc\transceiver_service.h

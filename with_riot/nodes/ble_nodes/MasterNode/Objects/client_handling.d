@@ -50,3 +50,6 @@
 .\objects\client_handling.o: ..\global_inc\nunchuck_service.h
 .\objects\client_handling.o: ..\global_inc\nunchuck.h
 .\objects\client_handling.o: C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\twi_master.h
+.\objects\client_handling.o: .\app_inc\transceiver_service.h
+.\objects\client_handling.o: .\app_inc\nrf51822BLE.h
+.\objects\client_handling.o: .\app_inc\transceiver.h

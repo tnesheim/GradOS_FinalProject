@@ -21,6 +21,7 @@
 #include "spi_slave.h"
 #include "transceiver.h"
 #include "nrf51822BLE.h"
+#include "transceiver_service.h"
 
 #define MISO_PIN 1
 #define MOSI_PIN 2
@@ -55,8 +56,8 @@ typedef enum
 } ble_advertising_mode_t;
 
 //SPI Variables
-static uint8_t rx_buf[NRF51822_SPI_PKT_LEN];
-static uint8_t tx_buf[NRF51822_SPI_PKT_LEN];
+static uint8_t rx_buf[NRF51822_PKT_LEN];
+static uint8_t tx_buf[NRF51822_PKT_LEN];
 static bool waitRIOT = true;
 
 //The peer addresses of the Ms. Pacman and Nunchuck Nodes
@@ -64,8 +65,6 @@ static bool waitRIOT = true;
 static uint8_t m_peer_addr_ms_pacman[] = {0x83, 0xE3, 0xA2, 0xF5, 0x11, 0xFE};
 //Nunchuck: 0xCE1B2093407F
 static uint8_t m_peer_addr_nunchuck[]  = {0x7F, 0x40, 0x93, 0x20, 0x1B, 0xCE};   
-
-static uint8_t m_current_node_type;
 
 static ble_db_discovery_t           m_ble_db_discovery;                  /**< Structure used to identify the DB Discovery module. */
 static ble_gap_scan_params_t        m_scan_param;                        /**< Scan parameters requested for scanning and connection. */
@@ -157,18 +156,9 @@ static api_result_t device_manager_event_handler(const dm_handle_t    * p_handle
         case DM_EVT_CONNECTION:
         {
             m_dm_device_handle = (*p_handle);
-
-            //Create the connected client
-            if(m_current_node_type == MS_PACMAN_NODE)
-            {
-               setLed(MS_PACMAN_CONNECT_LED, true);
-            }
-            else
-            {
-               setLed(NUNCHUCK_CONNECT_LED, true);
-            }
-           
-            err_code = client_handling_create(p_handle, p_event->event_param.p_gap_param->conn_handle, m_current_node_type);
+            
+            //Create the client
+            err_code = client_handling_create(p_handle, p_event->event_param.p_gap_param->conn_handle);
             APP_ERROR_CHECK(err_code); 
            
             m_peer_count++;
@@ -246,25 +236,21 @@ static void on_ble_evt(ble_evt_t * p_ble_evt)
     {
         case BLE_GAP_EVT_ADV_REPORT:
         {
-            //See if we have found the Ms. Pacman node or the Nunchuck, or neither
-            if(memcmp(p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr, m_peer_addr_ms_pacman, BLE_GAP_ADDR_LEN) == 0)
-            {
-               err_code = sd_ble_gap_scan_stop();
-               //Set the current node type
-               m_current_node_type = MS_PACMAN_NODE;
-               //Attempt a connection
-               sd_ble_gap_connect(&p_ble_evt->evt.gap_evt.params.adv_report.peer_addr, &m_scan_param, &m_connection_param);
-            }
-            else if(memcmp(p_ble_evt->evt.gap_evt.params.adv_report.peer_addr.addr, m_peer_addr_nunchuck, BLE_GAP_ADDR_LEN) == 0)
-            {
-               err_code = sd_ble_gap_scan_stop();
-               //Set the current node type
-               m_current_node_type = NUNCHUCK_NODE;
-               //Attempt a connection
-               err_code = sd_ble_gap_connect(&p_ble_evt->evt.gap_evt.params.adv_report.peer_addr, &m_scan_param, &m_connection_param);
-            }
-            
-            break;
+           ble_gap_evt_adv_report_t adv_report = p_ble_evt->evt.gap_evt.params.adv_report;
+           
+           //See if this is a scan response advertisement packet
+           if(adv_report.scan_rsp == 1)
+           {
+              uint8_t base_uuid[] = TRANSCEIVER_BASE_UUID;
+              
+              //Check the scan response to see if it contains the base Transceiver UUID
+              if(memcmp(base_uuid, adv_report.data, 16) == 0)
+              {
+                 //Attempt a connection
+                 sd_ble_gap_connect(&p_ble_evt->evt.gap_evt.params.adv_report.peer_addr, &m_scan_param, &m_connection_param);
+              }
+           }
+           break;
         }
         case BLE_GAP_EVT_TIMEOUT:
             break;
@@ -402,16 +388,6 @@ static void device_manager_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
-/**
- * @brief Database discovery collector initialization.
- */
-static void db_discovery_init(void)
-{
-    uint32_t err_code = ble_db_discovery_init();
-    APP_ERROR_CHECK(err_code);
-}
-
-
 /**@breif Function to start scanning.
  */
 static void scan_start(void)
@@ -504,6 +480,24 @@ void spi_event_handler(spi_slave_evt_t event)
             {
                //We are synced w/ RIOT, start BLE process
                waitRIOT = false;
+               
+               //Initialize the RX/TX buffers
+               spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
+            }
+         }
+         else
+         {
+            if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == RCV_PKT_NRF51822BLE)
+            {
+               //Grab the current data from the TX buffer of the requested Transceiver
+               tx_get(&(rx_buf[NRF51822_SPI_SRC_OFFSET_0]), tx_buf);
+               //Setup the SPI buffers
+               spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
+            }
+            else if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == SND_PKT)
+            {
+               //Send the RX pkt to the specified address 
+               rx_send(rx_buf);
             }
          }
          break;
@@ -556,9 +550,10 @@ int main(void)
    client_handling_init();
    device_manager_init();
    
-   //Scan for peripherals that have the UUID's we are interested in
+   //Scan for peripherals that have the Transceiver UUID we are interested in
    scan_start();
    
+   //SPI RX/TX from the Transceiver[s] happening in interrupts
    for(;;)
       ;
 }

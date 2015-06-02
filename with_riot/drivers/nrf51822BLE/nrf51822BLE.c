@@ -71,8 +71,10 @@ void nrfSendPkt(ble_radio_pkt *blePkt)
 
    //Fill in the data that is to be sent
    send_buf[NRF51822_SPI_MSG_TYPE_OFFSET] = blePkt->msg_type;
-   send_buf[NRF51822_SPI_SRC_OFFSET]      = blePkt->src_address;
-   send_buf[NRF51822_SPI_DST_OFFSET]      = blePkt->dest_address;
+   send_buf[NRF51822_SPI_SRC_OFFSET_0]    = (blePkt->src_address & 0xFF00) >> 8;
+   send_buf[NRF51822_SPI_SRC_OFFSET_1]    = blePkt->src_address & 0x00FF;
+   send_buf[NRF51822_SPI_DST_OFFSET_0]    = (blePkt->dest_address & 0xFF00) >> 8;
+   send_buf[NRF51822_SPI_DST_OFFSET_1]    = blePkt->dest_address & 0x00FF;
    memcpy(&(send_buf[NRF51822_SPI_PAYLOAD_OFFSET]), blePkt->payload, NRF51822_MAX_DATA_LENGTH);  
 
    //Send the data to the NRF device

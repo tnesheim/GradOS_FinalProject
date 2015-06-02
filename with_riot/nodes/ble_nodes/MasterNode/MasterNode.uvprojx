@@ -448,6 +448,21 @@
               <FileType>5</FileType>
               <FilePath>..\global_inc\nunchuck_service.h</FilePath>
             </File>
+            <File>
+              <FileName>transceiver_service.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\app_inc\transceiver_service.h</FilePath>
+            </File>
+            <File>
+              <FileName>transceiver.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\app_inc\transceiver.h</FilePath>
+            </File>
+            <File>
+              <FileName>nrf51822BLE.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\app_inc\nrf51822BLE.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
