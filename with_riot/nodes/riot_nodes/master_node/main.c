@@ -253,6 +253,7 @@ int main(void)
       setLED(&m_trans);
       //Send the LED Node pkt's to the Transceiver
       sendNodePkt(NODE_ONE_ADDR, led_value, &m_trans, trans_pid);
+      vtimer_usleep(10000);
       sendNodePkt(NODE_TWO_ADDR, led_value ^ 1, &m_trans, trans_pid);
       led_value ^= 1;
                   
