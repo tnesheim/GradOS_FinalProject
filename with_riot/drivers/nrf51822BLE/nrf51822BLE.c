@@ -58,8 +58,10 @@ void nrfRcvPkt(ble_radio_pkt * blePkt)
 
    //Copy the data over to the radio pkt buffer
    blePkt->msg_type     = rcv_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
-   blePkt->src_address  = rcv_buf[NRF51822_SPI_SRC_OFFSET];
-   blePkt->dest_address = rcv_buf[NRF51822_SPI_DST_OFFSET];
+   blePkt->src_address  = rcv_buf[NRF51822_SPI_SRC_OFFSET_0];
+   blePkt->src_address  = (blePkt->src_address << 8) & rcv_buf[NRF51822_SPI_SRC_OFFSET_1];
+   blePkt->dest_address = rcv_buf[NRF51822_SPI_DST_OFFSET_0];
+   blePkt->dest_address = (blePkt->dest_address << 8) & rcv_buf[NRF51822_SPI_DST_OFFSET_1];
    //Copy the payload over
    memcpy(blePkt->payload, &(rcv_buf[NRF51822_SPI_PAYLOAD_OFFSET]), NRF51822_MAX_DATA_LENGTH);
 }

@@ -1,5 +1,5 @@
-/Users/tnesheim/GitHub/RIOT/examples/hello-world/bin/native/hello-world/main.o: \
-  /Users/tnesheim/GitHub/RIOT/examples/hello-world/main.c \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/examples/hello-world/bin/native/hello-world/main.o: \
+  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/examples/hello-world/main.c \
   /usr/include/stdio.h /usr/include/sys/cdefs.h \
   /usr/include/sys/_symbol_aliasing.h \
   /usr/include/sys/_posix_availability.h /usr/include/Availability.h \
@@ -10,7 +10,7 @@
   /usr/include/sys/_types/_null.h /usr/include/sys/stdio.h \
   /usr/include/sys/_types/_off_t.h /usr/include/sys/_types/_ssize_t.h \
   /usr/include/secure/_stdio.h /usr/include/secure/_common.h \
-  /Users/tnesheim/GitHub/RIOT/boards/native/include/board.h \
+  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/native/include/board.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdint.h \
   /usr/include/stdint.h /usr/include/sys/_types/_int8_t.h \
   /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
@@ -18,55 +18,7 @@
   /usr/include/_types/_uint16_t.h /usr/include/_types/_uint32_t.h \
   /usr/include/_types/_uint64_t.h /usr/include/sys/_types/_intptr_t.h \
   /usr/include/sys/_types/_uintptr_t.h /usr/include/_types/_intmax_t.h \
-  /usr/include/_types/_uintmax_t.h \
-  sdk7.2/components/softdevice/common/softdevice_handler/softdevice_handler.h \
-  /usr/include/stdlib.h /usr/include/sys/wait.h \
-  /usr/include/sys/_types/_pid_t.h /usr/include/sys/_types/_id_t.h \
-  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
-  /usr/include/machine/signal.h /usr/include/i386/signal.h \
-  /usr/include/machine/_mcontext.h /usr/include/i386/_mcontext.h \
-  /usr/include/mach/i386/_structs.h \
-  /usr/include/sys/_pthread/_pthread_attr_t.h \
-  /usr/include/sys/_types/_sigaltstack.h \
-  /usr/include/sys/_types/_ucontext.h \
-  /usr/include/sys/_types/_sigset_t.h /usr/include/sys/_types/_uid_t.h \
-  /usr/include/sys/resource.h /usr/include/sys/_types/_timeval.h \
-  /usr/include/machine/endian.h /usr/include/i386/endian.h \
-  /usr/include/sys/_endian.h /usr/include/libkern/_OSByteOrder.h \
-  /usr/include/libkern/i386/_OSByteOrder.h /usr/include/alloca.h \
-  /usr/include/sys/_types/_ct_rune_t.h /usr/include/sys/_types/_rune_t.h \
-  /usr/include/sys/_types/_wchar_t.h /usr/include/machine/types.h \
-  /usr/include/i386/types.h /usr/include/sys/_types/_dev_t.h \
-  /usr/include/sys/_types/_mode_t.h \
-  sdk7.2/components/libraries/util/nordic_common.h \
-  sdk7.2/components/softdevice/s110/headers/nrf_sdm.h \
-  sdk7.2/components/softdevice/s110/headers/nrf_svc.h \
-  sdk7.2/components/drivers_nrf/hal/nrf51.h \
-  sdk7.2/components/toolchain/gcc/core_cm0.h \
-  sdk7.2/components/toolchain/gcc/core_cmInstr.h \
-  sdk7.2/components/toolchain/gcc/core_cmFunc.h \
-  sdk7.2/components/toolchain/system_nrf51.h \
-  sdk7.2/components/softdevice/s110/headers/nrf_soc.h \
-  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdbool.h \
-  sdk7.2/components/drivers_nrf/hal/nrf51_bitfields.h \
-  sdk7.2/components/softdevice/s110/headers/nrf_error_soc.h \
-  sdk7.2/components/softdevice/s110/headers/nrf_error.h \
-  sdk7.2/components/softdevice/s110/headers/nrf_error_sdm.h \
-  sdk7.2/components/libraries/util/app_error.h \
-  sdk7.2/components/libraries/scheduler/app_scheduler.h \
-  sdk7.2/components/libraries/util/app_util.h \
-  sdk7.2/components/drivers_nrf/hal/compiler_abstraction.h \
-  sdk7.2/components/softdevice/common/softdevice_handler/ble_stack_handler_types.h \
-  sdk7.2/components/softdevice/s110/headers/ble.h \
-  sdk7.2/components/softdevice/s110/headers/ble_ranges.h \
-  sdk7.2/components/softdevice/s110/headers/ble_types.h \
-  sdk7.2/components/softdevice/s110/headers/ble_gap.h \
-  sdk7.2/components/softdevice/s110/headers/ble_l2cap.h \
-  sdk7.2/components/softdevice/s110/headers/ble_err.h \
-  sdk7.2/components/softdevice/s110/headers/ble_gatt.h \
-  sdk7.2/components/softdevice/s110/headers/ble_gattc.h \
-  sdk7.2/components/softdevice/s110/headers/ble_gatts.h \
-  sdk7.2/components/softdevice/common/softdevice_handler/ant_stack_handler_types.h
+  /usr/include/_types/_uintmax_t.h
 
 /usr/include/stdio.h:
 
@@ -106,7 +58,7 @@
 
 /usr/include/secure/_common.h:
 
-/Users/tnesheim/GitHub/RIOT/boards/native/include/board.h:
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/native/include/board.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdint.h:
 
@@ -135,125 +87,3 @@
 /usr/include/_types/_intmax_t.h:
 
 /usr/include/_types/_uintmax_t.h:
-
-sdk7.2/components/softdevice/common/softdevice_handler/softdevice_handler.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/sys/wait.h:
-
-/usr/include/sys/_types/_pid_t.h:
-
-/usr/include/sys/_types/_id_t.h:
-
-/usr/include/sys/signal.h:
-
-/usr/include/sys/appleapiopts.h:
-
-/usr/include/machine/signal.h:
-
-/usr/include/i386/signal.h:
-
-/usr/include/machine/_mcontext.h:
-
-/usr/include/i386/_mcontext.h:
-
-/usr/include/mach/i386/_structs.h:
-
-/usr/include/sys/_pthread/_pthread_attr_t.h:
-
-/usr/include/sys/_types/_sigaltstack.h:
-
-/usr/include/sys/_types/_ucontext.h:
-
-/usr/include/sys/_types/_sigset_t.h:
-
-/usr/include/sys/_types/_uid_t.h:
-
-/usr/include/sys/resource.h:
-
-/usr/include/sys/_types/_timeval.h:
-
-/usr/include/machine/endian.h:
-
-/usr/include/i386/endian.h:
-
-/usr/include/sys/_endian.h:
-
-/usr/include/libkern/_OSByteOrder.h:
-
-/usr/include/libkern/i386/_OSByteOrder.h:
-
-/usr/include/alloca.h:
-
-/usr/include/sys/_types/_ct_rune_t.h:
-
-/usr/include/sys/_types/_rune_t.h:
-
-/usr/include/sys/_types/_wchar_t.h:
-
-/usr/include/machine/types.h:
-
-/usr/include/i386/types.h:
-
-/usr/include/sys/_types/_dev_t.h:
-
-/usr/include/sys/_types/_mode_t.h:
-
-sdk7.2/components/libraries/util/nordic_common.h:
-
-sdk7.2/components/softdevice/s110/headers/nrf_sdm.h:
-
-sdk7.2/components/softdevice/s110/headers/nrf_svc.h:
-
-sdk7.2/components/drivers_nrf/hal/nrf51.h:
-
-sdk7.2/components/toolchain/gcc/core_cm0.h:
-
-sdk7.2/components/toolchain/gcc/core_cmInstr.h:
-
-sdk7.2/components/toolchain/gcc/core_cmFunc.h:
-
-sdk7.2/components/toolchain/system_nrf51.h:
-
-sdk7.2/components/softdevice/s110/headers/nrf_soc.h:
-
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/6.1.0/include/stdbool.h:
-
-sdk7.2/components/drivers_nrf/hal/nrf51_bitfields.h:
-
-sdk7.2/components/softdevice/s110/headers/nrf_error_soc.h:
-
-sdk7.2/components/softdevice/s110/headers/nrf_error.h:
-
-sdk7.2/components/softdevice/s110/headers/nrf_error_sdm.h:
-
-sdk7.2/components/libraries/util/app_error.h:
-
-sdk7.2/components/libraries/scheduler/app_scheduler.h:
-
-sdk7.2/components/libraries/util/app_util.h:
-
-sdk7.2/components/drivers_nrf/hal/compiler_abstraction.h:
-
-sdk7.2/components/softdevice/common/softdevice_handler/ble_stack_handler_types.h:
-
-sdk7.2/components/softdevice/s110/headers/ble.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_ranges.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_types.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_gap.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_l2cap.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_err.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_gatt.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_gattc.h:
-
-sdk7.2/components/softdevice/s110/headers/ble_gatts.h:
-
-sdk7.2/components/softdevice/common/softdevice_handler/ant_stack_handler_types.h:

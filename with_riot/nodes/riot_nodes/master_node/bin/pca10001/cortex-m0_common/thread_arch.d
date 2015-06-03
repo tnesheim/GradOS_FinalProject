@@ -1,4 +1,4 @@
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/master_node/bin/pca10001/cortex-m0_common/thread_arch.o: \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cortex-m0_common/thread_arch.o: \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/cortex-m0_common/thread_arch.c \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/_ansi.h \

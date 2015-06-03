@@ -1,4 +1,4 @@
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/master_node/bin/pca10001/core/priority_queue.o: \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core/priority_queue.o: \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/priority_queue.c \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/inttypes.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/newlib.h \

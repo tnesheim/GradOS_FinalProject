@@ -1,4 +1,4 @@
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/master_node/bin/pca10001/core/lifo.o: \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core/lifo.o: \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/lifo.c \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/lifo.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/debug.h \

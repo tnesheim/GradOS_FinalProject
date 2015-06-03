@@ -1,4 +1,4 @@
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/master_node/bin/pca10001/cortex-m0_common/panic.o: \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cortex-m0_common/panic.o: \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/cortex-m0_common/panic.c \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/cortex-m0_common/include/cpu.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/cpu-conf.h \

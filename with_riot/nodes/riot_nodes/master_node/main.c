@@ -16,9 +16,8 @@ int main(void)
    //Get the PID of the main thread
    kernel_pid_t mthread_pid = thread_getpid();
 
-   //Initialize the vtimer and wait for a bit to synchronize the uC's
+   //Initialize the vtimer 
    vtimer_init();
-   vtimer_usleep(500000); //500ms
 
    //Initialize the BLE transceiver
    transceiver_init(bleTrans); 
@@ -33,6 +32,7 @@ int main(void)
    
    while(1)
    {
+
    }
 
    return 0;

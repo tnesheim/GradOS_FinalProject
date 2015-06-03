@@ -1,4 +1,4 @@
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/master_node/bin/pca10001/pca10001_base/board.o: \
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/pca10001_base/board.o: \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/board.c \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/board.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/cortex-m0_common/include/cpu.h \
