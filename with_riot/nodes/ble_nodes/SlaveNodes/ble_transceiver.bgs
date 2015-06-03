@@ -30,7 +30,7 @@ event connection_status(connection, flags, address, address_type, conn_interval,
 	# Device is connected.
 	connected = 1
 	#Turn on the connection LED
-	#call hardware_io_port_write(0, 1, 1)
+	call hardware_io_port_write(0, 1, 1)
 end
 
 # Disconnection event
@@ -39,7 +39,7 @@ event connection_disconnected(handle, result)
 	connected = 0
 	
 	#Turn off the connection LED
-	#call hardware_io_port_write(0, 1, 0)
+	call hardware_io_port_write(0, 1, 0)
 	
 	#connection disconnected, continue advertising
 	call gap_set_mode(gap_general_discoverable,gap_undirected_connectable)
@@ -47,19 +47,28 @@ end
 
 event system_endpoint_watermark_rx(endpoint, size)
     if endpoint = system_endpoint_uart1 then
-		call hardware_io_port_write(0, 1, 1)
-        call system_endpoint_set_watermarks(system_endpoint_uart1, 0, $ff) # disable RX watermark
-        call system_endpoint_rx(system_endpoint_uart1, 25)(result_t, value_len, in(0:25))
 		
-		#See if this was a RX command or a TX cmd
-		if in(0:1) = 6 then #It is an RX command, read data from the RX characteristic and prepare to TX it
-			call attributes_read(transceiver_rx, 0)(handle_t, offset_t, result_t, value_len, out(0:25))
-			call system_endpoint_set_watermarks(system_endpoint_uart1, $ff, 25) # enable TX watermark
-		end if 
-		if in(0:1) = 8 then #It is a send command, write it to the TX characteristic
-			call attributes_write(transceiver_tx, 0, 25, in(0:25))(result_t)
-			call system_endpoint_set_watermarks(system_endpoint_uart1, 25, $ff) #enable RX watermark
+        call system_endpoint_set_watermarks(system_endpoint_uart1, 0, $ff) # disable RX watermark
+        # Get the first byte and check it to see if it is a Transceiver RX/TX start byte 
+		call system_endpoint_rx(system_endpoint_uart1, 1)(result_t, value_len, in(0:25))
+		
+		if in(0:1) = 6 || in(0:1) = 8 then
+			call system_endpoint_rx(system_endpoint_uart1, 24)(result_t, value_len, in(1:24))
+			
+			#See if this was a RX command or a TX cmd
+			if in(0:1) = 6 then #It is an RX command, read data from the RX characteristic and prepare to TX it
+				call attributes_read(transceiver_rx, 0)(handle_t, offset_t, result_t, value_len, out(0:25))
+				call system_endpoint_set_watermarks(system_endpoint_uart1, $ff, 25) # enable TX watermark 
+			if in(0:1) = 8 then #It is a send command, write it to the TX characteristic
+				call attributes_write(transceiver_tx, 0, 25, in(0:25))(result_t)
+				call system_endpoint_set_watermarks(system_endpoint_uart1, 25, $ff) #enable RX watermark
+			end if 
+				
 		end if
+		else
+			call system_endpoint_set_watermarks(system_endpoint_uart1, 25, $ff) # enable RX watermark
+		end if 
+		
     end if
 end
 
