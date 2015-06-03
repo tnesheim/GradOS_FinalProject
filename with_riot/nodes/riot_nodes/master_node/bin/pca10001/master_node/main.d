@@ -57,6 +57,7 @@
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/msg.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/spi.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/periph_conf.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/gpio.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/transceiver.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/kernel_types.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/radio/types.h \
@@ -69,7 +70,9 @@
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/time.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/time.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/priority_queue.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/hwtimer.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h:
 
@@ -185,6 +188,8 @@
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/periph_conf.h:
 
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/gpio.h:
+
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/transceiver.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/kernel_types.h:
@@ -210,3 +215,7 @@
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/priority_queue.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/hwtimer.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h:

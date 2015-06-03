@@ -61,7 +61,8 @@
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stdarg.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/stdio.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/hwtimer.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/gpio.h
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/lib/gcc/arm-none-eabi/4.9.3/include/stdint.h:
 
@@ -186,3 +187,5 @@
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/hwtimer.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/gpio.h:

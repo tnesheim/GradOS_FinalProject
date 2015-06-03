@@ -4,8 +4,10 @@
 #include "thread.h"
 #include "msg.h"
 #include "periph/spi.h"
+#include "periph/gpio.h"
 #include "transceiver.h"
 #include "vtimer.h"
+#include "hwtimer.h"
 
 int main(void)
 {
@@ -29,10 +31,9 @@ int main(void)
    transceiver_register(bleTrans, mthread_pid);
 
    LED_RED_ON;
-   
+
    while(1)
    {
-
    }
 
    return 0;

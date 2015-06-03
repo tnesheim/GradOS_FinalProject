@@ -7,6 +7,7 @@
 #include "nrf51822BLE.h"
 #include "transceiver.h"
 #include "hwtimer.h"
+#include "periph/gpio.h"
 
 /*Initialize the NRF BLE transceiver w/ the RIOT OS*/
 void nrf51822ble_init(void)
@@ -29,6 +30,10 @@ void nrfInitSPI(void)
 {
    char rcvBuf[6]; 
 
+   //Init CSN and set it to high
+   gpio_init_out(GPIO_0, GPIO_PULLUP);   
+   gpio_set(GPIO_0);
+
    //Initialize the SPI as Master
    spi_init_master(SPI_0, SPI_CONF_FIRST_RISING, SPI_SPEED_1MHZ);     
    
@@ -36,7 +41,9 @@ void nrfInitSPI(void)
    //Keep sending until "GOOD" is returned
    do
    {
-      spi_transfer_bytes(SPI_0, NRF_BLE_INIT_STR, rcvBuf, 4);   
+      gpio_clear(GPIO_0);
+      spi_transfer_bytes(SPI_0, NRF_BLE_INIT_STR, rcvBuf, 4);  
+      gpio_set(GPIO_0); 
    } while(memcmp(rcvBuf, NRF_BLE_INIT_SUCCESS, 4) != 0); 
 }
 
@@ -47,14 +54,18 @@ void nrfRcvPkt(ble_radio_pkt * blePkt)
 
    //Tell the NRF that we want to receive a pkt
    uint8_t cmd_byte = RCV_PKT_NRF51822BLE;
+   gpio_clear(GPIO_0);
    spi_transfer_bytes(SPI_0, &cmd_byte, NULL, 1);
+   gpio_set(GPIO_0);
 
    //Wait for a little bit to ensure the NRF has time to 
    //load the data, 2ms
    hwtimer_wait(HWTIMER_TICKS(2000));
 
    //Receive ble packet
+   gpio_clear(GPIO_0);
    spi_transfer_bytes(SPI_0, NULL, rcv_buf, NRF51822_SPI_PKT_LEN);
+   gpio_set(GPIO_0);
 
    //Copy the data over to the radio pkt buffer
    blePkt->msg_type     = rcv_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
@@ -80,5 +91,7 @@ void nrfSendPkt(ble_radio_pkt *blePkt)
    memcpy(&(send_buf[NRF51822_SPI_PAYLOAD_OFFSET]), blePkt->payload, NRF51822_MAX_DATA_LENGTH);  
 
    //Send the data to the NRF device
+   gpio_clear(GPIO_0);
    spi_transfer_bytes(SPI_0, send_buf, NULL, NRF51822_SPI_PKT_LEN);
+   gpio_set(GPIO_0);
 }

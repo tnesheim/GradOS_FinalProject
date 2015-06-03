@@ -54,6 +54,8 @@ Archive member included because of file (symbol)
                               /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o) (msg_send_int)
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
                               /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o) (nrf51822ble_init)
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                              /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o) (gpio_init_out)
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
                               /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o) (spi_transfer_bytes)
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
@@ -1654,6 +1656,8 @@ Discarded input sections
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .debug_macro   0x0000000000000000      0x89e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .debug_macro   0x0000000000000000       0x58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
@@ -1708,6 +1712,8 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .debug_macro   0x0000000000000000       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .debug_macro   0x0000000000000000       0x41 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x0000000000000000       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
@@ -2262,6 +2268,86 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .debug_macro   0x0000000000000000       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x89e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x3a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x1f7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x1f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x242 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x1d2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000     0x74a3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x166 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0xdc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x35 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x3f9 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x2b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x118 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x35 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x9c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x52 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x43 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0xbd /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x3a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x2f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x0000000000000000      0x22d /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .group         0x0000000000000000        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
@@ -2423,7 +2509,7 @@ LOAD /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm
 END GROUP
                 0x0000000000000200                STACK_SIZE = DEFINED (STACK_SIZE)?STACK_SIZE:0x200
 
-.text           0x0000000000000000     0x3c4c
+.text           0x0000000000000000     0x3ed8
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                _sfixed = .
  *(.vectors .vectors.*)
@@ -2490,7 +2576,6 @@ END GROUP
                 0x00000000000002c4                isr_adc
                 0x00000000000002c4                isr_wdt
                 0x00000000000002c4                isr_qdec
-                0x00000000000002c4                isr_gpiote
                 0x00000000000002c4                isr_rtc0
                 0x00000000000002c4                isr_swi2
                 0x00000000000002c4                isr_swi4
@@ -2950,352 +3035,390 @@ END GROUP
                 0x0000000000001f54                msg_init_queue
  .text          0x0000000000001f78        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .text.nrfInitSPI
-                0x0000000000001f78       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000001f78       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
                 0x0000000000001f78                nrfInitSPI
  .text.nrf51822ble_init
-                0x0000000000001fa8       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000001fa8                nrf51822ble_init
+                0x0000000000001fc4       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000001fc4                nrf51822ble_init
  .text.nrfRcvPkt
-                0x0000000000001fc8       0x48 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000001fc8                nrfRcvPkt
+                0x0000000000001fe4       0x62 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000001fe4                nrfRcvPkt
  .text.nrfSendPkt
-                0x0000000000002010       0x36 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000002010                nrfSendPkt
- .text          0x0000000000002046        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002046       0x42 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000002046                nrfSendPkt
+ .text          0x0000000000002088        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .text.gpio_init_out
+                0x0000000000002088       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x0000000000002088                gpio_init_out
+ .text.gpio_init_in
+                0x00000000000020c4       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x00000000000020c4                gpio_init_in
+ .text.gpio_init_int
+                0x0000000000002100       0x98 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x0000000000002100                gpio_init_int
+ .text.gpio_irq_enable
+                0x0000000000002198       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x0000000000002198                gpio_irq_enable
+ .text.gpio_irq_disable
+                0x00000000000021b8       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x00000000000021b8                gpio_irq_disable
+ .text.gpio_read
+                0x00000000000021d8       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x00000000000021d8                gpio_read
+ .text.gpio_set
+                0x000000000000221c       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x000000000000221c                gpio_set
+ .text.gpio_clear
+                0x000000000000223c       0x24 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x000000000000223c                gpio_clear
+ .text.gpio_toggle
+                0x0000000000002260       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x0000000000002260                gpio_toggle
+ .text.gpio_write
+                0x000000000000227c       0x12 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x000000000000227c                gpio_write
+ *fill*         0x000000000000228e        0x2 
+ .text.isr_gpiote
+                0x0000000000002290       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                0x0000000000002290                isr_gpiote
+ .text          0x00000000000022c0        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .text.spi_init_slave
-                0x0000000000002046        0x6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x0000000000002046                spi_init_slave
+                0x00000000000022c0        0x6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000022c0                spi_init_slave
+ *fill*         0x00000000000022c6        0x2 
  .text.spi_conf_pins
-                0x000000000000204c       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x000000000000204c                spi_conf_pins
+                0x00000000000022c8       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000022c8                spi_conf_pins
  .text.spi_acquire
-                0x00000000000020b4       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x00000000000020b4                spi_acquire
+                0x0000000000002330       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002330                spi_acquire
  .text.spi_release
-                0x00000000000020d4       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x00000000000020d4                spi_release
+                0x0000000000002350       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002350                spi_release
  .text.spi_transfer_bytes
-                0x00000000000020f4       0x58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x00000000000020f4                spi_transfer_bytes
+                0x0000000000002370       0x58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002370                spi_transfer_bytes
  .text.spi_transfer_byte
-                0x000000000000214c       0x12 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x000000000000214c                spi_transfer_byte
+                0x00000000000023c8       0x12 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000023c8                spi_transfer_byte
  .text.spi_transfer_reg
-                0x000000000000215e       0x1a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x000000000000215e                spi_transfer_reg
+                0x00000000000023da       0x1a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000023da                spi_transfer_reg
  .text.spi_transfer_regs
-                0x0000000000002178       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x0000000000002178                spi_transfer_regs
+                0x00000000000023f4       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000023f4                spi_transfer_regs
  .text.spi_transmission_begin
-                0x0000000000002194        0x2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x0000000000002194                spi_transmission_begin
- *fill*         0x0000000000002196        0x2 
+                0x0000000000002410        0x2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002410                spi_transmission_begin
+ *fill*         0x0000000000002412        0x2 
  .text.spi_poweron
-                0x0000000000002198       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x0000000000002198                spi_poweron
+                0x0000000000002414       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002414                spi_poweron
  .text.spi_init_master
-                0x00000000000021b4       0xa0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x00000000000021b4                spi_init_master
+                0x0000000000002430       0xa0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000002430                spi_init_master
  .text.spi_poweroff
-                0x0000000000002254       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
-                0x0000000000002254                spi_poweroff
- .text          0x0000000000002270        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x00000000000024d0       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000024d0                spi_poweroff
+ .text          0x00000000000024ec        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
  .text.timex_add
-                0x0000000000002270       0x2c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
-                0x0000000000002270                timex_add
+                0x00000000000024ec       0x2c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x00000000000024ec                timex_add
  .text.timex_set
-                0x000000000000229c        0x6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
-                0x000000000000229c                timex_set
- *fill*         0x00000000000022a2        0x2 
+                0x0000000000002518        0x6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x0000000000002518                timex_set
+ *fill*         0x000000000000251e        0x2 
  .text.timex_sub
-                0x00000000000022a4       0x2c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
-                0x00000000000022a4                timex_sub
+                0x0000000000002520       0x2c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x0000000000002520                timex_sub
  .text.timex_cmp
-                0x00000000000022d0       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
-                0x00000000000022d0                timex_cmp
- .text          0x00000000000022f0       0x14 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
-                0x00000000000022f0                __gnu_thumb1_case_uqi
- .text          0x0000000000002304       0x14 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_shi.o)
-                0x0000000000002304                __gnu_thumb1_case_shi
- .text          0x0000000000002318      0x120 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
-                0x0000000000002318                __udivsi3
-                0x0000000000002318                __aeabi_uidiv
-                0x0000000000002424                __aeabi_uidivmod
- .text          0x0000000000002438        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
-                0x0000000000002438                __aeabi_ldiv0
-                0x0000000000002438                __aeabi_idiv0
- .text          0x000000000000243c        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
- .text.__errno  0x000000000000243c        0xc /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
-                0x000000000000243c                __errno
- .text          0x0000000000002448        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
- .text          0x0000000000002448        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
+                0x000000000000254c       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x000000000000254c                timex_cmp
+ .text          0x000000000000256c       0x14 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
+                0x000000000000256c                __gnu_thumb1_case_uqi
+ .text          0x0000000000002580       0x14 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_shi.o)
+                0x0000000000002580                __gnu_thumb1_case_shi
+ .text          0x0000000000002594      0x120 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
+                0x0000000000002594                __udivsi3
+                0x0000000000002594                __aeabi_uidiv
+                0x00000000000026a0                __aeabi_uidivmod
+ .text          0x00000000000026b4        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
+                0x00000000000026b4                __aeabi_ldiv0
+                0x00000000000026b4                __aeabi_idiv0
+ .text          0x00000000000026b8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
+ .text.__errno  0x00000000000026b8        0xc /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
+                0x00000000000026b8                __errno
+ .text          0x00000000000026c4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
+ .text          0x00000000000026c4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
  .text.__libc_init_array
-                0x0000000000002448       0x4c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
-                0x0000000000002448                __libc_init_array
- .text          0x0000000000002494        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
- .text.memcmp   0x0000000000002494       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
-                0x0000000000002494                memcmp
- .text          0x00000000000024b2        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
- .text.memcpy   0x00000000000024b2       0x12 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
-                0x00000000000024b2                memcpy
- .text          0x00000000000024c4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
- .text.memset   0x00000000000024c4       0x10 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
-                0x00000000000024c4                memset
- .text          0x00000000000024d4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
+                0x00000000000026c4       0x4c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
+                0x00000000000026c4                __libc_init_array
+ .text          0x0000000000002710        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
+ .text.memcmp   0x0000000000002710       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
+                0x0000000000002710                memcmp
+ .text          0x000000000000272e        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
+ .text.memcpy   0x000000000000272e       0x12 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
+                0x000000000000272e                memcpy
+ .text          0x0000000000002740        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
+ .text.memset   0x0000000000002740       0x10 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
+                0x0000000000002740                memset
+ .text          0x0000000000002750        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
  .text._printf_r
-                0x00000000000024d4       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
-                0x00000000000024d4                _printf_r
-                0x00000000000024d4                _iprintf_r
- .text.printf   0x00000000000024fc       0x34 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
-                0x00000000000024fc                printf
-                0x00000000000024fc                iprintf
- .text          0x0000000000002530        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
- .text._puts_r  0x0000000000002530       0xc2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
-                0x0000000000002530                _puts_r
- *fill*         0x00000000000025f2        0x2 
- .text.puts     0x00000000000025f4       0x14 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
-                0x00000000000025f4                puts
- .text          0x0000000000002608        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
- .text.strncpy  0x0000000000002608       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
-                0x0000000000002608                strncpy
- .text          0x0000000000002630        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
+                0x0000000000002750       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
+                0x0000000000002750                _printf_r
+                0x0000000000002750                _iprintf_r
+ .text.printf   0x0000000000002778       0x34 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
+                0x0000000000002778                printf
+                0x0000000000002778                iprintf
+ .text          0x00000000000027ac        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
+ .text._puts_r  0x00000000000027ac       0xc2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
+                0x00000000000027ac                _puts_r
+ *fill*         0x000000000000286e        0x2 
+ .text.puts     0x0000000000002870       0x14 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
+                0x0000000000002870                puts
+ .text          0x0000000000002884        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
+ .text.strncpy  0x0000000000002884       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
+                0x0000000000002884                strncpy
+ .text          0x00000000000028ac        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
  .text.__swbuf_r
-                0x0000000000002630       0xb0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
-                0x0000000000002630                __swbuf_r
- .text.__swbuf  0x00000000000026e0       0x18 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
-                0x00000000000026e0                __swbuf
- .text          0x00000000000026f8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
+                0x00000000000028ac       0xb0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
+                0x00000000000028ac                __swbuf_r
+ .text.__swbuf  0x000000000000295c       0x18 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
+                0x000000000000295c                __swbuf
+ .text          0x0000000000002974        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
  .text.__swsetup_r
-                0x00000000000026f8       0xe8 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
-                0x00000000000026f8                __swsetup_r
- .text          0x00000000000027e0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+                0x0000000000002974       0xe8 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
+                0x0000000000002974                __swsetup_r
+ .text          0x0000000000002a5c        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
  .text.__sflush_r
-                0x00000000000027e0      0x112 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
-                0x00000000000027e0                __sflush_r
- *fill*         0x00000000000028f2        0x2 
+                0x0000000000002a5c      0x112 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+                0x0000000000002a5c                __sflush_r
+ *fill*         0x0000000000002b6e        0x2 
  .text._fflush_r
-                0x00000000000028f4       0x58 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
-                0x00000000000028f4                _fflush_r
- .text.fflush   0x000000000000294c       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
-                0x000000000000294c                fflush
- .text          0x0000000000002974        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002b70       0x58 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+                0x0000000000002b70                _fflush_r
+ .text.fflush   0x0000000000002bc8       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+                0x0000000000002bc8                fflush
+ .text          0x0000000000002bf0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
  .text.__fp_lock
-                0x0000000000002974        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002bf0        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
  .text.__fp_unlock
-                0x0000000000002978        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002bf4        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x000000000000297c       0x10 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x000000000000297c                _cleanup_r
+                0x0000000000002bf8       0x10 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002bf8                _cleanup_r
  .text.std.isra.0
-                0x000000000000298c       0x48 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002c08       0x48 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
  .text.__sfmoreglue
-                0x00000000000029d4       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x00000000000029d4                __sfmoreglue
+                0x0000000000002c50       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002c50                __sfmoreglue
  .text._cleanup
-                0x0000000000002a00       0x10 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002a00                _cleanup
- .text.__sinit  0x0000000000002a10       0x64 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002a10                __sinit
- .text.__sfp    0x0000000000002a74       0x7c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002a74                __sfp
+                0x0000000000002c7c       0x10 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002c7c                _cleanup
+ .text.__sinit  0x0000000000002c8c       0x64 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002c8c                __sinit
+ .text.__sfp    0x0000000000002cf0       0x7c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002cf0                __sfp
  .text.__sfp_lock_acquire
-                0x0000000000002af0        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002af0                __sfp_lock_acquire
+                0x0000000000002d6c        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002d6c                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0000000000002af2        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002af2                __sfp_lock_release
+                0x0000000000002d6e        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002d6e                __sfp_lock_release
  .text.__sinit_lock_acquire
-                0x0000000000002af4        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002af4                __sinit_lock_acquire
+                0x0000000000002d70        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002d70                __sinit_lock_acquire
  .text.__sinit_lock_release
-                0x0000000000002af6        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002af6                __sinit_lock_release
+                0x0000000000002d72        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002d72                __sinit_lock_release
  .text.__fp_lock_all
-                0x0000000000002af8       0x18 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002af8                __fp_lock_all
+                0x0000000000002d74       0x18 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002d74                __fp_lock_all
  .text.__fp_unlock_all
-                0x0000000000002b10       0x18 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000002b10                __fp_unlock_all
- .text          0x0000000000002b28        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
- .text._fwalk   0x0000000000002b28       0x38 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
-                0x0000000000002b28                _fwalk
+                0x0000000000002d8c       0x18 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000002d8c                __fp_unlock_all
+ .text          0x0000000000002da4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
+ .text._fwalk   0x0000000000002da4       0x38 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
+                0x0000000000002da4                _fwalk
  .text._fwalk_reent
-                0x0000000000002b60       0x42 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
-                0x0000000000002b60                _fwalk_reent
- .text          0x0000000000002ba2        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
- *fill*         0x0000000000002ba2        0x2 
+                0x0000000000002ddc       0x42 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
+                0x0000000000002ddc                _fwalk_reent
+ .text          0x0000000000002e1e        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
+ *fill*         0x0000000000002e1e        0x2 
  .text.__smakebuf_r
-                0x0000000000002ba4       0xb0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
-                0x0000000000002ba4                __smakebuf_r
- .text          0x0000000000002c54        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
- .text._free_r  0x0000000000002c54       0x8c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
-                0x0000000000002c54                _free_r
- .text          0x0000000000002ce0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000002e20       0xb0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
+                0x0000000000002e20                __smakebuf_r
+ .text          0x0000000000002ed0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
+ .text._free_r  0x0000000000002ed0       0x8c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000002ed0                _free_r
+ .text          0x0000000000002f5c        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
  .text._malloc_r
-                0x0000000000002ce0       0xb0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000000002ce0                _malloc_r
- .text          0x0000000000002d90        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000002f5c       0xb0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000000002f5c                _malloc_r
+ .text          0x000000000000300c        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputc_r
-                0x0000000000002d90       0x2a /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000000300c       0x2a /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x0000000000002dba       0x24 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000000002dba                __sfputs_r
+                0x0000000000003036       0x24 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003036                __sfputs_r
  .text.__sprint_r
-                0x0000000000002dde       0x1c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000000002dde                __sprint_r
- *fill*         0x0000000000002dfa        0x2 
+                0x000000000000305a       0x1c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000000305a                __sprint_r
+ *fill*         0x0000000000003076        0x2 
  .text._vfprintf_r
-                0x0000000000002dfc      0x220 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x0000000000002dfc                _vfiprintf_r
-                0x0000000000002dfc                _vfprintf_r
+                0x0000000000003078      0x220 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003078                _vfiprintf_r
+                0x0000000000003078                _vfprintf_r
  .text.vfprintf
-                0x000000000000301c       0x1c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
-                0x000000000000301c                vfiprintf
-                0x000000000000301c                vfprintf
- .text          0x0000000000003038        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000003298       0x1c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003298                vfiprintf
+                0x0000000000003298                vfprintf
+ .text          0x00000000000032b4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .text._printf_common
-                0x0000000000003038       0xdc /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000000003038                _printf_common
+                0x00000000000032b4       0xdc /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00000000000032b4                _printf_common
  .text._printf_i
-                0x0000000000003114      0x230 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x0000000000003114                _printf_i
- .text          0x0000000000003344        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
- .text.__sread  0x0000000000003344       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
-                0x0000000000003344                __sread
+                0x0000000000003390      0x230 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000003390                _printf_i
+ .text          0x00000000000035c0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+ .text.__sread  0x00000000000035c0       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+                0x00000000000035c0                __sread
  .text.__seofread
-                0x000000000000336c        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
-                0x000000000000336c                __seofread
+                0x00000000000035e8        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+                0x00000000000035e8                __seofread
  .text.__swrite
-                0x0000000000003370       0x38 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
-                0x0000000000003370                __swrite
- .text.__sseek  0x00000000000033a8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
-                0x00000000000033a8                __sseek
+                0x00000000000035ec       0x38 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+                0x00000000000035ec                __swrite
+ .text.__sseek  0x0000000000003624       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+                0x0000000000003624                __sseek
  .text.__sclose
-                0x00000000000033d4        0xc /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
-                0x00000000000033d4                __sclose
- .text          0x00000000000033e0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
+                0x0000000000003650        0xc /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+                0x0000000000003650                __sclose
+ .text          0x000000000000365c        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
  .text.__sfvwrite_r
-                0x00000000000033e0      0x2b0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
-                0x00000000000033e0                __sfvwrite_r
- .text          0x0000000000003690        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
- .text.memchr   0x0000000000003690       0x16 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
-                0x0000000000003690                memchr
- .text          0x00000000000036a6        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
- .text.memmove  0x00000000000036a6       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
-                0x00000000000036a6                memmove
- .text          0x00000000000036ce        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x000000000000365c      0x2b0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
+                0x000000000000365c                __sfvwrite_r
+ .text          0x000000000000390c        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
+ .text.memchr   0x000000000000390c       0x16 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
+                0x000000000000390c                memchr
+ .text          0x0000000000003922        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
+ .text.memmove  0x0000000000003922       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
+                0x0000000000003922                memmove
+ .text          0x000000000000394a        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
  .text._realloc_r
-                0x00000000000036ce       0x4c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
-                0x00000000000036ce                _realloc_r
- .text          0x000000000000371a        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x000000000000394a       0x4c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x000000000000394a                _realloc_r
+ .text          0x0000000000003996        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
  .text._malloc_usable_size_r
-                0x000000000000371a       0x16 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
-                0x000000000000371a                _malloc_usable_size_r
- .text          0x0000000000003730      0x1e0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
-                0x0000000000003730                __aeabi_idiv
-                0x0000000000003730                __divsi3
-                0x00000000000038fc                __aeabi_idivmod
+                0x0000000000003996       0x16 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000000003996                _malloc_usable_size_r
+ .text          0x00000000000039ac      0x1e0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
+                0x00000000000039ac                __aeabi_idiv
+                0x00000000000039ac                __divsi3
+                0x0000000000003b78                __aeabi_idivmod
  *(.glue_7t)
  .glue_7t       0x0000000000000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x0000000000000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata.str1.1
-                0x0000000000003910       0x17 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
+                0x0000000000003b8c       0x17 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .rodata.str1.1
-                0x0000000000003927       0x29 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
+                0x0000000000003ba3       0x29 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .rodata.str1.1
-                0x0000000000003950       0xd6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
+                0x0000000000003bcc       0xd6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
  .rodata.str1.1
-                0x0000000000003a26       0x45 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(panic.o)
+                0x0000000000003ca2       0x45 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(panic.o)
                                          0x48 (size before relaxing)
  .rodata.str1.1
-                0x0000000000003a6b       0x11 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(hwtimer.o)
+                0x0000000000003ce7       0x11 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(hwtimer.o)
  .rodata.str1.1
-                0x0000000000003a7c       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(lifo.o)
+                0x0000000000003cf8       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(lifo.o)
  .rodata.str1.1
-                0x0000000000003acc       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cortex-m0_common.a(thread_arch.o)
+                0x0000000000003d48       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cortex-m0_common.a(thread_arch.o)
  .rodata.str1.1
-                0x0000000000003b3d       0x5b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000003db9       0x5b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
  .rodata.CSWTCH.32
-                0x0000000000003b98        0x6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000003e14        0x6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
  .rodata.str1.1
-                0x0000000000003b9e        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .rodata.spi    0x0000000000003ba8        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x0000000000003e1a        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .rodata.CSWTCH.6
+                0x0000000000003e24       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .rodata.spi    0x0000000000003e34        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .rodata.str1.1
-                0x0000000000003bb0        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
- *fill*         0x0000000000003bb2        0x2 
+                0x0000000000003e3c        0x2 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
+ *fill*         0x0000000000003e3e        0x2 
  .rodata._global_impure_ptr
-                0x0000000000003bb4        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
-                0x0000000000003bb4                _global_impure_ptr
+                0x0000000000003e40        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
+                0x0000000000003e40                _global_impure_ptr
  .rodata.__sf_fake_stdin
-                0x0000000000003bb8       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000003bb8                __sf_fake_stdin
+                0x0000000000003e44       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000003e44                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x0000000000003bd8       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000003bd8                __sf_fake_stdout
+                0x0000000000003e64       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000003e64                __sf_fake_stdout
  .rodata.__sf_fake_stderr
-                0x0000000000003bf8       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
-                0x0000000000003bf8                __sf_fake_stderr
+                0x0000000000003e84       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x0000000000003e84                __sf_fake_stderr
  .rodata.str1.1
-                0x0000000000003c18       0x11 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000003ea4       0x11 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
  .rodata.str1.1
-                0x0000000000003c29       0x22 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000003eb5       0x22 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000003c4c                . = ALIGN (0x4)
- *fill*         0x0000000000003c4b        0x1 
+                0x0000000000003ed8                . = ALIGN (0x4)
+ *fill*         0x0000000000003ed7        0x1 
  *(.init)
-                0x0000000000003c4c                . = ALIGN (0x4)
-                0x0000000000003c4c                __preinit_array_start = .
+                0x0000000000003ed8                . = ALIGN (0x4)
+                0x0000000000003ed8                __preinit_array_start = .
  *(.preinit_array)
-                0x0000000000003c4c                __preinit_array_end = .
-                0x0000000000003c4c                . = ALIGN (0x4)
-                0x0000000000003c4c                __init_array_start = .
+                0x0000000000003ed8                __preinit_array_end = .
+                0x0000000000003ed8                . = ALIGN (0x4)
+                0x0000000000003ed8                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
-                0x0000000000003c4c                __init_array_end = .
-                0x0000000000003c4c                . = ALIGN (0x4)
+                0x0000000000003ed8                __init_array_end = .
+                0x0000000000003ed8                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x0000000000003c4c                . = ALIGN (0x4)
+                0x0000000000003ed8                . = ALIGN (0x4)
  *(.fini)
-                0x0000000000003c4c                . = ALIGN (0x4)
-                0x0000000000003c4c                __fini_array_start = .
+                0x0000000000003ed8                . = ALIGN (0x4)
+                0x0000000000003ed8                __fini_array_start = .
  *(.fini_array)
  *(SORT(.fini_array.*))
-                0x0000000000003c4c                __fini_array_end = .
+                0x0000000000003ed8                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x0000000000003c4c                . = ALIGN (0x4)
-                0x0000000000003c4c                _efixed = .
-                0x0000000000003c4c                PROVIDE (__exidx_start, .)
+                0x0000000000003ed8                . = ALIGN (0x4)
+                0x0000000000003ed8                _efixed = .
+                0x0000000000003ed8                PROVIDE (__exidx_start, .)
 
-.vfp11_veneer   0x0000000000003c4c        0x0
+.vfp11_veneer   0x0000000000003ed8        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000003c4c        0x0
+.v4_bx          0x0000000000003ed8        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000003c4c        0x0
+.iplt           0x0000000000003ed8        0x0
  .iplt          0x0000000000000000        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
 
-.igot.plt       0x0000000000003c4c        0x0
+.igot.plt       0x0000000000003ed8        0x0
  .igot.plt      0x0000000000000000        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
 
-.rel.dyn        0x0000000000003c4c        0x0
+.rel.dyn        0x0000000000003ed8        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000000003c4c                PROVIDE (__exidx_end, .)
-                0x0000000000003c4c                . = ALIGN (0x4)
-                0x0000000000003c4c                _etext = .
+                0x0000000000003ed8                PROVIDE (__exidx_end, .)
+                0x0000000000003ed8                . = ALIGN (0x4)
+                0x0000000000003ed8                _etext = .
 
-.relocate       0x0000000020000000       0x74 load address 0x0000000000003c4c
+.relocate       0x0000000020000000       0x74 load address 0x0000000000003ed8
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -3340,6 +3463,7 @@ END GROUP
                 0x000000002000000c        0x4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .data          0x0000000020000010        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .data          0x0000000020000010        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .data          0x0000000020000010        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
  .data          0x0000000020000010        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .data          0x0000000020000010        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
  .data          0x0000000020000010        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
@@ -3380,7 +3504,7 @@ END GROUP
                 0x0000000020000074                . = ALIGN (0x4)
                 0x0000000020000074                _erelocate = .
 
-.bss            0x0000000020000074      0xe68 load address 0x0000000000003cc0
+.bss            0x0000000020000074      0xe74 load address 0x0000000000003f4c
                 0x0000000020000074                . = ALIGN (0x4)
                 0x0000000020000074                _sbss = .
                 0x0000000020000074                _szero = .
@@ -3497,64 +3621,66 @@ END GROUP
                 0x0000000020000ea0       0x24 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .bss           0x0000000020000ec4        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .bss           0x0000000020000ec4        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .bss           0x0000000020000ec4        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .bss.locks     0x0000000020000ec4       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_shi.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
- .bss           0x0000000020000ed4        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x0000000020000ec4        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .bss.gpio_config
+                0x0000000020000ec4        0xc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .bss           0x0000000020000ed0        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .bss.locks     0x0000000020000ed0       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_shi.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
+ .bss           0x0000000020000ee0        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
  .bss.__malloc_sbrk_start
-                0x0000000020000ed4        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000ed4                __malloc_sbrk_start
+                0x0000000020000ee0        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000ee0                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x0000000020000ed8        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
-                0x0000000020000ed8                __malloc_free_list
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
- .bss           0x0000000020000edc        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
+                0x0000000020000ee4        0x4 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x0000000020000ee4                __malloc_free_list
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
+ .bss           0x0000000020000ee8        0x0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
  *(COMMON)
-                0x0000000020000edc                . = ALIGN (0x4)
-                0x0000000020000edc                _ebss = .
-                0x0000000020000edc                _ezero = .
+                0x0000000020000ee8                . = ALIGN (0x4)
+                0x0000000020000ee8                _ebss = .
+                0x0000000020000ee8                _ezero = .
 
-.stack          0x0000000020000edc      0x204 load address 0x0000000000004b28
-                0x0000000020000ee0                . = ALIGN (0x8)
- *fill*         0x0000000020000edc        0x4 
-                0x0000000020000ee0                _sstack = .
-                0x00000000200010e0                . = (. + STACK_SIZE)
- *fill*         0x0000000020000ee0      0x200 
-                0x00000000200010e0                . = ALIGN (0x8)
-                0x00000000200010e0                _estack = .
-                0x00000000200010e0                . = ALIGN (0x4)
-                0x00000000200010e0                _sheap = .
+.stack          0x0000000020000ee8      0x200 load address 0x0000000000004dc0
+                0x0000000020000ee8                . = ALIGN (0x8)
+                0x0000000020000ee8                _sstack = .
+                0x00000000200010e8                . = (. + STACK_SIZE)
+ *fill*         0x0000000020000ee8      0x200 
+                0x00000000200010e8                . = ALIGN (0x8)
+                0x00000000200010e8                _estack = .
+                0x00000000200010e8                . = ALIGN (0x4)
+                0x00000000200010e8                _sheap = .
                 0x0000000020004000                _eheap = (ORIGIN (ram) + 0x4000)
 OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0xaf57
+.debug_info     0x0000000000000000     0xbb1a
  .debug_info    0x0000000000000000     0x1300 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_info    0x0000000000001300      0x4d2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .debug_info    0x00000000000017d2      0x390 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
@@ -3583,11 +3709,12 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_info    0x000000000000718a      0xcd3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
  .debug_info    0x0000000000007e5d      0xdc1 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .debug_info    0x0000000000008c1e      0xd0a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
- .debug_info    0x0000000000009928      0x515 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_info    0x0000000000009e3d      0xf58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_info    0x000000000000ad95      0x1c2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_info    0x0000000000009928      0x6ae /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_info    0x0000000000009fd6      0xa2a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_info    0x000000000000aa00      0xf58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_info    0x000000000000b958      0x1c2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_abbrev   0x0000000000000000     0x3589
+.debug_abbrev   0x0000000000000000     0x3855
  .debug_abbrev  0x0000000000000000      0x406 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_abbrev  0x0000000000000406      0x153 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .debug_abbrev  0x0000000000000559      0x17e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
@@ -3617,10 +3744,11 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_abbrev  0x00000000000029d8      0x3e2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .debug_abbrev  0x0000000000002dba      0x342 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .debug_abbrev  0x00000000000030fc      0x171 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_abbrev  0x000000000000326d      0x23e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_abbrev  0x00000000000034ab       0xde /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_abbrev  0x000000000000326d      0x2cc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_abbrev  0x0000000000003539      0x23e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_abbrev  0x0000000000003777       0xde /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_loc      0x0000000000000000     0x3bac
+.debug_loc      0x0000000000000000     0x3ea9
  .debug_loc     0x0000000000000000      0x481 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_loc     0x0000000000000481       0x36 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .debug_loc     0x00000000000004b7       0x42 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
@@ -3644,10 +3772,11 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_loc     0x0000000000002709      0x544 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .debug_loc     0x0000000000002c4d      0x936 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .debug_loc     0x0000000000003583       0x5a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_loc     0x00000000000035dd      0x458 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_loc     0x0000000000003a35      0x177 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_loc     0x00000000000035dd      0x2fd /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_loc     0x00000000000038da      0x458 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_loc     0x0000000000003d32      0x177 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_aranges  0x0000000000000000      0x888
+.debug_aranges  0x0000000000000000      0x8f8
  .debug_aranges
                 0x0000000000000000       0xa0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_aranges
@@ -3707,11 +3836,13 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_aranges
                 0x00000000000007a0       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .debug_aranges
-                0x00000000000007d8       0x78 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x00000000000007d8       0x70 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
  .debug_aranges
-                0x0000000000000850       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x0000000000000848       0x78 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_aranges
+                0x00000000000008c0       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_ranges   0x0000000000000000      0x940
+.debug_ranges   0x0000000000000000      0x9b8
  .debug_ranges  0x0000000000000000       0xd8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_ranges  0x00000000000000d8       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .debug_ranges  0x0000000000000100       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
@@ -3741,10 +3872,11 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_ranges  0x00000000000006b8       0xe8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .debug_ranges  0x00000000000007a0       0xe8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .debug_ranges  0x0000000000000888       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_ranges  0x00000000000008b0       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_ranges  0x0000000000000918       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_ranges  0x00000000000008b0       0x78 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_ranges  0x0000000000000928       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_ranges  0x0000000000000990       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_macro    0x0000000000000000     0xf3cd
+.debug_macro    0x0000000000000000     0xf697
  .debug_macro   0x0000000000000000      0x367 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_macro   0x0000000000000367      0x89e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_macro   0x0000000000000c05       0x10 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
@@ -3844,27 +3976,28 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_macro   0x000000000000d32c      0x2b9 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(timer.o)
  .debug_macro   0x000000000000d5e5      0x2a6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(uart.o)
  .debug_macro   0x000000000000d88b       0xd9 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/pca10001_base.a(board.o)
- .debug_macro   0x000000000000d964      0x389 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
- .debug_macro   0x000000000000dced       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
- .debug_macro   0x000000000000dd0f       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
- .debug_macro   0x000000000000dd5b       0x78 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
- .debug_macro   0x000000000000ddd3       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
- .debug_macro   0x000000000000ddf5      0x2e3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
- .debug_macro   0x000000000000e0d8       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
- .debug_macro   0x000000000000e0f4       0xd3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu.a(cpu.o)
- .debug_macro   0x000000000000e1c7      0x37f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
- .debug_macro   0x000000000000e546       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
- .debug_macro   0x000000000000e55c      0x3d1 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_macro   0x000000000000e92d       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_macro   0x000000000000e943       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_macro   0x000000000000e959       0x29 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_macro   0x000000000000e982      0x31a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
- .debug_macro   0x000000000000ec9c      0x348 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_macro   0x000000000000efe4       0x63 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_macro   0x000000000000f047      0x105 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_macro   0x000000000000f14c      0x281 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_macro   0x000000000000d964      0x3ab /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x000000000000dd0f       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x000000000000dd31       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x000000000000dd7d       0x78 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x000000000000ddf5       0x22 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_macro   0x000000000000de17      0x2e3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_macro   0x000000000000e0fa       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_macro   0x000000000000e116       0xd3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu.a(cpu.o)
+ .debug_macro   0x000000000000e1e9      0x37f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_macro   0x000000000000e568       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_macro   0x000000000000e57e      0x3d1 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_macro   0x000000000000e94f       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_macro   0x000000000000e965       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_macro   0x000000000000e97b       0x29 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_macro   0x000000000000e9a4      0x31a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
+ .debug_macro   0x000000000000ecbe      0x352 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_macro   0x000000000000f010       0x63 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_macro   0x000000000000f073      0x29e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_macro   0x000000000000f311      0x105 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_macro   0x000000000000f416      0x281 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_line     0x0000000000000000     0xbe6e
+.debug_line     0x0000000000000000     0xc66a
  .debug_line    0x0000000000000000      0x8f0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_line    0x00000000000008f0      0x670 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .debug_line    0x0000000000000f60      0x714 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
@@ -3887,17 +4020,18 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_line    0x0000000000006a12      0x80f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(timer.o)
  .debug_line    0x0000000000007221      0x7e7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(uart.o)
  .debug_line    0x0000000000007a08      0x425 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/pca10001_base.a(board.o)
- .debug_line    0x0000000000007e2d      0x81b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
- .debug_line    0x0000000000008648      0x5c7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
- .debug_line    0x0000000000008c0f      0x437 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu.a(cpu.o)
- .debug_line    0x0000000000009046      0x8f7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
- .debug_line    0x000000000000993d      0x944 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_line    0x000000000000a281      0x815 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
- .debug_line    0x000000000000aa96      0x829 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_line    0x000000000000b2bf      0x5db /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_line    0x000000000000b89a      0x5d4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_line    0x0000000000007e2d      0x843 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+ .debug_line    0x0000000000008670      0x5c7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_line    0x0000000000008c37      0x437 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu.a(cpu.o)
+ .debug_line    0x000000000000906e      0x8f7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_line    0x0000000000009965      0x944 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_line    0x000000000000a2a9      0x815 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
+ .debug_line    0x000000000000aabe      0x842 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_line    0x000000000000b300      0x7bb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_line    0x000000000000babb      0x5db /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_line    0x000000000000c096      0x5d4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
-.debug_str      0x0000000000000000    0x35994
+.debug_str      0x0000000000000000    0x35bbb
  .debug_str     0x0000000000000000    0x329d4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
                                       0x32cfa (size before relaxing)
  .debug_str     0x00000000000329d4      0x234 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
@@ -3942,23 +4076,25 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
                                       0x2ef50 (size before relaxing)
  .debug_str     0x000000000003426c       0x56 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/pca10001_base.a(board.o)
                                       0x2bdb5 (size before relaxing)
- .debug_str     0x00000000000342c2      0x5c0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
-                                      0x314dc (size before relaxing)
- .debug_str     0x0000000000034882       0xbb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_str     0x00000000000342c2      0x5c8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/master_node.a(main.o)
+                                      0x31639 (size before relaxing)
+ .debug_str     0x000000000003488a       0xbb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/auto_init.a(auto_init.o)
                                       0x30618 (size before relaxing)
- .debug_str     0x000000000003493d      0x148 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu.a(cpu.o)
+ .debug_str     0x0000000000034945      0x148 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu.a(cpu.o)
                                       0x2c519 (size before relaxing)
- .debug_str     0x0000000000034a85      0x4b8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_str     0x0000000000034a8d      0x4b8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/transceiver.a(transceiver.o)
                                       0x31d7d (size before relaxing)
- .debug_str     0x0000000000034f3d      0x476 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_str     0x0000000000034f45      0x476 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
                                       0x31268 (size before relaxing)
- .debug_str     0x00000000000353b3      0x120 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
+ .debug_str     0x00000000000353bb      0x120 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
                                       0x30af8 (size before relaxing)
- .debug_str     0x00000000000354d3      0x1cb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                                      0x31599 (size before relaxing)
- .debug_str     0x000000000003569e      0x25c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_str     0x00000000000354db      0x29a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                                      0x31670 (size before relaxing)
+ .debug_str     0x0000000000035775      0x150 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+                                      0x2ed83 (size before relaxing)
+ .debug_str     0x00000000000358c5      0x25c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
                                       0x2ca01 (size before relaxing)
- .debug_str     0x00000000000358fa       0x9a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_str     0x0000000000035b21       0x9a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
                                       0x304d4 (size before relaxing)
 
 .comment        0x0000000000000000       0x70
@@ -3992,6 +4128,7 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .comment       0x0000000000000000       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .comment       0x0000000000000000       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .comment       0x0000000000000000       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .comment       0x0000000000000000       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
  .comment       0x0000000000000000       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .comment       0x0000000000000000       0x71 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
 
@@ -4056,71 +4193,73 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .ARM.attributes
                 0x000000000000055c       0x31 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .ARM.attributes
-                0x000000000000058d       0x31 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+                0x000000000000058d       0x31 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
  .ARM.attributes
-                0x00000000000005be       0x31 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+                0x00000000000005be       0x31 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
  .ARM.attributes
-                0x00000000000005ef       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
+                0x00000000000005ef       0x31 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
  .ARM.attributes
-                0x000000000000060d       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_shi.o)
+                0x0000000000000620       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_uqi.o)
  .ARM.attributes
-                0x000000000000062b       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
+                0x000000000000063e       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_thumb1_case_shi.o)
  .ARM.attributes
-                0x0000000000000649       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
+                0x000000000000065c       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
  .ARM.attributes
-                0x0000000000000667       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
+                0x000000000000067a       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000000000000693       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
+                0x0000000000000698       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
  .ARM.attributes
-                0x00000000000006bf       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
+                0x00000000000006c4       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x00000000000006eb       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
+                0x00000000000006f0       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x0000000000000717       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
+                0x000000000000071c       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
  .ARM.attributes
-                0x0000000000000743       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
+                0x0000000000000748       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
  .ARM.attributes
-                0x000000000000076f       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
+                0x0000000000000774       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x000000000000079b       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
+                0x00000000000007a0       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
  .ARM.attributes
-                0x00000000000007c7       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
+                0x00000000000007cc       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
  .ARM.attributes
-                0x00000000000007f3       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
+                0x00000000000007f8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
  .ARM.attributes
-                0x000000000000081f       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
+                0x0000000000000824       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
  .ARM.attributes
-                0x000000000000084b       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+                0x0000000000000850       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
  .ARM.attributes
-                0x0000000000000877       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+                0x000000000000087c       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
  .ARM.attributes
-                0x00000000000008a3       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
+                0x00000000000008a8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
  .ARM.attributes
-                0x00000000000008cf       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
+                0x00000000000008d4       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
  .ARM.attributes
-                0x00000000000008fb       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
+                0x0000000000000900       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
  .ARM.attributes
-                0x0000000000000927       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+                0x000000000000092c       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
  .ARM.attributes
-                0x0000000000000953       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+                0x0000000000000958       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
  .ARM.attributes
-                0x000000000000097f       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000000984       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
  .ARM.attributes
-                0x00000000000009ab       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+                0x00000000000009b0       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
  .ARM.attributes
-                0x00000000000009d7       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
+                0x00000000000009dc       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
  .ARM.attributes
-                0x0000000000000a03       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
+                0x0000000000000a08       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
  .ARM.attributes
-                0x0000000000000a2f       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
+                0x0000000000000a34       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
  .ARM.attributes
-                0x0000000000000a5b       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
+                0x0000000000000a60       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x0000000000000a87       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
+                0x0000000000000a8c       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
  .ARM.attributes
-                0x0000000000000ab3       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
+                0x0000000000000ab8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x0000000000000ae4       0x1e /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
 
-.debug_frame    0x0000000000000000     0x1990
+.debug_frame    0x0000000000000000     0x1a90
  .debug_frame   0x0000000000000000      0x164 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/syscalls.o
  .debug_frame   0x0000000000000164       0x70 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/cpu/startup.o
  .debug_frame   0x00000000000001d4       0x60 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(kernel_init.o)
@@ -4150,31 +4289,32 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/mas
  .debug_frame   0x0000000000000ccc      0x224 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/vtimer.a(vtimer.o)
  .debug_frame   0x0000000000000ef0      0x170 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/core.a(msg.o)
  .debug_frame   0x0000000000001060       0x7c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_frame   0x00000000000010dc      0x130 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
- .debug_frame   0x000000000000120c       0x80 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
- .debug_frame   0x000000000000128c       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
- .debug_frame   0x00000000000012ac       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
- .debug_frame   0x00000000000012cc       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
- .debug_frame   0x00000000000012f8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
- .debug_frame   0x0000000000001324       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
- .debug_frame   0x000000000000134c       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
- .debug_frame   0x000000000000136c       0x50 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
- .debug_frame   0x00000000000013bc       0x44 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
- .debug_frame   0x0000000000001400       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
- .debug_frame   0x000000000000142c       0x44 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
- .debug_frame   0x0000000000001470       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
- .debug_frame   0x000000000000149c       0x68 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
- .debug_frame   0x0000000000001504      0x140 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
- .debug_frame   0x0000000000001644       0x58 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
- .debug_frame   0x000000000000169c       0x30 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
- .debug_frame   0x00000000000016cc       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00000000000016f8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000000000001724       0xa0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x00000000000017c4       0x54 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000000000001818       0x90 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
- .debug_frame   0x00000000000018a8       0x30 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
- .debug_frame   0x00000000000018d8       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
- .debug_frame   0x00000000000018f8       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
- .debug_frame   0x0000000000001920       0x30 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x0000000000001950       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x0000000000001970       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
+ .debug_frame   0x00000000000010dc      0x100 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(gpio.o)
+ .debug_frame   0x00000000000011dc      0x130 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/periph.a(spi.o)
+ .debug_frame   0x000000000000130c       0x80 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/bin/pca10001/timex.a(timex.o)
+ .debug_frame   0x000000000000138c       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000000000013ac       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-errno.o)
+ .debug_frame   0x00000000000013cc       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000013f8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcmp.o)
+ .debug_frame   0x0000000000001424       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x000000000000144c       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x000000000000146c       0x50 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-printf.o)
+ .debug_frame   0x00000000000014bc       0x44 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-puts.o)
+ .debug_frame   0x0000000000001500       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-strncpy.o)
+ .debug_frame   0x000000000000152c       0x44 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x0000000000001570       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x000000000000159c       0x68 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fflush.o)
+ .debug_frame   0x0000000000001604      0x140 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000001744       0x58 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x000000000000179c       0x30 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x00000000000017cc       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000000000017f8       0x2c /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000001824       0xa0 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x00000000000018c4       0x54 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000001918       0x90 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-stdio.o)
+ .debug_frame   0x00000000000019a8       0x30 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-fvwrite.o)
+ .debug_frame   0x00000000000019d8       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memchr.o)
+ .debug_frame   0x00000000000019f8       0x28 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000001a20       0x30 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000000000001a50       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv6-m/libc_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x0000000000001a70       0x20 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/bin/../lib/gcc/arm-none-eabi/4.9.3/armv6-m/libgcc.a(_divsi3.o)
