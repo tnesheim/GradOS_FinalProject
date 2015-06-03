@@ -30,7 +30,7 @@ event connection_status(connection, flags, address, address_type, conn_interval,
 	# Device is connected.
 	connected = 1
 	#Turn on the connection LED
-	call hardware_io_port_write(0, 1, 1)
+	#call hardware_io_port_write(0, 1, 1)
 end
 
 # Disconnection event
@@ -39,7 +39,7 @@ event connection_disconnected(handle, result)
 	connected = 0
 	
 	#Turn off the connection LED
-	call hardware_io_port_write(0, 1, 0)
+	#call hardware_io_port_write(0, 1, 0)
 	
 	#connection disconnected, continue advertising
 	call gap_set_mode(gap_general_discoverable,gap_undirected_connectable)
@@ -47,6 +47,7 @@ end
 
 event system_endpoint_watermark_rx(endpoint, size)
     if endpoint = system_endpoint_uart1 then
+		call hardware_io_port_write(0, 1, 1)
         call system_endpoint_set_watermarks(system_endpoint_uart1, 0, $ff) # disable RX watermark
         call system_endpoint_rx(system_endpoint_uart1, 25)(result_t, value_len, in(0:25))
 		
