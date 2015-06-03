@@ -1,9 +1,7 @@
-.\objects\spi_slave.o: C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\nodes\ble_nodes\MasterNode\src\spi_slave.c
+.\objects\spi_slave.o: C:\Keil_v5\ARM\Device\Nordic\nrf51422\Source\spi_slave\spi_slave.c
 .\objects\spi_slave.o: C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\spi_slave.h
 .\objects\spi_slave.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\spi_slave.o: .\include\nrf_error.h
-.\objects\spi_slave.o: C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\spi_master.h
-.\objects\spi_slave.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\spi_slave.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\spi_slave.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\spi_slave.o: C:\Keil_v5\ARM\Device\Nordic\nrf51422\Include\nrf51.h

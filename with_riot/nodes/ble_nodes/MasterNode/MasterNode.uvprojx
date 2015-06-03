@@ -516,7 +516,7 @@
             <File>
               <FileName>spi_slave.c</FileName>
               <FileType>1</FileType>
-              <FilePath>C:\Users\tnesheim\Documents\GitHub\GradOS_FinalProject\with_riot\nodes\ble_nodes\MasterNode\src\spi_slave.c</FilePath>
+              <FilePath>C:\Keil_v5\ARM\Device\Nordic\nrf51422\Source\spi_slave\spi_slave.c</FilePath>
             </File>
           </Files>
         </Group>

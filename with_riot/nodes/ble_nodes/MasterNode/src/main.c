@@ -470,31 +470,17 @@ void spi_event_handler(spi_slave_evt_t event)
       case SPI_SLAVE_BUFFERS_SET_DONE:
          break;
       case SPI_SLAVE_XFER_DONE:
-         if(waitRIOT)
+         if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == RCV_PKT_NRF51822BLE)
          {
-            if(memcmp(rx_buf, NRF_BLE_INIT_STR, 4) == 0)
-            {
-               //We are synced w/ RIOT, start BLE process
-               waitRIOT = false;
-               
-               //Initialize the RX/TX buffers
-               spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
-            }
+            //Grab the current data from the TX buffer of the requested Transceiver
+            tx_get(&(rx_buf[NRF51822_SPI_SRC_OFFSET_0]), tx_buf);
+            //Setup the SPI buffers
+            spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
          }
-         else
+         else if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == SND_PKT)
          {
-            if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == RCV_PKT_NRF51822BLE)
-            {
-               //Grab the current data from the TX buffer of the requested Transceiver
-               tx_get(&(rx_buf[NRF51822_SPI_SRC_OFFSET_0]), tx_buf);
-               //Setup the SPI buffers
-               spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
-            }
-            else if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == SND_PKT)
-            {
-               //Send the RX pkt to the specified address 
-               rx_send(rx_buf);
-            }
+            //Send the RX pkt to the specified address 
+            rx_send(rx_buf);
          }
          break;
    }
@@ -503,21 +489,25 @@ void spi_event_handler(spi_slave_evt_t event)
 /*Initializes the slave SPI driver including register the event handler*/
 static void initSPI()
 {
+   uint32_t           err_code;
+   spi_slave_config_t spi_slave_config;
+   
    //Initialize the SPI
-   spi_slave_config_t spi_config = {MISO_PIN,
-                                    MOSI_PIN,
-                                    SCK_PIN,
-                                    CS_PIN,
-                                    SPI_MODE_0,
-                                    SPIM_LSB_FIRST,
-                                    0,
-                                    0};
+    spi_slave_config.pin_miso         = MISO_PIN;
+    spi_slave_config.pin_mosi         = MOSI_PIN;
+    spi_slave_config.pin_sck          = SCK_PIN;
+    spi_slave_config.pin_csn          = CS_PIN;
+    spi_slave_config.mode             = SPI_MODE_0;
+    spi_slave_config.bit_order        = SPIM_MSB_FIRST;
+    spi_slave_config.def_tx_character = '0';
+    spi_slave_config.orc_tx_character = '0';
    
    //Register the SPI Event Handler
-   spi_slave_evt_handler_register(spi_event_handler);                                 
-                                    
+   err_code = spi_slave_evt_handler_register(spi_event_handler);                                 
+   APP_ERROR_CHECK(err_code);
+   
    //Configure the SPI interface                                    
-   spi_slave_init(&spi_config);
+   spi_slave_init(&spi_slave_config);
 }
 
 /*Waits for the init command from RIOT, for synchronization purposes*/
@@ -538,9 +528,6 @@ int main(void)
 {
    initLeds();
    initSPI();
-   
-   //Wait for SPI init from RIOT
-   waitForRIOT();
    
    ble_stack_init();
    client_handling_init();
