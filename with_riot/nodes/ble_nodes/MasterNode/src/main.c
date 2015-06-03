@@ -465,25 +465,33 @@ static void setLed(uint32_t led_pin, bool set_led)
 
 void spi_event_handler(spi_slave_evt_t event)
 {
+   uint8_t type;
+   
    switch(event.evt_type)
    {
       case SPI_SLAVE_BUFFERS_SET_DONE:
          break;
       case SPI_SLAVE_XFER_DONE:
+         setLed(MS_PACMAN_CONNECT_LED, true);
+         type = rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
          if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == RCV_PKT_NRF51822BLE)
          {
             //Grab the current data from the TX buffer of the requested Transceiver
             tx_get(&(rx_buf[NRF51822_SPI_SRC_OFFSET_0]), tx_buf);
-            //Setup the SPI buffers
-            spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
          }
          else if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == SND_PKT)
          {
+            
             //Send the RX pkt to the specified address 
             rx_send(rx_buf);
          }
+         
+         //Setup the SPI buffers
+         spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
          break;
    }
+   
+   
 }
 
 /*Initializes the slave SPI driver including register the event handler*/
@@ -507,7 +515,11 @@ static void initSPI()
    APP_ERROR_CHECK(err_code);
    
    //Configure the SPI interface                                    
-   spi_slave_init(&spi_slave_config);
+   err_code = spi_slave_init(&spi_slave_config);
+   APP_ERROR_CHECK(err_code);
+   
+   //Setup the SPI buffers
+   spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
 }
 
 /*Waits for the init command from RIOT, for synchronization purposes*/

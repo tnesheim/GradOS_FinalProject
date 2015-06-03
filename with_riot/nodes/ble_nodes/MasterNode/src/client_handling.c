@@ -77,7 +77,7 @@ static uint32_t client_find_addr(uint8_t *addr)
    {
       dm_peer_addr_get(&m_client[i].handle, &ble_addr);
       
-      if(addr[0] == ble_addr.addr[5] && addr[1] == ble_addr.addr[4])
+      if(addr[0] == ble_addr.addr[1] && addr[1] == ble_addr.addr[0])
       {
          return i;
       }
