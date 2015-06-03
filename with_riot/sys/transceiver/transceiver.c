@@ -308,6 +308,7 @@ static void *run(void *arg)
         transceiver_command_t *cmd = (transceiver_command_t *) m.content.ptr;
         DEBUG("transceiver: Transceiver: Message received, type: %02X\n", m.type);
 
+
         switch (m.type) {
             case RCV_PKT_CC1020:
             case RCV_PKT_CC1100:
@@ -436,6 +437,7 @@ static void receive_packet(uint16_t type, uint8_t pos)
             break;
         case RCV_PKT_NRF51822BLE:
             t = TRANSCEIVER_NRF51822BLE;
+            break;
         default:
             t = TRANSCEIVER_NONE;
             break;
@@ -740,7 +742,7 @@ static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
     ble_radio_pkt blePkt;
 
     /*Disable interrupts during copying*/
-    dINT();
+    //dINT();
 
     //Receive the BLE radio packet over SPI
     nrfRcvPkt(&blePkt);
@@ -756,7 +758,7 @@ static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
     trans_p->data = (uint8_t *) &(data_buffer[transceiver_buffer_pos * NRF51822_MAX_DATA_LENGTH]);
 
     /*Restore interrupts*/
-    eINT();
+    //eINT();
 }
 #endif
 

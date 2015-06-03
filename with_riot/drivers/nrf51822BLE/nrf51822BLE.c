@@ -36,15 +36,6 @@ void nrfInitSPI(void)
 
    //Initialize the SPI as Master
    spi_init_master(SPI_0, SPI_CONF_FIRST_RISING, SPI_SPEED_1MHZ);     
-   
-   //Send the 'INIT' pkt. to start BLE communication
-   //Keep sending until "GOOD" is returned
-   do
-   {
-      gpio_clear(GPIO_0);
-      spi_transfer_bytes(SPI_0, NRF_BLE_INIT_STR, rcvBuf, 4);  
-      gpio_set(GPIO_0); 
-   } while(memcmp(rcvBuf, NRF_BLE_INIT_SUCCESS, 4) != 0); 
 }
 
 /*Receives the current BLE radio pkt*/
@@ -53,9 +44,10 @@ void nrfRcvPkt(ble_radio_pkt * blePkt)
    uint8_t rcv_buf[NRF51822_SPI_PKT_LEN];
 
    //Tell the NRF that we want to receive a pkt
-   uint8_t cmd_byte = RCV_PKT_NRF51822BLE;
+   uint8_t cmd_byte[NRF51822_SPI_PKT_LEN];
+   cmd_byte[0] = RCV_PKT_NRF51822BLE;
    gpio_clear(GPIO_0);
-   spi_transfer_bytes(SPI_0, &cmd_byte, NULL, 1);
+   spi_transfer_bytes(SPI_0, &cmd_byte, NULL, NRF51822_SPI_PKT_LEN);
    gpio_set(GPIO_0);
 
    //Wait for a little bit to ensure the NRF has time to 
