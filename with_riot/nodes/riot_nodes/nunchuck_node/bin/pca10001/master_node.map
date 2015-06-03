@@ -2938,146 +2938,145 @@ END GROUP
                 0x000000000000150c       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
                 0x000000000000150c                sendMsPacmanPkt
  .text.startup.main
-                0x0000000000001558       0x74 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
+                0x0000000000001558       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
                 0x0000000000001558                main
- .text          0x00000000000015cc        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
+ .text          0x00000000000015c0        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
  .text.auto_init
-                0x00000000000015cc        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
-                0x00000000000015cc                auto_init
- .text          0x00000000000015d4        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x00000000000015c0        0x8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
+                0x00000000000015c0                auto_init
+ .text          0x00000000000015c8        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
  .text.queue_msg
-                0x00000000000015d4       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x00000000000015c8       0x28 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
  .text._msg_send
-                0x00000000000015fc       0xb4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x00000000000015f0       0xb4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
  .text._msg_receive
-                0x00000000000016b0       0xf0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x00000000000016a4       0xf0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
  .text.msg_send_to_self
-                0x00000000000017a0       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x00000000000017a0                msg_send_to_self
+                0x0000000000001794       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001794                msg_send_to_self
  .text.msg_send_int
-                0x00000000000017d0       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x00000000000017d0                msg_send_int
+                0x00000000000017c4       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x00000000000017c4                msg_send_int
  .text.msg_send
-                0x0000000000001814       0x40 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x0000000000001814                msg_send
+                0x0000000000001808       0x40 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001808                msg_send
  .text.msg_try_send
-                0x0000000000001854       0x40 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x0000000000001854                msg_try_send
+                0x0000000000001848       0x40 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001848                msg_try_send
  .text.msg_send_receive
-                0x0000000000001894       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x0000000000001894                msg_send_receive
+                0x0000000000001888       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001888                msg_send_receive
  .text.msg_reply
-                0x00000000000018d0       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x00000000000018d0                msg_reply
+                0x00000000000018c4       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x00000000000018c4                msg_reply
  .text.msg_reply_int
-                0x0000000000001920       0x34 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x0000000000001920                msg_reply_int
+                0x0000000000001914       0x34 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001914                msg_reply_int
  .text.msg_try_receive
-                0x0000000000001954        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x0000000000001954                msg_try_receive
+                0x0000000000001948        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001948                msg_try_receive
  .text.msg_receive
-                0x000000000000195e        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x000000000000195e                msg_receive
+                0x0000000000001952        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x0000000000001952                msg_receive
  .text.msg_init_queue
-                0x0000000000001968       0x24 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                0x0000000000001968                msg_init_queue
- .text          0x000000000000198c        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
+                0x000000000000195c       0x24 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                0x000000000000195c                msg_init_queue
+ .text          0x0000000000001980        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
  .text.cpu_init
-                0x000000000000198c       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
-                0x000000000000198c                cpu_init
- .text          0x00000000000019c8        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
- .text.run      0x00000000000019c8      0x1ac /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000001980       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
+                0x0000000000001980                cpu_init
+ .text          0x00000000000019bc        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+ .text.run      0x00000000000019bc      0x1ac /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
  .text.transceiver_init
-                0x0000000000001b74       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
-                0x0000000000001b74                transceiver_init
+                0x0000000000001b68       0x68 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000001b68                transceiver_init
  .text.transceiver_start
-                0x0000000000001bdc       0x5c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
-                0x0000000000001bdc                transceiver_start
+                0x0000000000001bd0       0x5c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000001bd0                transceiver_start
  .text.transceiver_register
-                0x0000000000001c38       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
-                0x0000000000001c38                transceiver_register
+                0x0000000000001c2c       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000001c2c                transceiver_register
  .text.transceiver_unregister
-                0x0000000000001c88       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
-                0x0000000000001c88                transceiver_unregister
- .text          0x0000000000001ccc        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001c7c       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+                0x0000000000001c7c                transceiver_unregister
+ .text          0x0000000000001cc0        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.set_shortterm
-                0x0000000000001ccc       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001cc0       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.vtimer_callback_tick
-                0x0000000000001ce4       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001cd8       0x50 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.vtimer_callback_wakeup
-                0x0000000000001d34        0xc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001d28        0xc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.vtimer_callback_unlock
-                0x0000000000001d40        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001d34        0xa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.vtimer_callback_msg
-                0x0000000000001d4a       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
- *fill*         0x0000000000001d62        0x2 
+                0x0000000000001d3e       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+ *fill*         0x0000000000001d56        0x2 
  .text.update_shortterm
-                0x0000000000001d64       0x74 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001d58       0x74 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.vtimer_callback
-                0x0000000000001dd8       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001dcc       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.normalize_to_tick
-                0x0000000000001e10       0x48 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001e10                normalize_to_tick
+                0x0000000000001e04       0x48 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001e04                normalize_to_tick
  .text.vtimer_now
-                0x0000000000001e58       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001e58                vtimer_now
+                0x0000000000001e4c       0x38 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001e4c                vtimer_now
  .text.vtimer_set
-                0x0000000000001e90       0x90 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001e84       0x90 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
  .text.vtimer_gettimeofday
-                0x0000000000001f20       0x14 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001f20                vtimer_gettimeofday
-                0x0000000000001f20                _gettimeofday
+                0x0000000000001f14       0x14 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001f14                vtimer_gettimeofday
+                0x0000000000001f14                _gettimeofday
  .text.vtimer_get_localtime
-                0x0000000000001f34       0x3a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001f34                vtimer_get_localtime
- *fill*         0x0000000000001f6e        0x2 
+                0x0000000000001f28       0x3a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001f28                vtimer_get_localtime
+ *fill*         0x0000000000001f62        0x2 
  .text.vtimer_init
-                0x0000000000001f70       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001f70                vtimer_init
+                0x0000000000001f64       0x44 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001f64                vtimer_init
  .text.vtimer_set_wakeup
-                0x0000000000001fb4       0x24 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001fb4                vtimer_set_wakeup
+                0x0000000000001fa8       0x24 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001fa8                vtimer_set_wakeup
  .text.vtimer_sleep
-                0x0000000000001fd8       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000001fd8                vtimer_sleep
+                0x0000000000001fcc       0x4c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000001fcc                vtimer_sleep
  .text.vtimer_usleep
-                0x0000000000002024       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000002024                vtimer_usleep
- *fill*         0x000000000000203a        0x2 
+                0x0000000000002018       0x16 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000002018                vtimer_usleep
+ *fill*         0x000000000000202e        0x2 
  .text.vtimer_remove
-                0x000000000000203c       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x000000000000203c                vtimer_remove
+                0x0000000000002030       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000002030                vtimer_remove
  .text.vtimer_set_msg
-                0x000000000000206c       0x2c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x000000000000206c                vtimer_set_msg
+                0x0000000000002060       0x2c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x0000000000002060                vtimer_set_msg
  .text.vtimer_msg_receive_timeout
-                0x0000000000002098       0x60 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                0x0000000000002098                vtimer_msg_receive_timeout
- .text          0x00000000000020f8        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x000000000000208c       0x60 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                0x000000000000208c                vtimer_msg_receive_timeout
+ .text          0x00000000000020ec        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .text.nrfInitSPI
-                0x00000000000020f8       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x00000000000020f8                nrfInitSPI
+                0x00000000000020ec       0x1c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x00000000000020ec                nrfInitSPI
  .text.nrfInitUART
-                0x0000000000002114        0xe /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000002114                nrfInitUART
- *fill*         0x0000000000002122        0x2 
+                0x0000000000002108        0xe /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000002108                nrfInitUART
+ *fill*         0x0000000000002116        0x2 
  .text.nrf51822ble_init
-                0x0000000000002124       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000002124                nrf51822ble_init
+                0x0000000000002118       0x20 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000002118                nrf51822ble_init
  .text.nrfRxUART
-                0x0000000000002144       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000002144                nrfRxUART
+                0x0000000000002138       0x26 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000002138                nrfRxUART
  .text.nrfTxUART
-                0x000000000000215c       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x000000000000215c                nrfTxUART
+                0x000000000000215e       0x18 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x000000000000215e                nrfTxUART
  .text.nrfRcvPkt
-                0x0000000000002174       0x32 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x0000000000002174                nrfRcvPkt
+                0x0000000000002176       0x32 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x0000000000002176                nrfRcvPkt
  .text.nrfSendPkt
-                0x00000000000021a6       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                0x00000000000021a6                nrfSendPkt
- .text          0x00000000000021d6        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
- *fill*         0x00000000000021d6        0x2 
+                0x00000000000021a8       0x30 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                0x00000000000021a8                nrfSendPkt
+ .text          0x00000000000021d8        0x0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
  .text.gpio_init_out
                 0x00000000000021d8       0x3c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
                 0x00000000000021d8                gpio_init_out
@@ -3729,18 +3728,18 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nun
  .debug_info    0x000000000000527e      0x983 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(timer.o)
  .debug_info    0x0000000000005c01      0xa89 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(uart.o)
  .debug_info    0x000000000000668a      0x1a4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/pca10001_base.a(board.o)
- .debug_info    0x000000000000682e      0x931 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
- .debug_info    0x000000000000715f       0xa4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
- .debug_info    0x0000000000007203      0xd0a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
- .debug_info    0x0000000000007f0d      0x578 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
- .debug_info    0x0000000000008485      0xcb6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
- .debug_info    0x000000000000913b      0xdc1 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_info    0x0000000000009efc      0x648 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_info    0x000000000000682e      0x83c /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
+ .debug_info    0x000000000000706a       0xa4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_info    0x000000000000710e      0xd0a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+ .debug_info    0x0000000000007e18      0x578 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
+ .debug_info    0x0000000000008390      0xcb6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_info    0x0000000000009046      0xdc1 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_info    0x0000000000009e07      0x73d /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
  .debug_info    0x000000000000a544      0xa2a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
  .debug_info    0x000000000000af6e      0xf58 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
  .debug_info    0x000000000000bec6      0x1c2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
 
-.debug_abbrev   0x0000000000000000     0x39e3
+.debug_abbrev   0x0000000000000000     0x3a06
  .debug_abbrev  0x0000000000000000      0x406 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/syscalls.o
  .debug_abbrev  0x0000000000000406      0x153 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/startup.o
  .debug_abbrev  0x0000000000000559      0x179 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(kernel_init.o)
@@ -3763,16 +3762,16 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nun
  .debug_abbrev  0x0000000000001cb5      0x2dc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(timer.o)
  .debug_abbrev  0x0000000000001f91      0x272 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(uart.o)
  .debug_abbrev  0x0000000000002203       0xde /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/pca10001_base.a(board.o)
- .debug_abbrev  0x00000000000022e1      0x33b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
- .debug_abbrev  0x000000000000261c       0x63 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
- .debug_abbrev  0x000000000000267f      0x342 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
- .debug_abbrev  0x00000000000029c1      0x153 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
- .debug_abbrev  0x0000000000002b14      0x398 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
- .debug_abbrev  0x0000000000002eac      0x3e2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_abbrev  0x000000000000328e      0x16d /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_abbrev  0x00000000000033fb      0x2cc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
- .debug_abbrev  0x00000000000036c7      0x23e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
- .debug_abbrev  0x0000000000003905       0xde /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
+ .debug_abbrev  0x00000000000022e1      0x300 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
+ .debug_abbrev  0x00000000000025e1       0x63 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_abbrev  0x0000000000002644      0x342 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+ .debug_abbrev  0x0000000000002986      0x153 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
+ .debug_abbrev  0x0000000000002ad9      0x398 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_abbrev  0x0000000000002e71      0x3e2 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_abbrev  0x0000000000003253      0x1cb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_abbrev  0x000000000000341e      0x2cc /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
+ .debug_abbrev  0x00000000000036ea      0x23e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
+ .debug_abbrev  0x0000000000003928       0xde /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
 
 .debug_loc      0x0000000000000000     0x415c
  .debug_loc     0x0000000000000000      0x481 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/syscalls.o
@@ -4028,7 +4027,7 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nun
  .debug_macro   0x000000000000f4ee      0x105 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
  .debug_macro   0x000000000000f5f3      0x281 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
 
-.debug_line     0x0000000000000000     0xc839
+.debug_line     0x0000000000000000     0xc837
  .debug_line    0x0000000000000000      0x8f0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/syscalls.o
  .debug_line    0x00000000000008f0      0x670 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/startup.o
  .debug_line    0x0000000000000f60      0x711 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(kernel_init.o)
@@ -4051,82 +4050,82 @@ OUTPUT(/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nun
  .debug_line    0x0000000000006a0f      0x80f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(timer.o)
  .debug_line    0x000000000000721e      0x7e7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(uart.o)
  .debug_line    0x0000000000007a05      0x425 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/pca10001_base.a(board.o)
- .debug_line    0x0000000000007e2a      0x9d6 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
- .debug_line    0x0000000000008800      0x5c7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
- .debug_line    0x0000000000008dc7      0x815 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
- .debug_line    0x00000000000095dc      0x437 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
- .debug_line    0x0000000000009a13      0x8f7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
- .debug_line    0x000000000000a30a      0x944 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
- .debug_line    0x000000000000ac4e      0x881 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
- .debug_line    0x000000000000b4cf      0x7bb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
- .debug_line    0x000000000000bc8a      0x5db /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
- .debug_line    0x000000000000c265      0x5d4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
+ .debug_line    0x0000000000007e2a      0x9d3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
+ .debug_line    0x00000000000087fd      0x5c7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
+ .debug_line    0x0000000000008dc4      0x815 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+ .debug_line    0x00000000000095d9      0x437 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
+ .debug_line    0x0000000000009a10      0x8f7 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+ .debug_line    0x000000000000a307      0x944 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+ .debug_line    0x000000000000ac4b      0x882 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+ .debug_line    0x000000000000b4cd      0x7bb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
+ .debug_line    0x000000000000bc88      0x5db /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
+ .debug_line    0x000000000000c263      0x5d4 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
 
-.debug_str      0x0000000000000000    0x36359
- .debug_str     0x0000000000000000    0x329e1 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/syscalls.o
-                                      0x32d07 (size before relaxing)
- .debug_str     0x00000000000329e1      0x234 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/startup.o
-                                      0x2e552 (size before relaxing)
- .debug_str     0x0000000000032c15      0x46d /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(kernel_init.o)
-                                      0x310c1 (size before relaxing)
- .debug_str     0x0000000000033082      0x207 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(mutex.o)
-                                      0x30a8c (size before relaxing)
- .debug_str     0x0000000000033289       0xae /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(panic.o)
-                                      0x306b7 (size before relaxing)
- .debug_str     0x0000000000033337       0x6f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(priority_queue.o)
-                                      0x304e1 (size before relaxing)
- .debug_str     0x00000000000333a6       0xe8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(ringbuffer.o)
-                                       0x4d5c (size before relaxing)
- .debug_str     0x000000000003348e      0x11f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(sched.o)
-                                      0x30a3e (size before relaxing)
- .debug_str     0x00000000000335ad      0x138 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(thread.o)
-                                      0x311fc (size before relaxing)
- .debug_str     0x00000000000336e5       0x6e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(atomic.o)
-                                      0x2bcc2 (size before relaxing)
- .debug_str     0x0000000000033753       0x67 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(bitarithm.o)
-                                       0x5878 (size before relaxing)
- .debug_str     0x00000000000337ba       0x4b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(clist.o)
-                                       0x599b (size before relaxing)
- .debug_str     0x0000000000033805      0x1a3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(hwtimer.o)
-                                      0x30d18 (size before relaxing)
- .debug_str     0x00000000000339a8       0x41 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(lifo.o)
-                                      0x30467 (size before relaxing)
- .debug_str     0x00000000000339e9       0x9f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cortex-m0_common.a(irq_arch.o)
-                                      0x2bc97 (size before relaxing)
- .debug_str     0x0000000000033a88       0x52 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cortex-m0_common.a(panic.o)
-                                      0x2bcf7 (size before relaxing)
- .debug_str     0x0000000000033ada      0x158 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cortex-m0_common.a(thread_arch.o)
-                                      0x30982 (size before relaxing)
- .debug_str     0x0000000000033c32       0xfa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(hwtimer_arch.o)
-                                      0x2ebfb (size before relaxing)
- .debug_str     0x0000000000033d2c       0x54 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(lpm_arch.o)
-                                       0x26a7 (size before relaxing)
- .debug_str     0x0000000000033d80      0x309 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(timer.o)
-                                      0x2eeeb (size before relaxing)
- .debug_str     0x0000000000034089      0x1f0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(uart.o)
-                                      0x2ef5d (size before relaxing)
- .debug_str     0x0000000000034279       0x56 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/pca10001_base.a(board.o)
-                                      0x2bdc1 (size before relaxing)
- .debug_str     0x00000000000342cf     0x1057 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
-                                      0x3213f (size before relaxing)
- .debug_str     0x0000000000035326       0xbb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
-                                      0x30624 (size before relaxing)
- .debug_str     0x00000000000353e1      0x142 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
-                                      0x30b04 (size before relaxing)
- .debug_str     0x0000000000035523      0x148 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
-                                      0x2c526 (size before relaxing)
- .debug_str     0x000000000003566b      0x270 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
-                                      0x31d7a (size before relaxing)
- .debug_str     0x00000000000358db      0x389 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
-                                      0x31274 (size before relaxing)
- .debug_str     0x0000000000035c64      0x291 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
-                                      0x316df (size before relaxing)
- .debug_str     0x0000000000035ef5      0x15b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
-                                      0x2ed90 (size before relaxing)
- .debug_str     0x0000000000036050      0x26f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
-                                      0x2ca0e (size before relaxing)
- .debug_str     0x00000000000362bf       0x9a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
+.debug_str      0x0000000000000000    0x36358
+ .debug_str     0x0000000000000000    0x329e0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/syscalls.o
+                                      0x32d06 (size before relaxing)
+ .debug_str     0x00000000000329e0      0x234 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/startup.o
+                                      0x2e551 (size before relaxing)
+ .debug_str     0x0000000000032c14      0x46d /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(kernel_init.o)
+                                      0x310c0 (size before relaxing)
+ .debug_str     0x0000000000033081      0x207 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(mutex.o)
+                                      0x30a8b (size before relaxing)
+ .debug_str     0x0000000000033288       0xae /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(panic.o)
+                                      0x306b6 (size before relaxing)
+ .debug_str     0x0000000000033336       0x6f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(priority_queue.o)
                                       0x304e0 (size before relaxing)
+ .debug_str     0x00000000000333a5       0xe8 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(ringbuffer.o)
+                                       0x4d5b (size before relaxing)
+ .debug_str     0x000000000003348d      0x11f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(sched.o)
+                                      0x30a3d (size before relaxing)
+ .debug_str     0x00000000000335ac      0x138 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(thread.o)
+                                      0x311fb (size before relaxing)
+ .debug_str     0x00000000000336e4       0x6e /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(atomic.o)
+                                      0x2bcc1 (size before relaxing)
+ .debug_str     0x0000000000033752       0x67 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(bitarithm.o)
+                                       0x5877 (size before relaxing)
+ .debug_str     0x00000000000337b9       0x4b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(clist.o)
+                                       0x599a (size before relaxing)
+ .debug_str     0x0000000000033804      0x1a3 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(hwtimer.o)
+                                      0x30d17 (size before relaxing)
+ .debug_str     0x00000000000339a7       0x41 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(lifo.o)
+                                      0x30466 (size before relaxing)
+ .debug_str     0x00000000000339e8       0x9f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cortex-m0_common.a(irq_arch.o)
+                                      0x2bc96 (size before relaxing)
+ .debug_str     0x0000000000033a87       0x52 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cortex-m0_common.a(panic.o)
+                                      0x2bcf6 (size before relaxing)
+ .debug_str     0x0000000000033ad9      0x158 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cortex-m0_common.a(thread_arch.o)
+                                      0x30981 (size before relaxing)
+ .debug_str     0x0000000000033c31       0xfa /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(hwtimer_arch.o)
+                                      0x2ebfa (size before relaxing)
+ .debug_str     0x0000000000033d2b       0x54 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(lpm_arch.o)
+                                       0x26a6 (size before relaxing)
+ .debug_str     0x0000000000033d7f      0x309 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(timer.o)
+                                      0x2eeea (size before relaxing)
+ .debug_str     0x0000000000034088      0x1f0 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(uart.o)
+                                      0x2ef5c (size before relaxing)
+ .debug_str     0x0000000000034278       0x56 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/pca10001_base.a(board.o)
+                                      0x2bdc0 (size before relaxing)
+ .debug_str     0x00000000000342ce     0x1057 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/master_node.a(main.o)
+                                      0x320f8 (size before relaxing)
+ .debug_str     0x0000000000035325       0xbb /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/auto_init.a(auto_init.o)
+                                      0x30623 (size before relaxing)
+ .debug_str     0x00000000000353e0      0x142 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/core.a(msg.o)
+                                      0x30b03 (size before relaxing)
+ .debug_str     0x0000000000035522      0x148 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu.a(cpu.o)
+                                      0x2c525 (size before relaxing)
+ .debug_str     0x000000000003566a      0x270 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/transceiver.a(transceiver.o)
+                                      0x31d79 (size before relaxing)
+ .debug_str     0x00000000000358da      0x389 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/vtimer.a(vtimer.o)
+                                      0x31273 (size before relaxing)
+ .debug_str     0x0000000000035c63      0x291 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/nrf51822BLE.a(nrf51822BLE.o)
+                                      0x31724 (size before relaxing)
+ .debug_str     0x0000000000035ef4      0x15b /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(gpio.o)
+                                      0x2ed8f (size before relaxing)
+ .debug_str     0x000000000003604f      0x26f /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/periph.a(spi.o)
+                                      0x2ca0d (size before relaxing)
+ .debug_str     0x00000000000362be       0x9a /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/timex.a(timex.o)
+                                      0x304df (size before relaxing)
 
 .comment        0x0000000000000000       0x70
  .comment       0x0000000000000000       0x70 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/nunchuck_node/bin/pca10001/cpu/syscalls.o

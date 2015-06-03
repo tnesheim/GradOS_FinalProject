@@ -54,13 +54,14 @@ typedef uint8_t radio_packet_length_t;
  * @{
  */
 #define LED_RED_PIN         18 
+#define LED_GREEN_PIN       19
 
 #define LED_RED_ON          (NRF_GPIO->OUTSET = (1 << LED_RED_PIN))
 #define LED_RED_OFF         (NRF_GPIO->OUTCLR = (1 << LED_RED_PIN))
 #define LED_RED_TOGGLE      (NRF_GPIO->OUT ^= (1 << LED_RED_PIN))
-#define LED_GREEN_ON        /* not available */
-#define LED_GREEN_OFF       /* not available */
-#define LED_GREEN_TOGGLE    /* not available */
+#define LED_GREEN_ON        (NRF_GPIO->OUTSET = (1 << LED_GREEN_PIN))
+#define LED_GREEN_OFF       (NRF_GPIO->OUTCLR = (1 << LED_GREEN_PIN))
+#define LED_GREEN_TOGGLE    (NRF_GPIO->OUT ^= (1 << LED_GREEN_PIN))
 #define LED_BLUE_ON         /* not available */
 #define LED_BLUE_OFF        /* not available */
 #define LED_BLUE_TOGGLE     /* not available */

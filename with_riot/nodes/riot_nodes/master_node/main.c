@@ -12,12 +12,58 @@
 #include "ms_pacman.h"
 #include "nunchuck.h"
 
-#define MS_PACMAN_ADDR 0xD92F
+#define NODE_ONE_ADDR 0xD92F
+#define NODE_TWO_ADDR 0xD35F
 
-void createTransceiverRcvMsg(msg_t *m)
+void createTransceiverRcvMsg(uint16_t node_addr, msg_t *m)
 {
    m->type = RCV_PKT_NRF51822BLE;
    m->content.value = 0; 
+}
+
+void setLED(msg_t *m)
+{
+    uint16_t src_addr;
+    uint8_t led_data[NRF51822_MAX_DATA_LENGTH];
+    uint8_t led_value;
+    radio_packet_t *trans_buf;
+
+    //Copy the data from the transceiver
+    trans_buf = (radio_packet_t *)(m->content.ptr);
+    memcpy(led_data, trans_buf->data, NRF51822_MAX_DATA_LENGTH);
+
+    //Tell the Transceiver that we are done with the buffer
+    trans_buf->processing = 0;
+
+    //Extract the Source address from the rcv'd pkt
+    src_addr = led_data[NRF51822_SPI_SRC_OFFSET_0];
+    src_addr = (src_addr << 8) & led_data[NRF51822_SPI_SRC_OFFSET_1];
+    //Extract the requested LED value
+    led_value = led_data[NRF51822_SPI_PAYLOAD_OFFSET];
+    
+    //Set the appropriate LED depending on who send the pkt
+    if(src_addr == NODE_ONE_ADDR)
+    {
+       if(led_value)
+       {
+          LED_RED_ON;
+       }  
+       else
+       {
+          LED_RED_OFF;
+       }
+    }
+    else if(src_addr == NODE_TWO_ADDR)
+    {
+       if(led_value)
+       {
+          LED_GREEN_ON;
+       }  
+       else
+       {
+          LED_GREEN_OFF;
+       }
+    }  
 }
 
 MsPacmanCtrls translateToMsPacman(msg_t *m)
@@ -107,6 +153,35 @@ MsPacmanCtrls translateToMsPacman(msg_t *m)
     return ms_pacman;
 }
 
+void sendNodePkt(uint16_t node_addr, uint8_t led_value, msg_t *m, kernel_pid_t send_pid)
+{
+   transceiver_command_t trans_cmd;
+   uint8_t sendPkt[sizeof(ble_radio_pkt)];
+   ble_radio_pkt blePkt; 
+   msg_t mResponse;
+
+   //Fill in the BLE Pkt properly
+   blePkt.msg_type = SND_PKT;
+   blePkt.src_address  = 0;
+   //The address to send this data to 
+   blePkt.dest_address = node_address;
+   blePkt.payload[0] = led_value;
+
+   //Fill in the packet properly
+   memcpy(sendPkt, (uint8_t*)(&blePkt), sizeof(ble_radio_pkt)); 
+
+   //Fill in the Transceiver cmd packet
+   trans_cmd.transceivers = TRANSCEIVER_NRF51822BLE;
+   trans_cmd.data = sendPkt;
+
+   //Setup the message pkt
+   m->type = SND_PKT;
+   m->content.ptr = (char *)(&trans_cmd);
+
+   //Send the pkt to the Transceiver
+   msg_send_receive(m, &mResponse, send_pid);
+}
+
 void sendMsPacmanPkt(MsPacmanCtrls ms_pacman, msg_t *m, kernel_pid_t send_pid)
 {
    transceiver_command_t trans_cmd;
@@ -164,7 +239,7 @@ int main(void)
    //Register this thread w/ the BLE transceiver to receive msg's
    transceiver_register(bleTrans, mthread_pid);
 
-   int i = 0;
+   uint8_t led_value = 1;
 
    while(1)
    {
@@ -173,17 +248,17 @@ int main(void)
       msg_send(&m_trans, trans_pid);
       //Now wait for a response
       msg_receive(&m_trans);
-      //Translate response into Ms. Pacman controls
-      ms_pacman = translateToMsPacman(&m_trans);
-      //Send the Ms. Pacman pkt to the Transceiver
-      sendMsPacmanPkt(ms_pacman, &m_trans, trans_pid);
-      //Sleep for 100ms and do it again
-      vtimer_usleep(100000);
+      //Set the LED's depending on what was received and from who
+      setLED(&m_trans)
+      //Send the LED Node pkt's to the Transceiver
+      sendNodePkt(NODE_ONE_ADDR, led_value, &m, trans_pid);
+      sendNodePkt(NODE_TWO_ADDR, led_value ^ 1, &m, trans_pid);
+      led_value ^= 1;
+                  
+      //Sleep for 500ms and do it again
+      vtimer_usleep(500000);
       
-      i++;
    }
- if(i > 1)   
-         LED_RED_ON;
 
    return 0;
 }

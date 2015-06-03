@@ -50,6 +50,7 @@
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/mutex.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/spi.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/periph_conf.h \
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/uart.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/nrf51822BLE.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/spi.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/transceiver.h \
@@ -163,6 +164,8 @@
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/spi.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/periph_conf.h:
+
+/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/periph/uart.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/drivers/include/nrf51822BLE.h:
 

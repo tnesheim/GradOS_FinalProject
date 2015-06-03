@@ -91,10 +91,10 @@ void kernel_init(void)
     }
 
     if (thread_create(main_stack, sizeof(main_stack), PRIORITY_MAIN, CREATE_WOUT_YIELD | CREATE_STACKTEST, main_trampoline, NULL, main_name) < 0) {
-    //    printf("kernel_init(): error creating main task.\n");
+//        printf("kernel_init(): error creating main task.\n");
     }
 
- //   printf("kernel_init(): jumping into first task...\n");
+  //  printf("kernel_init(): jumping into first task...\n");
 
     cpu_switch_context_exit();
 }

@@ -46,6 +46,7 @@ typedef struct
 static client_t         m_client[MAX_CLIENTS];      /**< Client context information list. */
 static uint8_t          m_client_count;             /**< Number of clients. */
 static uint8_t          m_base_uuid_type_transceiver;           /**< UUID type. */
+static uint8_t          m_hvx_buffer[NRF51822_PKT_LEN]
 
 /**@brief Function for finding client context information based on handle.
  *
@@ -216,6 +217,7 @@ static void on_evt_hvx(ble_evt_t * p_ble_evt, client_t * p_client, uint32_t inde
         {
            //Store the received Transceiver TX data in the TX buffer 
            memcpy(p_client->tx_buf, p_ble_evt->evt.gattc_evt.params.hvx.data, NRF51822_PKT_LEN);
+           memcpy(m_hvx_buffer, p_ble_evt->evt.gattc_evt.params.hvx.data, NRF51822_PKT_LEN);
         }
     }
 }
@@ -223,16 +225,17 @@ static void on_evt_hvx(ble_evt_t * p_ble_evt, client_t * p_client, uint32_t inde
 /*Get what is currently in the TX buffer and copy it into the Transceiver RX buffer*/
 void tx_get(uint8_t *addr, uint8_t * rx_buf)
 {
-   uint32_t node_ndx = client_find_addr(addr);
+   //uint32_t node_ndx = client_find_addr(addr);
    
    //Don't do anything if the Transceiver client wasn't found
-   if(node_ndx == MAX_CLIENTS)
+   /*if(node_ndx == MAX_CLIENTS)
    {
       return;
-   }
+   }*/
    
    //Copy the data 
-   memcpy(rx_buf, m_client[node_ndx].tx_buf, NRF51822_PKT_LEN);
+   //memcpy(rx_buf, m_client[node_ndx].tx_buf, NRF51822_PKT_LEN);
+   memcpy(rx_buf, m_hvx_buffer, NRF51822_PKT_LEN);
 }
 
 /*Send the received RX data to the node*/

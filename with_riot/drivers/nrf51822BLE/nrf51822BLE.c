@@ -59,7 +59,8 @@ void nrfRxUART(uint8_t *rxBuf)
    for(i = 0; i < NRF51822_SPI_PKT_LEN; i++)
    {
       uart_read_blocking(UART_0, &(rxBuf[i]));
-   }   
+   }
+   LED_RED_ON;   
 }
 
 /*Send a pkt to the BLE Transceiver*/
@@ -78,7 +79,6 @@ void nrfTxUART(uint8_t *txBuf)
 void nrfRcvPkt(ble_radio_pkt * blePkt)
 {
    uint8_t rcv_buf[NRF51822_SPI_PKT_LEN];
-
    //Tell the NRF that we want to receive a pkt
    rcv_buf[0] = RCV_PKT_NRF51822BLE;
 #ifdef BLE_UART
@@ -91,7 +91,6 @@ void nrfRcvPkt(ble_radio_pkt * blePkt)
    //load the data, 2ms
    hwtimer_wait(HWTIMER_TICKS(2000));
 #endif
-
    //Receive ble packet
 #ifdef BLE_UART
    nrfRxUART(rcv_buf);
