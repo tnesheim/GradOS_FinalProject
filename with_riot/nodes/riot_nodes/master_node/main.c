@@ -14,8 +14,9 @@
 
 #define NODE_ONE_ADDR 0xD92F
 #define NODE_TWO_ADDR 0xD35F
+#define MS_PACMAN_ADDR 0xD92F
 
-void createTransceiverRcvMsg(uint16_t node_addr, msg_t *m)
+void createTransceiverRcvMsg(msg_t *m)
 {
    m->type = RCV_PKT_NRF51822BLE;
    m->content.value = 0; 
@@ -164,7 +165,7 @@ void sendNodePkt(uint16_t node_addr, uint8_t led_value, msg_t *m, kernel_pid_t s
    blePkt.msg_type = SND_PKT;
    blePkt.src_address  = 0;
    //The address to send this data to 
-   blePkt.dest_address = node_address;
+   blePkt.dest_address = node_addr;
    blePkt.payload[0] = led_value;
 
    //Fill in the packet properly
@@ -249,10 +250,10 @@ int main(void)
       //Now wait for a response
       msg_receive(&m_trans);
       //Set the LED's depending on what was received and from who
-      setLED(&m_trans)
+      setLED(&m_trans);
       //Send the LED Node pkt's to the Transceiver
-      sendNodePkt(NODE_ONE_ADDR, led_value, &m, trans_pid);
-      sendNodePkt(NODE_TWO_ADDR, led_value ^ 1, &m, trans_pid);
+      sendNodePkt(NODE_ONE_ADDR, led_value, &m_trans, trans_pid);
+      sendNodePkt(NODE_TWO_ADDR, led_value ^ 1, &m_trans, trans_pid);
       led_value ^= 1;
                   
       //Sleep for 500ms and do it again

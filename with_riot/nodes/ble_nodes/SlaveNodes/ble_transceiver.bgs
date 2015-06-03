@@ -19,10 +19,10 @@ event system_boot(major, minor, patch, build, ll_version, prot_version, hw)
 	
 	# Set UART to 115200
 	call system_reg_write($70fa, 216)    # mantissa, BAUD_M
-    call system_reg_write($70fc, 11)    # exponent, BAUD_E 
+   call system_reg_write($70fc, 11)    # exponent, BAUD_E 
 	
 	# Enable the RX watermark to receive SND/RCV Transceiver packets
-	call system_endpoint_set_watermarks(system_endpoint_uart1, 25, 0)
+   #call system_endpoint_set_watermarks(system_endpoint_uart1, 25, 0)
 end
 
 # Connection event listener
