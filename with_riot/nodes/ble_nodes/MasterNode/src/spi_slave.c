@@ -81,12 +81,12 @@ uint32_t spi_slave_init(const spi_slave_config_t * p_spi_slave_config)
         (GPIO_PIN_CNF_INPUT_Connect << GPIO_PIN_CNF_INPUT_Pos)  |
         (GPIO_PIN_CNF_DIR_Input << GPIO_PIN_CNF_DIR_Pos);
 
-    /*NRF_GPIO->PIN_CNF[p_spi_slave_config->pin_csn] = 
+    NRF_GPIO->PIN_CNF[p_spi_slave_config->pin_csn] = 
         (GPIO_PIN_CNF_SENSE_Disabled << GPIO_PIN_CNF_SENSE_Pos) |
         (GPIO_PIN_CNF_DRIVE_S0S1 << GPIO_PIN_CNF_DRIVE_Pos)     |
         (m_cs_pullup_config << GPIO_PIN_CNF_PULL_Pos)           |
         (GPIO_PIN_CNF_INPUT_Connect << GPIO_PIN_CNF_INPUT_Pos)  |
-        (GPIO_PIN_CNF_DIR_Input << GPIO_PIN_CNF_DIR_Pos); */
+        (GPIO_PIN_CNF_DIR_Input << GPIO_PIN_CNF_DIR_Pos); 
 
     NRF_GPIO->PIN_CNF[p_spi_slave_config->pin_mosi] = 
         (GPIO_PIN_CNF_SENSE_Disabled << GPIO_PIN_CNF_SENSE_Pos) |
@@ -102,7 +102,7 @@ uint32_t spi_slave_init(const spi_slave_config_t * p_spi_slave_config)
         (GPIO_PIN_CNF_INPUT_Connect << GPIO_PIN_CNF_INPUT_Pos)  |
         (GPIO_PIN_CNF_DIR_Input << GPIO_PIN_CNF_DIR_Pos);
 
-    NRF_SPIS1->PSELCSN  = SPI_PIN_DISCONNECTED;
+    NRF_SPIS1->PSELCSN  = p_spi_slave_config->pin_csn;
     NRF_SPIS1->PSELSCK  = p_spi_slave_config->pin_sck;
     NRF_SPIS1->PSELMOSI = p_spi_slave_config->pin_mosi;
     NRF_SPIS1->PSELMISO = p_spi_slave_config->pin_miso;

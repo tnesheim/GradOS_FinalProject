@@ -537,10 +537,10 @@ static void waitForRIOT()
 int main(void)
 {
    initLeds();
-   //initSPI();
+   initSPI();
    
    //Wait for SPI init from RIOT
-   //waitForRIOT();
+   waitForRIOT();
    
    ble_stack_init();
    client_handling_init();
