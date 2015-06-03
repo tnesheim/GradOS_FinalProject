@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\MasterNode.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\MasterNode.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Jun 03 04:19:40 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Jun 03 10:38:28 2015
 <BR><P>
 <H3>Maximum Stack Usage =        224 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -809,8 +809,8 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> device_manager_central.o(i.device_context_store)
 <LI> device_manager_central.o(i.gatts_context_store)
 </UL>
-<P><STRONG><a name="[ba]"></a>rx_send</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, client_handling.o(i.rx_send))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = rx_send &rArr; client_find_addr &rArr; dm_peer_addr_get &rArr; __aeabi_memcpy
+<P><STRONG><a name="[ba]"></a>rx_send</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, client_handling.o(i.rx_send))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = rx_send &rArr; client_find_addr &rArr; dm_peer_addr_get &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;client_find_addr
 </UL>
@@ -838,8 +838,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ble_stack_init
 </UL>
 
-<P><STRONG><a name="[2e]"></a>spi_event_handler</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, main.o(i.spi_event_handler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = spi_event_handler &rArr; spi_slave_buffers_set &rArr; sm_state_change &rArr; state_entry_action_execute &rArr; app_error_handler &rArr; setLed
+<P><STRONG><a name="[2e]"></a>spi_event_handler</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, main.o(i.spi_event_handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = spi_event_handler &rArr; rx_send &rArr; client_find_addr &rArr; dm_peer_addr_get &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tx_get
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_slave_buffers_set
@@ -869,11 +869,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initSPI
 </UL>
 
-<P><STRONG><a name="[bf]"></a>tx_get</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, client_handling.o(i.tx_get))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = tx_get &rArr; client_find_addr &rArr; dm_peer_addr_get &rArr; __aeabi_memcpy
+<P><STRONG><a name="[bf]"></a>tx_get</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, client_handling.o(i.tx_get))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = tx_get &rArr; __aeabi_memcpy
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;client_find_addr
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_event_handler
 </UL>
@@ -936,7 +935,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a8]"></a>initSPI</STRONG> (Thumb, 114 bytes, Stack size 32 bytes, main.o(i.initSPI))
+<P><STRONG><a name="[a8]"></a>initSPI</STRONG> (Thumb, 116 bytes, Stack size 32 bytes, main.o(i.initSPI))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = initSPI &rArr; spi_slave_buffers_set &rArr; sm_state_change &rArr; state_entry_action_execute &rArr; app_error_handler &rArr; setLed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_slave_init
@@ -1013,8 +1012,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dm_peer_addr_get
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tx_get
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rx_send
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rx_send
 </UL>
 
 <P><STRONG><a name="[28]"></a>db_discovery_evt_handler</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, client_handling.o(i.db_discovery_evt_handler))
@@ -1034,7 +1032,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;client_handling_init
 </UL>
 
-<P><STRONG><a name="[78]"></a>notif_enable</STRONG> (Thumb, 90 bytes, Stack size 32 bytes, client_handling.o(i.notif_enable))
+<P><STRONG><a name="[78]"></a>notif_enable</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, client_handling.o(i.notif_enable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = notif_enable &rArr; app_error_handler &rArr; setLed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_error_handler
@@ -1043,7 +1041,7 @@ Local Symbols
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;client_handling_dm_event_handler
 </UL>
 
-<P><STRONG><a name="[73]"></a>on_evt_hvx</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, client_handling.o(i.on_evt_hvx))
+<P><STRONG><a name="[73]"></a>on_evt_hvx</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, client_handling.o(i.on_evt_hvx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = on_evt_hvx &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -1059,7 +1057,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;client_handling_ble_evt_handler
 </UL>
 
-<P><STRONG><a name="[72]"></a>on_evt_write_rsp</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, client_handling.o(i.on_evt_write_rsp))
+<P><STRONG><a name="[72]"></a>on_evt_write_rsp</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, client_handling.o(i.on_evt_write_rsp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = on_evt_write_rsp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;client_handling_ble_evt_handler

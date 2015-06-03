@@ -46,7 +46,7 @@ typedef struct
 static client_t         m_client[MAX_CLIENTS];      /**< Client context information list. */
 static uint8_t          m_client_count;             /**< Number of clients. */
 static uint8_t          m_base_uuid_type_transceiver;           /**< UUID type. */
-static uint8_t          m_hvx_buffer[NRF51822_PKT_LEN]
+static uint8_t          m_hvx_buffer[NRF51822_PKT_LEN];
 
 /**@brief Function for finding client context information based on handle.
  *
@@ -119,7 +119,7 @@ static void notif_enable(client_t * p_client)
     buf[1] = 0;
 
     write_params.write_op = BLE_GATT_OP_WRITE_REQ;
-    write_params.handle   = p_client->srv_db.services[1].charateristics[p_client->char_index_tx].cccd_handle;
+    write_params.handle   = p_client->srv_db.services[0].charateristics[p_client->char_index_tx].cccd_handle;
     write_params.offset   = 0;
     write_params.len      = sizeof(buf);
     write_params.p_value  = buf;
@@ -188,9 +188,7 @@ static void on_evt_write_rsp(ble_evt_t * p_ble_evt, client_t * p_client)
     if ((p_client != NULL) && (p_client->state == STATE_NOTIF_ENABLE))
     {
         if (p_ble_evt->evt.gattc_evt.params.write_rsp.handle !=
-            p_client->srv_db.services[1].charateristics[p_client->char_index_tx].cccd_handle &&
-            p_ble_evt->evt.gattc_evt.params.write_rsp.handle !=
-            p_client->srv_db.services[1].charateristics[p_client->char_index_rx].cccd_handle)
+            p_client->srv_db.services[0].charateristics[p_client->char_index_tx].cccd_handle)
         {
             // Got response from unexpected handle.
             p_client->state = STATE_ERROR;
@@ -212,12 +210,12 @@ static void on_evt_hvx(ble_evt_t * p_ble_evt, client_t * p_client, uint32_t inde
     if ((p_client != NULL) && (p_client->state == STATE_RUNNING))
     {
         if ((p_ble_evt->evt.gattc_evt.params.hvx.handle ==
-            p_client->srv_db.services[1].charateristics[p_client->char_index_tx].characteristic.handle_value)
-            && (p_ble_evt->evt.gattc_evt.params.hvx.len == NRF51822_PKT_LEN))
+            p_client->srv_db.services[0].charateristics[p_client->char_index_tx].characteristic.handle_value)
+            )//&& (p_ble_evt->evt.gattc_evt.params.hvx.len == NRF51822_PKT_LEN))
         {
            //Store the received Transceiver TX data in the TX buffer 
-           memcpy(p_client->tx_buf, p_ble_evt->evt.gattc_evt.params.hvx.data, NRF51822_PKT_LEN);
-           memcpy(m_hvx_buffer, p_ble_evt->evt.gattc_evt.params.hvx.data, NRF51822_PKT_LEN);
+           memcpy(p_client->tx_buf, p_ble_evt->evt.gattc_evt.params.hvx.data, p_ble_evt->evt.gattc_evt.params.hvx.len);
+           memcpy(m_hvx_buffer, p_ble_evt->evt.gattc_evt.params.hvx.data, p_ble_evt->evt.gattc_evt.params.hvx.len);
         }
     }
 }
@@ -225,6 +223,7 @@ static void on_evt_hvx(ble_evt_t * p_ble_evt, client_t * p_client, uint32_t inde
 /*Get what is currently in the TX buffer and copy it into the Transceiver RX buffer*/
 void tx_get(uint8_t *addr, uint8_t * rx_buf)
 {
+   uint8_t is_nested;
    //uint32_t node_ndx = client_find_addr(addr);
    
    //Don't do anything if the Transceiver client wasn't found
@@ -235,12 +234,15 @@ void tx_get(uint8_t *addr, uint8_t * rx_buf)
    
    //Copy the data 
    //memcpy(rx_buf, m_client[node_ndx].tx_buf, NRF51822_PKT_LEN);
+   sd_nvic_critical_region_enter(&is_nested);
    memcpy(rx_buf, m_hvx_buffer, NRF51822_PKT_LEN);
+   sd_nvic_critical_region_exit(is_nested);
 }
 
 /*Send the received RX data to the node*/
 void rx_send(uint8_t *rx_buf)
 {
+   uint32_t err_code;
    ble_gattc_write_params_t write_params = {0};
    
    //Find the Ms. Pacman node
@@ -252,16 +254,26 @@ void rx_send(uint8_t *rx_buf)
       return;
    }
    
+   //Return if not in the running state
+   if(m_client[node_ndx].state != STATE_RUNNING)
+   {
+      return;
+   }
+   
    //Fill in the buffer with the appropriate values
    
    /* Central writes to CCCD of peripheral to receive indications */
    write_params.write_op = BLE_GATT_OP_WRITE_REQ;
    write_params.handle = m_client[node_ndx].srv_db.services[0].charateristics[m_client[node_ndx].char_index_rx].characteristic.handle_value;
    write_params.offset = 0;
-   write_params.len = NRF51822_PKT_LEN;
+   write_params.len = 0x14;//NRF51822_PKT_LEN;
    write_params.p_value = rx_buf;
    
-   sd_ble_gattc_write(m_client[node_ndx].srv_db.conn_handle, &write_params);
+   err_code = sd_ble_gattc_write(m_client[node_ndx].srv_db.conn_handle, &write_params);
+   if(err_code)
+   {   
+      rx_buf[0]++;
+   }
 }
 
 

@@ -484,6 +484,7 @@ void spi_event_handler(spi_slave_evt_t event)
             
             //Send the RX pkt to the specified address 
             rx_send(rx_buf);
+            type = rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
          }
          
          //Setup the SPI buffers

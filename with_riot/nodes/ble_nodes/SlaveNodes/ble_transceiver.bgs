@@ -5,6 +5,7 @@ dim result_t
 dim value_len
 dim in(25) # endpoint data in
 dim out(25)
+dim id_transceiver_rx
 
 # Boot event listener
 event system_boot(major, minor, patch, build, ll_version, prot_version, hw)
@@ -12,14 +13,29 @@ event system_boot(major, minor, patch, build, ll_version, prot_version, hw)
 	call hardware_io_port_config_direction(0, 1)
 	call hardware_io_port_write(0, 1, 0)
 	
+	#Initialize the TX Buffer
+	#Set the type to SND_PKT
+	out(0:1) = 8
+	#Set the address bytes 
+	out(1:1) = $D3
+	out(2:1) = $5F
+	# Set the remote LED value to off initially
+	out(5:1) = 0
+	
+	#Set the ID of the transceiver_rx characteristic
+	id_transceiver_rx = 3
+	
 	# Start advertisement (generic discoverable, undirected connectable)
 	call gap_set_mode(gap_general_discoverable, gap_undirected_connectable)
 	# Set device to be bondable
 	call sm_set_bondable_mode(1)
 	
+	#Setup the timer to go off every 1/2 second
+	call hardware_set_soft_timer(34768, 1, 0)
+	
 	# Set UART to 115200
-	call system_reg_write($70fa, 216)    # mantissa, BAUD_M
-   call system_reg_write($70fc, 11)    # exponent, BAUD_E 
+	#call system_reg_write($70fa, 216)    # mantissa, BAUD_M
+	#call system_reg_write($70fc, 11)    # exponent, BAUD_E 
 	
 	# Enable the RX watermark to receive SND/RCV Transceiver packets
    #call system_endpoint_set_watermarks(system_endpoint_uart1, 25, 0)
@@ -29,8 +45,6 @@ end
 event connection_status(connection, flags, address, address_type, conn_interval, timeout, latency, bonding)
 	# Device is connected.
 	connected = 1
-	#Turn on the connection LED
-	call hardware_io_port_write(0, 1, 1)
 end
 
 # Disconnection event
@@ -38,11 +52,29 @@ event connection_disconnected(handle, result)
 	#not connected anymore
 	connected = 0
 	
-	#Turn off the connection LED
-	call hardware_io_port_write(0, 1, 0)
-	
 	#connection disconnected, continue advertising
 	call gap_set_mode(gap_general_discoverable,gap_undirected_connectable)
+end
+
+# GATT Database update event 
+event attributes_value(connection, reason, handle, offset, value_len_t, value_data)
+	#Check if light characteristic was written 
+	if handle = id_transceiver_rx then
+		call attributes_read(transceiver_rx, 0)(handle_t, offset_t, result_t, value_len, in(0:25))  
+		
+		#Set the LED value based on the received characteristic write 
+		call hardware_io_port_write(0, 1, in(5:1))
+		
+	end if	
+end
+
+#Event is triggered whenever the soft timer goes off
+event hardware_soft_timer(handle)
+	if handle = 1 then
+		#writes the alarm to whatever its current value is
+		out(5:1) = out(5:1) ^ 1 
+		call attributes_write(transceiver_tx, 0, 25, out(0:25))(result_t)
+	end if
 end
 
 event system_endpoint_watermark_rx(endpoint, size)
