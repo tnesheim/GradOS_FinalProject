@@ -140,6 +140,8 @@ void sendMsPacmanPkt(MsPacmanCtrls ms_pacman, msg_t *m, kernel_pid_t send_pid)
 
 int main(void)
 {
+   LED_RED_ON;
+
    MsPacmanCtrls ms_pacman;
 
    //Set the transceiver type to BLE
