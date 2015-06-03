@@ -182,8 +182,6 @@ int main(void)
       
       i++;
    }
- if(i > 1)   
-         LED_RED_ON;
 
    return 0;
 }

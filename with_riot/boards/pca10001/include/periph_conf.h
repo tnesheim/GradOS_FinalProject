@@ -82,8 +82,8 @@ extern "C" {
 #define UART_IRQ_PRIO       1
 
 /* UART pin configuration */
-#define UART_PIN_RX       11
-#define UART_PIN_TX       9
+#define UART_PIN_RX       20 
+#define UART_PIN_TX       21 
 /** @} */
 
 /**

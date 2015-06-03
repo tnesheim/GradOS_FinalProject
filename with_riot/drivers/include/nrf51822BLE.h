@@ -34,8 +34,17 @@ typedef struct ble_radio_pkt {
 /*Initialize the NRF BLE transceiver w/ the RIOT OS*/
 void nrf51822ble_init(void);
 
-/*Initialize the spi connection and send the init pkt*/
+/*Initialize the spi connection*/
 void nrfInitSPI(void);
+
+/*Initialize the uart connection*/
+void nrfInitUART(void);
+
+/*Receives a pkt from the BLE Transceiver*/
+void nrfRxUART(uint8_t *rxBuf);
+
+/*Send a pkt to the BLE Transceiver*/
+void nrfTxUART(uint8_t *txBuf);
 
 /*Receives the current BLE radio pkt*/
 void nrfRcvPkt(ble_radio_pkt *blePkt);
