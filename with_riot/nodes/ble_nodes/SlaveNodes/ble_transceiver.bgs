@@ -1,4 +1,10 @@
 dim connected 
+dim handle_t
+dim offset_t
+dim result_t
+dim value_len
+dim in(25) # endpoint data in
+dim out(25)
 
 # Boot event listener
 event system_boot(major, minor, patch, build, ll_version, prot_version, hw)
@@ -10,6 +16,13 @@ event system_boot(major, minor, patch, build, ll_version, prot_version, hw)
 	call gap_set_mode(gap_general_discoverable, gap_undirected_connectable)
 	# Set device to be bondable
 	call sm_set_bondable_mode(1)
+	
+	# Set UART to 115200
+	call system_reg_write($70fa, 216)    # mantissa, BAUD_M
+    call system_reg_write($70fc, 11)    # exponent, BAUD_E 
+	
+	# Enable the RX watermark to receive SND/RCV Transceiver packets
+	call system_endpoint_set_watermarks(system_endpoint_uart1, 25, 0)
 end
 
 # Connection event listener
@@ -32,7 +45,28 @@ event connection_disconnected(handle, result)
 	call gap_set_mode(gap_general_discoverable,gap_undirected_connectable)
 end
 
-# GATT Database update event 
-event attributes_value(connection, reason, handle, offset, value_len, value_data)
+event system_endpoint_watermark_rx(endpoint, size)
+    if endpoint = system_endpoint_uart1 then
+        call system_endpoint_set_watermarks(system_endpoint_uart1, 0, $ff) # disable RX watermark
+        call system_endpoint_rx(system_endpoint_uart1, 25)(result_t, value_len, in(0:25))
+		
+		#See if this was a RX command or a TX cmd
+		if in(0:1) = 6 then #It is an RX command, read data from the RX characteristic and prepare to TX it
+			call attributes_read(transceiver_rx, 0)(handle_t, offset_t, result_t, value_len, out(0:25))
+			call system_endpoint_set_watermarks(system_endpoint_uart1, $ff, 25) # enable TX watermark
+		end if 
+		if in(0:1) = 8 then #It is a send command, write it to the TX characteristic
+			call attributes_write(transceiver_tx, 0, 25, in(0:25))(result_t)
+			call system_endpoint_set_watermarks(system_endpoint_uart1, 25, $ff) #enable RX watermark
+		end if
+    end if
+end
 
+#Send data over the UART 
+event system_endpoint_watermark_tx(endpoint, size)
+    if endpoint = system_endpoint_uart1 then
+        call system_endpoint_set_watermarks(system_endpoint_uart1, $ff, 0) # disable TX watermark
+        call system_endpoint_tx(system_endpoint_uart1, 25, out(0:25))
+		call system_endpoint_set_watermarks(system_endpoint_uart1, 25, $ff) # enable RX watermark
+    end if
 end

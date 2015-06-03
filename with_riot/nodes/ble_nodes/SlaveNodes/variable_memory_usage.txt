@@ -1,4 +1,4 @@
-4
+70
 0:0	GAP_AD_FLAG_BREDR_NOT_SUPPORTED
 0:0	GAP_AD_FLAG_GENERAL_DISCOVERABLE
 0:0	GAP_AD_FLAG_LIMITED_DISCOVERABLE
@@ -79,3 +79,9 @@
 0:0	transceiver_rx
 0:0	transceiver_tx
 0:4	connected
+4:4	handle_t
+8:4	offset_t
+12:4	result_t
+16:4	value_len
+20:25	in
+45:25	out
