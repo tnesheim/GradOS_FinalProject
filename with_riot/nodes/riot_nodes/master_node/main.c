@@ -17,6 +17,8 @@
 
 static char rx_thread_stack[KERNEL_CONF_STACKSIZE_DEFAULT];
 
+uint8_t toggle = 1;
+
 void setLED(msg_t *m)
 {
     uint16_t src_addr;
@@ -24,16 +26,18 @@ void setLED(msg_t *m)
     uint8_t led_value;
     radio_packet_t *trans_buf;
 
+    toggle ^= 1;
+
     //Copy the data from the transceiver
     trans_buf = (radio_packet_t *)(m->content.ptr);
     memcpy(led_data, trans_buf->data, NRF51822_MAX_DATA_LENGTH);
 
+    //Extract the Source address from the rcv'd pkt
+    src_addr = trans_buf->src;
+
     //Tell the Transceiver that we are done with the buffer
     trans_buf->processing = 0;
 
-    //Extract the Source address from the rcv'd pkt
-    src_addr = led_data[NRF51822_SPI_SRC_OFFSET_0];
-    src_addr = (src_addr << 8) & led_data[NRF51822_SPI_SRC_OFFSET_1];
     //Extract the requested LED value
     led_value = led_data[NRF51822_SPI_PAYLOAD_OFFSET];
     

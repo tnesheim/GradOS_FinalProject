@@ -120,7 +120,7 @@ extern "C" {
 /* SPI_0 device configuration */
 #define SPI_0_DEV           NRF_SPI0
 #define SPI_0_PIN_MOSI      20 
-#define SPI_0_PIN_MISO      21 
+#define SPI_0_PIN_MISO      2 
 #define SPI_0_PIN_SCK       22
 
 /* SPI_1 device configuration */
