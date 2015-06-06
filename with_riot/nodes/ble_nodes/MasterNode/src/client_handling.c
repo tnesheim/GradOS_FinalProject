@@ -46,7 +46,8 @@ typedef struct
 static client_t         m_client[MAX_CLIENTS];      /**< Client context information list. */
 static uint8_t          m_client_count;             /**< Number of clients. */
 static uint8_t          m_base_uuid_type_transceiver;           /**< UUID type. */
-static uint8_t          m_hvx_buffer[NRF51822_PKT_LEN];
+uint8_t          m_hvx_buffer[NRF51822_PKT_LEN];
+static void             (*rx_handler)(uint8_t *rx_buf);
 
 /**@brief Function for finding client context information based on handle.
  *
@@ -209,34 +210,18 @@ static void on_evt_hvx(ble_evt_t * p_ble_evt, client_t * p_client, uint32_t inde
 {
     if ((p_client != NULL) && (p_client->state == STATE_RUNNING))
     {
-        if ((p_ble_evt->evt.gattc_evt.params.hvx.handle ==
+        if (p_ble_evt->evt.gattc_evt.params.hvx.handle ==
             p_client->srv_db.services[0].charateristics[p_client->char_index_tx].characteristic.handle_value)
-            )//&& (p_ble_evt->evt.gattc_evt.params.hvx.len == NRF51822_PKT_LEN))
+            //&& (p_ble_evt->evt.gattc_evt.params.hvx.len == NRF51822_PKT_LEN))
         {
            //Store the received Transceiver TX data in the TX buffer 
            memcpy(p_client->tx_buf, p_ble_evt->evt.gattc_evt.params.hvx.data, p_ble_evt->evt.gattc_evt.params.hvx.len);
            memcpy(m_hvx_buffer, p_ble_evt->evt.gattc_evt.params.hvx.data, p_ble_evt->evt.gattc_evt.params.hvx.len);
+           
+           //Send the data over SPI
+           rx_handler(m_hvx_buffer);
         }
     }
-}
-
-/*Get what is currently in the TX buffer and copy it into the Transceiver RX buffer*/
-void tx_get(uint8_t *addr, uint8_t * rx_buf)
-{
-   uint8_t is_nested;
-   //uint32_t node_ndx = client_find_addr(addr);
-   
-   //Don't do anything if the Transceiver client wasn't found
-   /*if(node_ndx == MAX_CLIENTS)
-   {
-      return;
-   }*/
-   
-   //Copy the data 
-   //memcpy(rx_buf, m_client[node_ndx].tx_buf, NRF51822_PKT_LEN);
-   sd_nvic_critical_region_enter(&is_nested);
-   memcpy(rx_buf, m_hvx_buffer, NRF51822_PKT_LEN);
-   sd_nvic_critical_region_exit(is_nested);
 }
 
 /*Send the received RX data to the node*/
@@ -375,11 +360,14 @@ static void db_discovery_init(void)
 
 /**@brief Function for initializing the client handling.
  */
-void client_handling_init(void)
+void client_handling_init(void(*rx_handler_t)(uint8_t *rx_buf))
 {
     uint32_t err_code;
     uint32_t i;
 
+    //Store the SPI RX handler
+    rx_handler = rx_handler_t;
+   
     //Add the Transceiver base UUID
     ble_uuid128_t base_uuid = TRANSCEIVER_BASE_UUID;
 

@@ -23,10 +23,11 @@
 #include "nrf51822BLE.h"
 #include "transceiver_service.h"
 
-#define MISO_PIN 1
-#define MOSI_PIN 2
-#define  SCK_PIN 3
-#define   CS_PIN 4
+#define MISO_PIN     1
+#define MOSI_PIN     2
+#define SCK_PIN      3
+#define CS_PIN       4
+#define RX_INTERRUPT 5
 
 #define SEC_PARAM_BOND             1                                  /**< Perform bonding. */
 #define SEC_PARAM_MITM             0                                  /**< Man In The Middle protection not required. */
@@ -58,7 +59,8 @@ typedef enum
 //SPI Variables
 static uint8_t rx_buf[NRF51822_PKT_LEN];
 static uint8_t tx_buf[NRF51822_PKT_LEN];
-static bool waitRIOT = true;
+static bool spi_master_recv = false;
+extern uint8_t m_hvx_buffer[];
 
 //The peer addresses of the Ms. Pacman and Nunchuck Nodes
 //Ms. Pacman: 0xFE11F5A2E383
@@ -87,7 +89,7 @@ static const ble_gap_conn_params_t m_connection_param =
 };
 
 static void scan_start(void);
-static void initLeds();
+static void initGPIO();
 static void setLed(uint32_t led_pin, bool set_led);
 
 /**@brief Function for error handling, which is called when an error has occurred.
@@ -444,12 +446,16 @@ static void scan_start(void)
     APP_ERROR_CHECK(err_code);
 }
 
-static void initLeds()
+static void initGPIO()
 {
    nrf_gpio_cfg_output(MS_PACMAN_CONNECT_LED);
    nrf_gpio_cfg_output(NUNCHUCK_CONNECT_LED);
    nrf_gpio_pin_clear(MS_PACMAN_CONNECT_LED);
    nrf_gpio_pin_clear(NUNCHUCK_CONNECT_LED);
+   
+   //Set RX Interrupt as output
+   nrf_gpio_cfg_output(RX_INTERRUPT);
+   nrf_gpio_pin_set(RX_INTERRUPT);
 }
 static void setLed(uint32_t led_pin, bool set_led)
 {
@@ -472,19 +478,17 @@ void spi_event_handler(spi_slave_evt_t event)
       case SPI_SLAVE_BUFFERS_SET_DONE:
          break;
       case SPI_SLAVE_XFER_DONE:
-         setLed(MS_PACMAN_CONNECT_LED, true);
-         type = rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
-         if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == RCV_PKT_NRF51822BLE)
-         {
-            //Grab the current data from the TX buffer of the requested Transceiver
-            tx_get(&(rx_buf[NRF51822_SPI_SRC_OFFSET_0]), tx_buf);
-         }
-         else if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == SND_PKT)
+         if(rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET] == SND_PKT)
          {
             
             //Send the RX pkt to the specified address 
             rx_send(rx_buf);
             type = rx_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
+         }
+         else if(spi_master_recv)
+         {
+            nrf_gpio_pin_set(RX_INTERRUPT);
+            spi_master_recv = false;
          }
          
          //Setup the SPI buffers
@@ -523,27 +527,26 @@ static void initSPI()
    spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
 }
 
-/*Waits for the init command from RIOT, for synchronization purposes*/
-static void waitForRIOT()
+/*This function is called when a Notify operation is received from a BLE client.*/
+void rx_handler(uint8_t *rx_buffer)
 {
-   //Setup the TX Buffer to contain the Init response string
-   memcpy(tx_buf, NRF_BLE_INIT_SUCCESS, 4);
+   memcpy(tx_buf, m_hvx_buffer, NRF51822_PKT_LEN); 
+   //Setup the SPI buffers
+   spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
    
-   //Init the buffers
-   spi_slave_buffers_set(tx_buf, rx_buf, 4, 4);
+   spi_master_recv = true;
    
-   //Wait for RIOT to sync with us
-   while(waitRIOT)
-      ;
+   //Notify the RIOT OS that data is available
+   nrf_gpio_pin_clear(RX_INTERRUPT);
 }
 
 int main(void)
 {
-   initLeds();
+   initGPIO();
    initSPI();
    
    ble_stack_init();
-   client_handling_init();
+   client_handling_init(rx_handler);
    device_manager_init();
    
    //Scan for peripherals that have the Transceiver UUID we are interested in
@@ -551,5 +554,6 @@ int main(void)
    
    //SPI RX/TX from the Transceiver[s] happening in interrupts
    for(;;)
-      ;
+   {
+   }
 }

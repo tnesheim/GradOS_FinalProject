@@ -35,7 +35,7 @@ typedef enum
 
 /**@brief Funtion for initializing the module.
  */
-void client_handling_init(void);
+void client_handling_init(void(*rx_handler)(uint8_t *rx_buf));
 
 /**@brief Funtion for returning the current number of clients.
  *
@@ -67,9 +67,6 @@ uint32_t client_handling_destroy(const dm_handle_t * p_handle);
  * @param[in] p_ble_evt  Event to be handled.
  */
 void client_handling_ble_evt_handler(ble_evt_t * p_ble_evt);
-
-/*Get what is currently in the TX buffer and copy it into the Transceiver RX buffer*/
-void tx_get(uint8_t *addr, uint8_t * rx_buf);
 
 /*Send the received RX data to the node*/
 void rx_send(uint8_t *rx_buf);
