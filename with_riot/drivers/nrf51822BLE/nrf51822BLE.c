@@ -24,6 +24,9 @@ void nrf51822ble_init(kernel_pid_t transceiver_pid)
    {
       hwtimer_init();
    }
+
+   nrfInitSPI();
+   nrfInitRxInterrupt();
 }
 
 /*Initialize the spi connection and send the init pkt*/
@@ -54,7 +57,6 @@ void nrfSPITransfer(char* tx_buf, char* rx_buf, int length)
    gpio_clear(GPIO_0);
    spi_transfer_bytes(SPI_0, tx_buf, rx_buf, NRF51822_SPI_PKT_LEN);
    gpio_set(GPIO_0);
-
    //Release the SPI
    spi_release(SPI_0); 
 }

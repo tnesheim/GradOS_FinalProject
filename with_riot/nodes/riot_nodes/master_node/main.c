@@ -94,7 +94,7 @@ void sendNodePkt(uint16_t node_addr, uint8_t led_value, msg_t *m, kernel_pid_t s
 void *rx_thread(void *arg)
 {
    msg_t m_trans;
-
+   
    while(1)
    {
       //Wait for an RX packet from the Transceiver
@@ -136,7 +136,7 @@ int main(void)
       sendNodePkt(NODE_ONE_ADDR, led_value, &m_trans, trans_pid);
       vtimer_usleep(10000);
       sendNodePkt(NODE_TWO_ADDR, led_value ^ 1, &m_trans, trans_pid);
-      
+
       //Alternate LED values each loop.
       led_value ^= 1;
                   
