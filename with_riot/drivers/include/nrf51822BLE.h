@@ -31,23 +31,23 @@ typedef struct ble_radio_pkt {
    uint8_t payload[NRF51822_MAX_DATA_LENGTH];
 } ble_radio_pkt;
 
+//Extern of ble_radio_pkt
+extern ble_radio_pkt nrf51822_blePkt;
+
 /*Initialize the NRF BLE transceiver w/ the RIOT OS*/
-void nrf51822ble_init(void);
+void nrf51822ble_init(kernel_pid_t transceiver_pid);
 
 /*Initialize the spi connection*/
 void nrfInitSPI(void);
 
-/*Initialize the uart connection*/
-void nrfInitUART(void);
+/*Initializes the RX interrupt GPIO pin*/
+void nrfInitRxInterrupt(void);
 
-/*Receives a pkt from the BLE Transceiver*/
-void nrfRxUART(uint8_t *rxBuf);
-
-/*Send a pkt to the BLE Transceiver*/
-void nrfTxUART(uint8_t *txBuf);
+/*Locks the SPI bus and transfers data.*/
+void nrfSPITransfer(char* tx_buf, char* rx_buf, int length);
 
 /*Receives the current BLE radio pkt*/
-void nrfRcvPkt(ble_radio_pkt *blePkt);
+void nrfRcvPkt(void *arg);
 
 /*Sends the current BLE radio pkt*/
 void nrfSendPkt(ble_radio_pkt *blePkt);

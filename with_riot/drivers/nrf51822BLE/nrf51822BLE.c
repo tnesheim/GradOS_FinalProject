@@ -10,26 +10,20 @@
 #include "hwtimer.h"
 #include "periph/gpio.h"
 
+static kernel_pid_t trans_pid;
+ble_radio_pkt nrf51822_blePkt;
+
 /*Initialize the NRF BLE transceiver w/ the RIOT OS*/
-void nrf51822ble_init(void)
+void nrf51822ble_init(kernel_pid_t transceiver_pid)
 {
+   //Store the PID of the transceiver 
+   trans_pid = transceiver_pid;   
 
    //Initialize the hwtimer if not already started
    if(hwtimer_active() != 1)
    {
       hwtimer_init();
    }
-
-   //Wait for 500ms to give the nrf time to init
-   hwtimer_wait(HWTIMER_TICKS(500000));
-
-#ifdef BLE_UART
-   //Init the UART
-   nrfInitUART();
-#else
-   //Init the SPI. 
-   nrfInitSPI();
-#endif
 }
 
 /*Initialize the spi connection and send the init pkt*/
@@ -43,71 +37,53 @@ void nrfInitSPI(void)
    spi_init_master(SPI_0, SPI_CONF_FIRST_RISING, SPI_SPEED_1MHZ);     
 }
 
-/*Initialize the uart connection*/
-void nrfInitUART(void)
+/*Initializes the RX interrupt GPIO pin*/
+void nrfInitRxInterrupt(void)
 {
-   //Init the UART at 115200
-   uart_init_blocking(UART_0, 115200);    
+   //Set the interrupt for falling edge to indicate a new RX pkt.
+   gpio_init_int(GPIO_1, GPIO_PULLUP, GPIO_FALLING, nrfRcvPkt, NULL);    
 }
 
-/*Receives a pkt from the BLE Transceiver*/
-void nrfRxUART(uint8_t *rxBuf)
+/*Locks the SPI bus and transfers data.*/
+void nrfSPITransfer(char* tx_buf, char* rx_buf, int length)
 {
-   int i;
+   //Acquire exclusive SPI access
+   spi_acquire(SPI_0);
 
-   //Read each of the bytes in the BLE Transceiver pkt
-   for(i = 0; i < NRF51822_SPI_PKT_LEN; i++)
-   {
-      uart_read_blocking(UART_0, &(rxBuf[i]));
-   }
-   LED_RED_ON;   
-}
+   //Clear CS and transfer bytes
+   gpio_clear(GPIO_0);
+   spi_transfer_bytes(SPI_0, tx_buf, rx_buf, NRF51822_SPI_PKT_LEN);
+   gpio_set(GPIO_0);
 
-/*Send a pkt to the BLE Transceiver*/
-void nrfTxUART(uint8_t *txBuf)
-{
-   int i;
-
-   //Send each of the bytes in the pkt to the BLE Transceiver
-   for(i = 0; i < NRF51822_SPI_PKT_LEN; i++)
-   {
-      uart_write_blocking(UART_0, txBuf[i]);
-   }
+   //Release the SPI
+   spi_release(SPI_0); 
 }
 
 /*Receives the current BLE radio pkt*/
-void nrfRcvPkt(ble_radio_pkt * blePkt)
+void nrfRcvPkt(void *arg)
 {
    uint8_t rcv_buf[NRF51822_SPI_PKT_LEN];
-   //Tell the NRF that we want to receive a pkt
-   rcv_buf[0] = RCV_PKT_NRF51822BLE;
-#ifdef BLE_UART
-   nrfTxUART(rcv_buf); 
-#else
-   gpio_clear(GPIO_0);
-   spi_transfer_bytes(SPI_0, &rcv_buf, NULL, NRF51822_SPI_PKT_LEN);
-   gpio_set(GPIO_0);
-   //Wait for a little bit to ensure the NRF has time to 
-   //load the data, 2ms
-   hwtimer_wait(HWTIMER_TICKS(2000));
-#endif
+
    //Receive ble packet
-#ifdef BLE_UART
-   nrfRxUART(rcv_buf);
-#else
-   gpio_clear(GPIO_0);
-   spi_transfer_bytes(SPI_0, NULL, rcv_buf, NRF51822_SPI_PKT_LEN);
-   gpio_set(GPIO_0);
-#endif
+   nrfSPITransfer(NULL, rcv_buf, NRF51822_SPI_PKT_LEN);
 
    //Copy the data over to the radio pkt buffer
-   blePkt->msg_type     = rcv_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
-   blePkt->src_address  = rcv_buf[NRF51822_SPI_SRC_OFFSET_0];
-   blePkt->src_address  = (blePkt->src_address << 8) & rcv_buf[NRF51822_SPI_SRC_OFFSET_1];
-   blePkt->dest_address = rcv_buf[NRF51822_SPI_DST_OFFSET_0];
-   blePkt->dest_address = (blePkt->dest_address << 8) & rcv_buf[NRF51822_SPI_DST_OFFSET_1];
+   nrf51822_blePkt.msg_type     = rcv_buf[NRF51822_SPI_MSG_TYPE_OFFSET];
+   nrf51822_blePkt.src_address  = rcv_buf[NRF51822_SPI_SRC_OFFSET_0];
+   nrf51822_blePkt.src_address  = (nrf51822_blePkt.src_address << 8) & rcv_buf[NRF51822_SPI_SRC_OFFSET_1];
+   nrf51822_blePkt.dest_address = rcv_buf[NRF51822_SPI_DST_OFFSET_0];
+   nrf51822_blePkt.dest_address = (nrf51822_blePkt.dest_address << 8) & rcv_buf[NRF51822_SPI_DST_OFFSET_1];
    //Copy the payload over
-   memcpy(blePkt->payload, &(rcv_buf[NRF51822_SPI_PAYLOAD_OFFSET]), NRF51822_MAX_DATA_LENGTH);
+   memcpy(nrf51822_blePkt.payload, &(rcv_buf[NRF51822_SPI_PAYLOAD_OFFSET]), NRF51822_MAX_DATA_LENGTH);
+
+   //Assuming it exists, send the RX pkt. to the transceiver thread
+   if(trans_pid != KERNEL_PID_UNDEF)
+   {
+      msg_t m;
+      m.type = RCV_PKT_NRF51822BLE;
+      m.content.value = 0;
+      msg_send(&m, trans_pid);
+   }
 }
 
 /*Sends the current BLE radio pkt*/
@@ -124,11 +100,5 @@ void nrfSendPkt(ble_radio_pkt *blePkt)
    memcpy(&(send_buf[NRF51822_SPI_PAYLOAD_OFFSET]), blePkt->payload, NRF51822_MAX_DATA_LENGTH);  
 
    //Send the data to the NRF/Bluegiga device
-#ifdef BLE_UART
-   nrfTxUART(send_buf);
-#else
-   gpio_clear(GPIO_0);
-   spi_transfer_bytes(SPI_0, send_buf, NULL, NRF51822_SPI_PKT_LEN);
-   gpio_set(GPIO_0);
-#endif
+   nrfSPITransfer(send_buf, NULL, NRF51822_SPI_PKT_LEN);
 }

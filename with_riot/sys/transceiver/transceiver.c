@@ -242,7 +242,7 @@ kernel_pid_t transceiver_start(void)
 #endif
 #ifdef MODULE_NRF51822BLE
     else if (transceivers & TRANSCEIVER_NRF51822BLE) {
-        nrf51822ble_init();
+        nrf51822ble_init(transceiver_pid);
     }
 
 #endif
@@ -738,27 +738,15 @@ void receive_at86rf231_packet(ieee802154_packet_t *trans_p)
 #ifdef MODULE_NRF51822BLE
 static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
 {
-    //The BLE radio pkt that will get the received data
-    ble_radio_pkt blePkt;
-
-    /*Disable interrupts during copying*/
-    //dINT();
-
-    //Receive the BLE radio packet over SPI
-    nrfRcvPkt(&blePkt);
-
     //Copy the data over
-    trans_p->src = blePkt.src_address;
-    trans_p->dst = blePkt.dest_address;
+    trans_p->src = nrf51822_blePkt.src_address;
+    trans_p->dst = nrf51822_blePkt.dest_address;
     trans_p->rssi = 0;
     trans_p->lqi = 0;
     trans_p->length = NRF51822_MAX_DATA_LENGTH;
-    memcpy((void *) &(data_buffer[transceiver_buffer_pos * PAYLOAD_SIZE]), blePkt.payload, NRF51822_MAX_DATA_LENGTH);
+    memcpy((void *) &(data_buffer[transceiver_buffer_pos * PAYLOAD_SIZE]), nrf51822_blePkt.payload, NRF51822_MAX_DATA_LENGTH);
     
     trans_p->data = (uint8_t *) &(data_buffer[transceiver_buffer_pos * NRF51822_MAX_DATA_LENGTH]);
-
-    /*Restore interrupts*/
-    //eINT();
 }
 #endif
 

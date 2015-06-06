@@ -18,6 +18,8 @@
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/types.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/types.h \
  /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/stdio.h \
+ /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/string.h \
+ /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/string.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/board.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/cortex-m0_common/include/cpu.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/cpu-conf.h \
@@ -72,16 +74,7 @@
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/priority_queue.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/sys/include/timex.h \
  /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/hwtimer.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/ms_pacman.h \
- /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdlib.h \
- /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/stdlib.h \
- /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/alloca.h \
- /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/string.h \
- /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/string.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/ms_pacman_service.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/nunchuck.h \
- /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/nunchuck_service.h
+ /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdio.h:
 
@@ -118,6 +111,10 @@
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/types.h:
 
 /Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/stdio.h:
+
+/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/string.h:
+
+/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/string.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/boards/pca10001/include/board.h:
 
@@ -228,21 +225,3 @@
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/core/include/hwtimer.h:
 
 /Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/cpu/nrf51822/include/hwtimer_cpu.h:
-
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/ms_pacman.h:
-
-/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/stdlib.h:
-
-/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/machine/stdlib.h:
-
-/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/alloca.h:
-
-/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/string.h:
-
-/Users/tnesheim/GitHub/RIOT/gcc-arm-none-eabi-4_9-2015q1/arm-none-eabi/include/sys/string.h:
-
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/ms_pacman_service.h:
-
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/nunchuck.h:
-
-/Users/tnesheim/GitHub/GradOS_FinalProject/with_riot/nodes/riot_nodes/master_node/nunchuck_service.h:
