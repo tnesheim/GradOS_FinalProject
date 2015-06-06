@@ -535,6 +535,9 @@ void rx_handler(uint8_t *rx_buffer)
    spi_slave_buffers_set(tx_buf, rx_buf, NRF51822_PKT_LEN, NRF51822_PKT_LEN);
    
    spi_master_recv = true;
+ 
+   //Reset the interrupt
+   nrf_gpio_pin_set(RX_INTERRUPT);
    
    //Notify the RIOT OS that data is available
    nrf_gpio_pin_clear(RX_INTERRUPT);

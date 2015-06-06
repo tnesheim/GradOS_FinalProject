@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\MasterNode.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\MasterNode.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sat Jun 06 10:19:42 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sat Jun 06 11:47:41 2015
 <BR><P>
 <H3>Maximum Stack Usage =        224 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -810,10 +810,11 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> device_manager_central.o(i.device_context_store)
 <LI> device_manager_central.o(i.gatts_context_store)
 </UL>
-<P><STRONG><a name="[2f]"></a>rx_handler</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main.o(i.rx_handler))
+<P><STRONG><a name="[2f]"></a>rx_handler</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, main.o(i.rx_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = rx_handler &rArr; spi_slave_buffers_set &rArr; sm_state_change &rArr; state_entry_action_execute &rArr; app_error_handler &rArr; setLed
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_slave_buffers_set
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrf_gpio_pin_set
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nrf_gpio_pin_clear
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
@@ -961,6 +962,7 @@ Local Symbols
 
 <P><STRONG><a name="[a9]"></a>nrf_gpio_pin_set</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, main.o(i.nrf_gpio_pin_set))
 <BR><BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_event_handler
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rx_handler
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setLed
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initGPIO
 </UL>

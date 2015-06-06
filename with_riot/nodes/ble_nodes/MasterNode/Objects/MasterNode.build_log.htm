@@ -26,7 +26,30 @@ Project File Date:  06/02/2015
 
 <h2>Output:</h2>
 Build target 'MasterNode'
-".\Objects\MasterNode.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\global_inc\ms_pacman.h(58): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\global_inc\ms_pacman_service.h(37): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\global_inc\ms_pacman.h(58): warning:  #1-D: last line of file ends without a newline
+  #endif 
+.\app_inc\transceiver_service.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+src\main.c(92): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+  static void initGPIO();
+src\main.c(153): warning:  #177-D: variable "lcd_write_status" was declared but never referenced
+      bool     lcd_write_status;
+src\main.c(474): warning:  #550-D: variable "type" was set but never used
+     uint8_t type;
+src\main.c(67): warning:  #177-D: variable "m_peer_addr_ms_pacman" was declared but never referenced
+  static uint8_t m_peer_addr_ms_pacman[] = {0x83, 0xE3, 0xA2, 0xF5, 0x11, 0xFE};
+src\main.c(69): warning:  #177-D: variable "m_peer_addr_nunchuck" was declared but never referenced
+  static uint8_t m_peer_addr_nunchuck[]  = {0x7F, 0x40, 0x93, 0x20, 0x1B, 0xCE};   
+src\main.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=17716 RO-data=604 RW-data=188 ZI-data=5260  
+FromELF: creating hex file...
+".\Objects\MasterNode.axf" - 0 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 
