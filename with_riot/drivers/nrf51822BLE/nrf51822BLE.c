@@ -44,25 +44,44 @@ void nrfInitSPI(void)
 void nrfInitRxInterrupt(void)
 {
    //Set the interrupt for falling edge to indicate a new RX pkt.
-   gpio_init_int(GPIO_1, GPIO_PULLUP, GPIO_FALLING, nrfRcvPkt, NULL);    
+   gpio_init_int(GPIO_1, GPIO_PULLUP, GPIO_FALLING, nrfRxHandler, NULL);    
 }
 
 /*Locks the SPI bus and transfers data.*/
 void nrfSPITransfer(char* tx_buf, char* rx_buf, int length)
 {
+   uint8_t spi_err;
    //Acquire exclusive SPI access
    spi_acquire(SPI_0);
 
    //Clear CS and transfer bytes
    gpio_clear(GPIO_0);
-   spi_transfer_bytes(SPI_0, tx_buf, rx_buf, NRF51822_SPI_PKT_LEN);
+   spi_err = spi_transfer_bytes(SPI_0, tx_buf, rx_buf, NRF51822_SPI_PKT_LEN);
    gpio_set(GPIO_0);
    //Release the SPI
-   spi_release(SPI_0); 
+   spi_release(SPI_0);
+
+   if(spi_err == -1)
+   {
+      LED_RED_ON;
+   } 
 }
 
 /*Receives the current BLE radio pkt*/
-void nrfRcvPkt(void *arg)
+void nrfRxHandler(void *arg)
+{
+   //Assuming it exists, send the RX pkt. to the transceiver thread
+   if(trans_pid != KERNEL_PID_UNDEF)
+   {
+      msg_t m;
+      m.type = RCV_PKT_NRF51822BLE;
+      m.content.value = 0;
+      msg_send(&m, trans_pid);
+   }
+}
+
+/*Receives a new packet from the BLE transceiver*/
+void nrfRcvPkt(void)
 {
    uint8_t rcv_buf[NRF51822_SPI_PKT_LEN];
 
@@ -77,15 +96,6 @@ void nrfRcvPkt(void *arg)
    nrf51822_blePkt.dest_address = (nrf51822_blePkt.dest_address << 8) & rcv_buf[NRF51822_SPI_DST_OFFSET_1];
    //Copy the payload over
    memcpy(nrf51822_blePkt.payload, &(rcv_buf[NRF51822_SPI_PAYLOAD_OFFSET]), NRF51822_MAX_DATA_LENGTH);
-
-   //Assuming it exists, send the RX pkt. to the transceiver thread
-   if(trans_pid != KERNEL_PID_UNDEF)
-   {
-      msg_t m;
-      m.type = RCV_PKT_NRF51822BLE;
-      m.content.value = 0;
-      msg_send(&m, trans_pid);
-   }
 }
 
 /*Sends the current BLE radio pkt*/

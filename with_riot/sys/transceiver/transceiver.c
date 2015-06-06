@@ -738,6 +738,10 @@ void receive_at86rf231_packet(ieee802154_packet_t *trans_p)
 #ifdef MODULE_NRF51822BLE
 static void receive_nrf51822ble_packet(radio_packet_t *trans_p)
 {
+    //Actually receive the pkt.
+    nrfRcvPkt();
+    LED_RED_ON;
+
     //Copy the data over
     trans_p->src = nrf51822_blePkt.src_address;
     trans_p->dst = nrf51822_blePkt.dest_address;

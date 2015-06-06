@@ -46,8 +46,11 @@ void nrfInitRxInterrupt(void);
 /*Locks the SPI bus and transfers data.*/
 void nrfSPITransfer(char* tx_buf, char* rx_buf, int length);
 
-/*Receives the current BLE radio pkt*/
-void nrfRcvPkt(void *arg);
+/*Alerts the transceiver that there is a new BLE pkt*/
+void nrfRxHandler(void *arg);
+
+/*Receives a new packet from the BLE transceiver*/
+void nrfRcvPkt(void);
 
 /*Sends the current BLE radio pkt*/
 void nrfSendPkt(ble_radio_pkt *blePkt);
